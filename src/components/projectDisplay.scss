@@ -1,0 +1,16 @@
+.projectContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0;
+}
+
+.project {
+    .projectTitle, .projectDescription {
+        text-decoration: none;
+    }
+}
+
+.projectLink {
+    text-decoration: none;
+    color: black;
+}
