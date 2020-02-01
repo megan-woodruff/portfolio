@@ -2,9 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import NavBar from "./navBar"
 import "./layout.scss"
-import "./wrapper.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,8 +18,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="contentWrapper">
+      <NavBar siteTitle={data.site.siteMetadata.title} />
+      <div>
         <main>{children}</main>
         <footer style={{fontSize: '1em', textAlign: 'right'}}>
           © {new Date().getFullYear()}. Made with  ☕ & ❤️ in Seattle. Built with

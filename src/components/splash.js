@@ -3,9 +3,8 @@ import './splash.scss'
 
 const Splash = () => (
     <div className="splash">
-        <h1>Hello! I'm Megan.</h1>
-        <h1>I am a creative technologist based in Seattle, WA.</h1>
-        {/* <p>I am currently a Technical Product Manager at </p> */}
+        <h3>Hello! I'm Megan.</h3> 
+        <h1>I am passionate about combining <span className="emphasis">UX design</span> + <span className="emphasis">engineering</span> to build robust, user-driven experiences.</h1>
     </div>
 )
   

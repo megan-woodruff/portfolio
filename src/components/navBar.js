@@ -1,16 +1,16 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import "./header.scss"
+import "./navBar.scss"
 import resume from '../images/WoodruffResume.pdf'
 
-const Header = ({ siteTitle }) => (
-  <header className="header">
-    <div className="headerContentContainer">
+const NavBar = ({ siteTitle }) => (
+  <header className="navBar">
+    <div className="navBarContentContainer">
         <div>
           <h2>
             <Link to="/" className="link">
-              {siteTitle}
+              {/* {siteTitle} */}
             </Link>
           </h2>
         </div>
@@ -29,12 +29,12 @@ const Header = ({ siteTitle }) => (
   </header>
 )
 
-Header.propTypes = {
+NavBar.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+NavBar.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default NavBar

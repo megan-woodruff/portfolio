@@ -1,5 +1,12 @@
+@import 'styles';
+
 .splash {
-    margin: 2rem 0;
+    @extend .contentWrapper;
+    margin: 5rem auto 12rem;
+
+    .emphasis {
+        color: $secondaryColor;
+    }
 
     h1: {
         margin: 0;
