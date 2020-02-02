@@ -625,6 +625,28 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+footer {  
+  .footerContent {
+    @extend .contentWrapper;
+    text-align: center;
+    margin: 1rem auto;
+    font-size: .8rem;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  .link {
+    color: $primaryColor;
+  }
+}
+
+@media only screen and (max-width: $mobileBreak) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

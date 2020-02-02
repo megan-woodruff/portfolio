@@ -7,7 +7,7 @@ import Splash from "../components/splash"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Work" />
     <Splash />
     <ProjectDisplay />
   </Layout>

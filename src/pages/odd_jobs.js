@@ -1,15 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
+import '../components/styles.scss'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="Project 1" />
-    <h1>Hi from project 1</h1>
-    <p>Welcome to project 1</p>
-    <Link to="/">Go back to the homepage</Link>
+    <SEO title="Odd Jobs" />
+    <div style={{minHeight: '20rem'}} className="contentWrapper">
+      <h1>Odd Jobs</h1>
+      <p>Connecting users with independent service providers in their community</p>
+    </div>
   </Layout>
 )
 

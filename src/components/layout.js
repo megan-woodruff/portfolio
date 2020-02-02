@@ -21,10 +21,13 @@ const Layout = ({ children }) => {
       <NavBar siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
-        <footer style={{fontSize: '1em', textAlign: 'right'}}>
-          © {new Date().getFullYear()}. Made with  ☕ & ❤️ in Seattle. Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby.</a>
+        <footer>
+          <div className="footerContent">
+            © {new Date().getFullYear()}. Made with ☕ & ❤️ in Seattle. Built with
+            {` `}
+            <a className="link" href="https://www.gatsbyjs.org">Gatsby.</a>
+          </div>
+         
         </footer>
       </div>
     </>

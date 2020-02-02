@@ -15,11 +15,11 @@ const NavBar = ({ siteTitle }) => (
           </h2>
         </div>
         <div className="navBar">
-          <Link to="/about" className="navLink">
-            About
-          </Link>
           <Link to="/" className="navLink">
             Work
+          </Link>
+          <Link to="/about" className="navLink">
+            About
           </Link>
           <a className="navLink" href={resume}>
             Resume

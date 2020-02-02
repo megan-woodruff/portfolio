@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-// import Image from './image'
-import image from '../images/gatsby-astronaut.png'
+
+import desktop from '../images/stock_image_desk.jpg'
+import mobile from '../images/stock_image_mobile.jpg'
 import './projectDisplay.scss'
 
 const ProjectDisplay = () => (
@@ -11,37 +12,46 @@ const ProjectDisplay = () => (
             <ProjectCard 
                 className="project" 
                 title="OddJobs" 
-                skills={["User journey mapping", "IA development", "Prototyping"]}
+                // skills={["User journey mapping", "IA development", "prototyping"]}
+                location="University of Washington"
                 description="Connecting users with independent service providers in their community" 
                 slug="odd_jobs" 
+                imageSource={mobile}
             />
             <ProjectCard 
                 className="project" 
-                title="RxConnect" 
+                title="Rx Connect" 
                 description="Helping primary care providers understand a patient's potential prescription drug costs" 
-                skills={["Generative research", "Problem definition", "Prototyping"]}
-                slug="rx_connect" />
+                location="University of Washington"
+                // skills={["User research", "problem definition", "prototyping"]}
+                slug="rx_connect" 
+                imageSource={desktop}
+                />
             <ProjectCard 
                 className="project" 
-                title="Collective Edu" 
-                description="Helping educators learn collectively and connect with peers" 
-                skills={["Research", "User journey mapping", "Prototyping"]}
-                slug="every_learner_community" />
+                title="Solve by Every Learner" 
+                description="Helping postsecondary educators learn collectively and connect with peers" 
+                location="Intentional Futures"
+                // skills={["User research", "software architecture design", "product management"]}
+                slug="solve" 
+                imageSource={mobile}
+                />
         </div> 
     </div>
 )
 
-const ProjectCard = ({ title, description, skills, slug }) => (
+const ProjectCard = ({ title, description, location, slug, imageSource }) => (
     <Link className="projectLink" to={`/${slug}`}>
         <div className="projectCard">
+            <img className="projectImage" src={imageSource} alt="Digital application in use"/> 
             <div className="projectInfo">
-                <h3 className="projectTitle">{title}</h3>
+                <div>
+                    <h3 className="projectTitle">{title}</h3>
+                    <h5 className="projectLocation">{location}</h5>
+                </div>
                 <h4 className="projectDescription">{description}</h4>
-                    {
-                        skills.map(skill => (<h5 className="projectSkill">{skill}</h5>))
-                    }
             </div>
-            <img className="projectImage" src={image}/>
+             
         </div>
     </Link>
 )
