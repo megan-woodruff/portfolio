@@ -1,0 +1,12 @@
+@import 'styles';
+
+.headerImage {
+    max-height: 600px;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.title {
+    margin: 2rem auto;
+}

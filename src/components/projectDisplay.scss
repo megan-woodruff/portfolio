@@ -1,48 +1,69 @@
 @import 'styles';
 
+$transitionStyle: all 0.4s ease;
+
 .projectDisplay {
     background-color: $primaryColor; 
     padding: 1rem 0;
 
     .projectContentContainer {
         @extend .contentWrapper;
+        transition: $transitionStyle;
 
         .projectCard {
             display: flex;
             margin: 3rem 0;
             height: 20rem;
+            transition: $transitionStyle;
 
             .projectInfo {
                 padding: 2rem;
                 min-width: 280px;
-                width: 35%;
+                width: 38%;
                 background-color: #ffffff;
                 text-align: left;
                 border-radius: 0 8px 8px 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                transition: $transitionStyle;
 
                 .projectTitle {
-                    color: $secondaryColor;
                     margin: 0 0 .5rem 0;
                     font-size: 1.3rem;
+                    color: $primaryColor;
+                    transition: $transitionStyle;
                 }
 
                 .projectDescription {
-                    font-size: 1rem;
-                    color: $primaryColor;
-                    font-weight: 200;
                     margin: 0;
+                    font-size: 1rem;
+                    font-weight: 200;
+                    color: $primaryColor;
                 }
             }
                 .projectImage {
+                    transition: $transitionStyle;
                     height: 100%;
                     width: 65%;
                     object-fit: cover;
-                    vertical-align: bottom;
                     border-radius: 8px 0 0 8px;
                     margin: 0;
+                    -webkit-filter: grayscale(100%);
+                    -moz-filter: grayscale(100%);
+                    filter: grayscale(100%);
+                }
+
+                &:hover {
+                    transform: translateY(-2px);
+                    .projectImage {
+                        -webkit-filter: grayscale(0%);
+                        -moz-filter: grayscale(0%);
+                        filter: grayscale(0%);
+                    }
+                    .projectTitle {
+                        color: $secondaryColor;
+                    }
                 }
         }
 

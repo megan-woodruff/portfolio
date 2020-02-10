@@ -1,17 +1,12 @@
 import React from "react"
-import '../components/styles.scss'
+import ProjectPage from '../components/projectPage'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Odd Jobs" />
-    <div style={{minHeight: '20rem'}} className="contentWrapper">
-      <h1>Odd Jobs</h1>
-      <p>Connecting users with independent service providers in their community</p>
-    </div>
-  </Layout>
+const OddJobs = () => (
+  <ProjectPage 
+    title="OddJobs" 
+    location="University of Washington"
+    description="Connecting users with independent service providers in their community"
+  />
 )
 
-export default SecondPage
+export default OddJobs

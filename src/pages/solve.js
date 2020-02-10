@@ -1,17 +1,28 @@
 import React from "react"
+import ProjectPage from '../components/projectPage'
+import { useStaticQuery, graphql } from "gatsby"
 
-import '../components/styles.scss'
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+const Solve = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      solveImage: file(relativePath: { eq: "everylearnermock.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 700) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Solve by Every Learner" />
-    <div style={{minHeight: '20rem'}} className="contentWrapper">
-      <h1>Solve by Every Learner</h1>
-      <p>Helping postsecondary educators learn collectively and connect with peers</p>
-    </div>
-  </Layout>
-)
+  return (
+    <ProjectPage 
+      title="Solve by Every Learner" 
+      description="Helping postsecondary educators bring adaptive pedagogy into their classrooms" 
+      location="Intentional Futures"
+      // imageSource={data.solveImage.childImageSharp.fluid}
+    />
+  )
+}
 
-export default SecondPage
+export default Solve
