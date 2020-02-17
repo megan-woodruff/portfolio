@@ -59,6 +59,14 @@ const ProjectDisplay = () => {
                     slug="odd_jobs" 
                     imageSource={data.oddJobsImage.childImageSharp.fluid}
                 />
+                {/* <ProjectCard 
+                    className="project" 
+                    title="RxConnect" 
+                    location="University of Washington"
+                    description="Helping primary care providers understand the prescription drug costs for their patients" 
+                    slug="rx_connect" 
+                    imageSource={data.solveImage.childImageSharp.fluid}
+                /> */}
             </div> 
         </div>
 )

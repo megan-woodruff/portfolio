@@ -1,12 +1,135 @@
 @import 'styles';
 
 .headerImage {
-    max-height: 600px;
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    filter: grayscale(100%);
+    max-height: 500px;
 }
 
-.title {
-    margin: 2rem auto;
+.projectContent {
+    background-color: white;
+    padding-bottom: 4rem;
+
+    .overviewCard {
+        @extend .contentWrapper;
+        position: relative;
+        margin: -4rem auto 0;
+    
+        .heading {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px 8px 0 0;
+
+            .title {
+                color: $secondaryColor;
+                font-weight: 800;
+            }
+             
+            .description {
+                font-weight: normal;
+                margin: 0;
+            }
+        }
+    
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.2rem 2rem;
+            background-color: $backgroundColor;
+            border-radius: 0 0 8px 8px;
+
+            .stat {
+                min-width: 6rem;
+                margin: 0 1rem 1rem 0;
+            }
+            h5 {
+                margin-bottom: .5rem;
+                color: $secondaryColor;
+                font-weight: 600;
+            }
+
+            h6 {
+                font-weight: 400;
+                margin-bottom: .3rem;
+            }
+
+            @media only screen and (max-width: $mobileBreak) {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                
+                .stat {
+                    width: 8rem;
+                }
+            }
+        }
+    }
+
+    .contentBody {
+        @extend .contentWrapper;
+        margin: 4rem auto;
+
+        .projectImage {
+            margin: 2.5rem 0;
+        }
+
+        .bodyTextWrapper {
+            max-width: 34rem;
+            margin: 0 auto;
+        }
+
+        .columnLayout {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 2rem 2rem 1rem;
+            margin: 3rem auto;
+            background-color: $backgroundColor;
+            // background-color: #fbfbfb;
+            border-radius: 8px;
+            overflow: wrap;
+
+            li, p {
+                font-size: .9rem;
+                line-height: 1.2rem;
+                letter-spacing: .0025rem;
+            }
+
+            .column {
+                margin: 0 1rem;
+                width: 43%;
+                
+                h4 {
+                    font-size: 1rem;
+                    margin-bottom: .75rem;
+                    color: $secondaryColor;
+                }
+            }
+        }
+
+        p, ul, ol {
+            color: $primaryColor;
+            font-size: 1rem;
+            font-family: Avenir, Arial, Helvetica, sans-serif;
+            letter-spacing: .01rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: $secondaryColor;
+            margin: 3rem 0 1rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: normal;
+            margin: 1.5rem 0 1rem;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    }
 }
+
+
+
