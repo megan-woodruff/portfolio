@@ -35,10 +35,10 @@ const ProjectDisplay = () => {
     return (
         <div className="projectDisplay">
             <div className="projectContentContainer">
-                <ProjectCard
+            <ProjectCard
                     className="project"
                     title="Learning Session: Equity-Centered Technology Design"
-                    location="Bill & Melinda Gates Foundation"
+                    location="Bill & Melinda Gates Foundation  |  Intentional Futures"
                     description="Helping education leaders at the Bill & Melinda Gates Foundation learn about the equitable design of edtech products"
                     slug="tech_learning_session"
                     imageSource={data.techLearningImage.childImageSharp.fluid}
@@ -46,8 +46,8 @@ const ProjectDisplay = () => {
                 <ProjectCard 
                     className="project" 
                     title="Solve by Every Learner" 
-                    description="Helping postsecondary educators bring adaptive pedagogy into their classrooms" 
-                    location="Intentional Futures"
+                    description="Helping postsecondary educators bring digital learning software into their classrooms" 
+                    location="Every Learner Everywhere  |  Intentional Futures"
                     slug="solve" 
                     imageSource={data.solveImage.childImageSharp.fluid}
                     />

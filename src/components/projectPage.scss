@@ -39,6 +39,7 @@
             .stat {
                 min-width: 6rem;
                 margin: 0 1rem 1rem 0;
+                // max-width: 30%;
             }
             h5 {
                 margin-bottom: .5rem;
@@ -48,7 +49,8 @@
 
             h6 {
                 font-weight: 400;
-                margin-bottom: .3rem;
+                margin-bottom: .1rem;
+                line-height: 1.2rem;
             }
 
             @media only screen and (max-width: $mobileBreak) {
@@ -75,6 +77,12 @@
             margin: 0 auto;
         }
 
+        .iframeWrapper {
+            max-width: 420px;
+            height: 700px;
+            margin: 0 auto;
+        }
+
         .columnLayout {
             display: flex;
             flex-direction: row;
@@ -83,7 +91,7 @@
             padding: 2rem 2rem 1rem;
             margin: 3rem auto;
             background-color: $backgroundColor;
-            // background-color: #fbfbfb;
+            background-color: #f9f9f9;
             border-radius: 8px;
             overflow: wrap;
 
@@ -100,8 +108,15 @@
                 h4 {
                     font-size: 1rem;
                     margin-bottom: .75rem;
-                    color: $secondaryColor;
                 }
+
+                h5 {
+                    font-size: .9rem;
+                    margin-bottom: 1rem;
+                    line-height: 1.1rem;
+                }
+
+             
             }
         }
 
