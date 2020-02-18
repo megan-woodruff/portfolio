@@ -5,13 +5,14 @@
 
     .navBarContentContainer {
         @extend .contentWrapper;
-        padding: 1.45rem 1.0875rem;
+        padding: 1.2rem 1.0875rem 1.2rem 0;
         display: flex;
         justify-content: space-between;
     }
 
     h2 {
-        margin: 0;
+        margin: .5rem 0;
+        font-size: 1rem;
     }
 
     .navBarButtons {

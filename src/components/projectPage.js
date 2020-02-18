@@ -6,16 +6,29 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from 'gatsby-image/withIEPolyfill'
 
-const ProjectPage = ({ title, description, location, imageSource }) => (
-  <Layout>
-    <SEO title={title} />
-   {imageSource && <Img className="headerImage" objectFit="cover" objectPosition="top center" fluid={imageSource} alt="Placeholder alt text for now" />}
-    <div className="contentWrapper">
-      <h1 className="title">{title}</h1>
-      <h2>{location}</h2>
-      <p>{description}</p>
-    </div>
-  </Layout>
-)
+
+const ProjectPage = ({ title, description, imageSource, stats, children }) => {
+    return (
+        <Layout>
+            <SEO title={title} />
+            <Img className="headerImage" objectFit="cover" objectPosition="top center" fluid={imageSource} alt="Placeholder alt text for now" />
+                <div className="projectContent">
+                    <div className="overviewCard">
+                        <div className="heading">
+                            <h3 className="title">{title}</h3>
+                            <h2 className="description">{description}</h2>
+                        </div>
+                        <div className="stats">
+                            {stats}
+                        </div>
+                    </div>
+                    <div className="contentBody">
+                        {children}
+                    </div>
+                 </div>
+        
+        </Layout>
+    )
+}
 
 export default ProjectPage

@@ -10,7 +10,7 @@ const NavBar = ({ siteTitle }) => (
         <div>
           <h2>
             <Link to="/" className="link">
-              {/* {siteTitle} */}
+              {siteTitle}
             </Link>
           </h2>
         </div>
