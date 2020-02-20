@@ -138,7 +138,7 @@ const TechLearningSession = () => {
         stats={getStats()}
     >
         <>
-            <div className="bodyTextWrapper">
+            <div className="bodyTextWrapper overview">
                 <h2>Project Overview</h2>
                 <p>Clients at the Bill & Melinda Gates foundation asked our team at Intentional Futures to create a <strong>three-hour learning session</strong> on <strong>equitable technology design in the edtech space</strong>. The session was to be designed and delivered for 30-40 Senior Program Officers from the K-12, postsecondary, and “P-16 Solutions” education teams at the Foundation.</p>
             </div>

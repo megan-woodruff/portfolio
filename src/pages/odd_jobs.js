@@ -74,7 +74,7 @@ const OddJobs = () => {
     stats={getStats()}
   >
     <>
-    <div className="bodyTextWrapper">
+    <div className="bodyTextWrapper overview">
         <h2>Project Overview</h2>
         <p>Odd Jobs was an open-ended class assignment to prototype key purchasing flows for a native, mobile peer-to-peer service-finding application.</p>
     </div>

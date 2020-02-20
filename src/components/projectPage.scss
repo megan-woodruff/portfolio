@@ -1,7 +1,10 @@
 @import 'styles';
 
 .headerImage {
-    max-height: 500px;
+    height: 500px;
+    // -webkit-box-shadow: inset 0 0 6px black;
+	//    -moz-box-shadow: inset 0 0 6px black;
+	//         box-shadow: inset 0 0 6px black;
 }
 
 .projectContent {
@@ -35,6 +38,8 @@
             padding: 1.2rem 2rem;
             background-color: $backgroundColor;
             border-radius: 0 0 8px 8px;
+            
+
 
             .stat {
                 min-width: 6rem;
@@ -77,6 +82,15 @@
             margin: 0 auto;
         }
 
+        .overview {
+            p {
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+                letter-spacing: .02rem;
+            }
+            
+        }
+
         .iframeWrapper {
             max-width: 420px;
             height: 700px;
@@ -104,6 +118,10 @@
             .column {
                 margin: 0 1rem;
                 width: 43%;
+
+                h3 {
+                    margin-top: 0;
+                }
                 
                 h4 {
                     font-size: 1rem;
