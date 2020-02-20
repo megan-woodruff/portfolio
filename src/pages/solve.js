@@ -6,7 +6,14 @@ import Img from 'gatsby-image/withIEPolyfill'
 const Solve = () => {
   const data = useStaticQuery(graphql`
     query {
-      solvesnapshot: file(relativePath: { eq: "solvesnapshot3-01.png" }) {
+      solvesnapshot: file(relativePath: { eq: "solveheader.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      solvetimeline: file(relativePath: { eq: "solvetimeline.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
@@ -34,7 +41,7 @@ const Solve = () => {
           }
         }
       }
-      kitassetrelationship: file(relativePath: { eq: "kitassetrelationship.png" }) {
+      kitassetrelationship: file(relativePath: { eq: "kitasset.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
@@ -48,7 +55,14 @@ const Solve = () => {
           }
         }
       }
-      persona: file(relativePath: { eq: "james.png" }) {
+      faculty: file(relativePath: { eq: "faculty.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+              ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      assetteam: file(relativePath: { eq: "assetteam.png" }) {
         childImageSharp {
           fluid(maxWidth: 960) {
               ...GatsbyImageSharpFluid
@@ -72,23 +86,20 @@ const Solve = () => {
             <p>Intentional Futures is one of 12 partner organizations in the Every Learner Everywhere digital learning solutions network. This network is working to <strong>help postsecondary institutions use digital learning software to improve student success in entry-level courses</strong>.</p>
             <p>As the network grows a body of resources related to this work, our team was tasked with building a <strong>knowledge management solution</strong> to help organize and promote the network's thought leadership.</p>
         </div>
-        <div className="columnLayout">
-          <p>Project timeline coming soon</p>
-        </div>
+        <Img style={{borderRadius: '8px'}} fluid={data.solvetimeline.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
           <h2>Defining Core User Groups</h2>
           <div className="overview">
-            <p>For the initial build of the platform, we chose to focus on the needs of two user groups whose buy-in would be key to eventual platform adoption and success: <strong>faculty at postsecondary institutions</strong> and the <strong>Every Learner Everywhere content team.</strong></p>
-          </div> 
-          <h3>Institution Faculty</h3>
-          <p>Our access to faculty and administrators at postsecondary institutions was unfortunately extremely limited (as was our time and budget to do user research). We addressed this constraint by conducting 1-on-1 interviews with "technical assistance" partners who were working directly with these faculty to better understand their needs. We used these interviews to align on a team understanding of this user group, their context, and their pain points.</p>
+            <p>After getting ramped-up to the network and conducting a brief stakeholder analysis, we chose to focus on the needs of two user groups whose buy-in would be key to eventual platform adoption and success: <strong>faculty at postsecondary institutions</strong> and the <strong>Every Learner Everywhere content team.</strong></p>
+          </div>           
         </div>
            
            <div className="columnLayout">
               <div className="column" style={{width: '30%'}}>
-                <Img style={{borderRadius: '8px'}} fluid={data.persona.childImageSharp.fluid}></Img>
+                <Img style={{borderRadius: '8px'}} fluid={data.faculty.childImageSharp.fluid}></Img>
+                <p className="caption">Our access to faculty and administrators at postsecondary institutions was unfortunately extremely limited. We addressed this constraint by conducting 1-on-1 interviews with "technical assistance" partners who were working directly with these faculty to better understand their needs.</p>
               </div>
-              <div className="column" style={{width: '60%'}}>
+              <div className="column" style={{width: '57%'}}>
                 <h3 style={{marginTop: '0'}}>Institution Faculty</h3>
                 <h4>Context</h4>
                 <p>These faculty members were given a top-down directive to add adaptive digital learning to their courses as part of a grant funding agreement. They are already busy teaching courses and are thus concerned about how much extra work it may take to change their courses to include a digital learning solution. They are already using an online learning management system (LMS) in their courses, and thus have baseline level of technical literacy.</p>
@@ -105,16 +116,12 @@ const Solve = () => {
               </div>
            </div>
             
-           <div className="bodyTextWrapper">
-              <h3>Every Learner Everywhere Content Team</h3>
-              <p>Similarly, we conducted 1-on-1 interviews with three Every Learner Everywhere content team members to understand their goals, motivation, and anticipated pain points from the content creation and management side.</p>
-          </div>
-            
             <div className="columnLayout">
               <div className="column" style={{width: '30%'}}>
-                <Img style={{borderRadius: '8px'}} fluid={data.persona.childImageSharp.fluid}></Img>
+                <Img style={{borderRadius: '8px'}} fluid={data.assetteam.childImageSharp.fluid}></Img>
+                <p className="caption">We conducted 1-on-1 interviews with three Every Learner Everywhere content team members to understand their goals, motivation, and anticipated pain points from the content creation and management side.</p>
               </div>
-              <div className="column" style={{width: '60%'}}>
+              <div className="column" style={{width: '57%'}}>
                 <h3 style={{marginTop: '0'}}>Every Learner Everywhere Content Team</h3>
                 <h4>Context</h4>
                 <p>The Every Learner Content Team is a small group of content strategists and writers. They are in charge of collaborating with 12 network partners to prioritize content topics, research and draft content, determine the appropriate content form, manage content review workstreams, and then publish the resulting resources to knowledge management platform. They have all used content editing or management platforms (e.g. Wordpress) </p>
@@ -135,7 +142,7 @@ const Solve = () => {
         <div className="bodyTextWrapper">
             <h2>Information Architecture</h2>
             <div className="overview">
-              <p>One of this project's key challenges was a contractual platform completion date set for months before the creation of almost all of the content that would live on it. Thus, rather than developing the platform with a specific scale or medium in mind, we had to approach the architecture iteratively and work from "knowns" about existing resources and assumptions about the future state of resources.</p>
+              <p>One of this project's key challenges was a contractual platform completion date set for <strong>months before the creation of almost all of the content</strong> that would live on it. Thus, rather than developing the platform with a specific scale or medium in mind, we had to approach the architecture iteratively and work from "knowns" about existing resources and assumptions about the future state of resources.</p>
             </div>
             
         </div>
@@ -152,8 +159,9 @@ const Solve = () => {
           <div className="column">
            <h3>Assumptions</h3>
             <ul>
-              <li>The platform will eventually hold content from 12 or more different authors, who may create content on overlapping topics but using different styles and mediums.</li>
-              <li>Though we may be able to encourage content creators towards creating more interactive resources, it is unlikely that they will make drastic changes away from their current medium.</li>
+              <li>The platform will eventually hold content from 12 or more different authors</li> 
+              <li>Different authors may create content on overlapping topics but using different styles and mediums.</li>
+              <li>Though we may be able to encourage content creators towards creating more interactive resources, it is unlikely that drastic changes will occur .</li>
             </ul>
           </div>
         </div>
@@ -186,22 +194,26 @@ const Solve = () => {
             <div className="bodyTextWrapper">
               <p>Along with these definitions, we also developed the following hierarchical relationship between content topics, toolkits, and resources:</p>
             </div>
-            <div className="columnLayout">
-              <div className="column" style={{width: '70%'}}>
-                <Img style={{borderRadius: '8px'}} fluid={data.kitassetrelationship.childImageSharp.fluid}></Img>
-              </div>
-              <div className="column" style={{width: '20%'}}>
+            {/* <div className="columnLayout"> */}
+              {/* <div className="column"> */}
+              <Img style={{borderRadius: '8px'}} fluid={data.kitassetrelationship.childImageSharp.fluid}></Img>
+              {/* </div> */}
+              {/* <div className="column" style={{width: '20%'}}>
                 <p>This mapping lays out the relationship between high-level topics, questions that faculty might have related to those topics, and the resources that can be configured to help answer those questions.</p>
+              </div> */}
+            {/* </div> */}
+            {/* <div className="columnLayout">
+              <div className="column" style={{width: '70%'}}> */}
+              <div className="bodyTextWrapper" style={{margin: '2rem auto'}}>
+               <p>This mapping lays out the relationship between high-level topics, questions that faculty might have related to those topics, and the resources that can be configured to help answer those questions.</p>
+               <p>Expanding on this model, here is an example that shows how a set of related resources on impact studies might be configured into a toolkit to help answer a faculty member's question about measuring the impact of their digital learning implementation.</p>
               </div>
-            </div>
-            <div className="columnLayout">
-              <div className="column" style={{width: '70%'}}>
                 <Img style={{borderRadius: '8px'}} fluid={data.kitassetexample.childImageSharp.fluid}></Img>
-              </div>
+              {/* </div>
               <div className="column" style={{width: '20%'}}>
                 <p>Expanding on this model, here is an example that shows how a set of related resources on impact studies might be configured into a toolkit to help answer a faculty member's question about measuring the impact of their digital learning implementation.</p>
               </div>
-            </div>
+            </div> */}
             <div className="columnLayout">
               <p>Image of high fidelity toolkit & resource mock-ups coming soon</p>
             </div>
@@ -242,7 +254,7 @@ const Solve = () => {
         </div>
         <div className="bodyTextWrapper">
           <h2>Iterating on the initial build</h2>
-          <p>With the initial build of the platform in place, our team worked closely with Every Learner content team to identify additional patterns that they wanted to support across our resources. For each of these areas, I:</p> 
+          <p>With the initial build of the platform in place, I worked closely with the Every Learner content team to identify additional patterns that they wanted to support across their resources. For each of these areas, I:</p> 
           <ul>
             <li>Worked with the content team to understand the content need and potential use scenarios (both existing and future)</li>
             <li>Ran UX sprints with our designers to generate feature ideas and converge on a design to meet these needs</li>
@@ -250,7 +262,7 @@ const Solve = () => {
             <li>Oversaw its development onto our production platform</li>
           </ul>
           
-          <p>Below is an updated information architecture that integrates the additional search and content type features that were added over time.</p>
+          <p>Below is an updated information architecture that integrates the additional search and content type features that were added as a result of this work.</p>
         </div>
         <Img className="projectImage" fluid={data.solveiav2.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
@@ -296,7 +308,7 @@ const getStats = () => (
       </div>
       <div className="stat">
           <h5>Timeline</h5>
-          <h6>8 months</h6>
+          <h6>11 months</h6>
       </div>
       <div className="stat">
           <h5>Responsibilities</h5>

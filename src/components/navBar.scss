@@ -2,6 +2,11 @@
 
 .navBar {
     background: $backgroundColor;
+    // background: white;
+
+    // z-index: 1000;
+    // position: fixed;
+    // top: 0px;
 
     .navBarContentContainer {
         @extend .contentWrapper;
