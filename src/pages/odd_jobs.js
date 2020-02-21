@@ -84,10 +84,10 @@ const OddJobs = () => {
         <p>I was assigned a persona from which to draw inspiration throughout the design process. Due to the scope of the project, the emphasis here was decidedly <strong>not</strong> on conducting research to develop the persona myself. Instead, I was to assume that I was given this persona by UX researchers on my team.</p>
     </div>
     <div className="columnLayout">
-      <div className="column" style={{width: '30%'}}>
-        <Img style={{borderRadius: '8px'}} fluid={data.james.childImageSharp.fluid}></Img>
+      <div className="column personaImageContainer">
+        <Img className="personaImage" fluid={data.james.childImageSharp.fluid}></Img>
       </div>
-      <div className="column" style={{width: '60%'}}>
+      <div className="column personaText" >
         <h4>James</h4> 
         <h5>Apartment Manager at Crescent Square Apartments</h5>
         <p>James owns Crescent Square apartments in Redmond, WA. Among other apartment management responsibilities, he works to update and maintain apartment facilities based on resident feedback.</p>

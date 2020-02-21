@@ -95,11 +95,11 @@ const Solve = () => {
         </div>
            
            <div className="columnLayout">
-              <div className="column" style={{width: '30%'}}>
-                <Img style={{borderRadius: '8px'}} fluid={data.faculty.childImageSharp.fluid}></Img>
+              <div className="column personaImageContainer">
+                <Img className="personaImage" fluid={data.faculty.childImageSharp.fluid}></Img>
                 <p className="caption">Our access to faculty and administrators at postsecondary institutions was unfortunately extremely limited. We addressed this constraint by conducting 1-on-1 interviews with "technical assistance" partners who were working directly with these faculty to better understand their needs.</p>
               </div>
-              <div className="column" style={{width: '57%'}}>
+              <div className="column personaText">
                 <h3 style={{marginTop: '0'}}>Institution Faculty</h3>
                 <h4>Context</h4>
                 <p>These faculty members were given a top-down directive to add adaptive digital learning to their courses as part of a grant funding agreement. They are already busy teaching courses and are thus concerned about how much extra work it may take to change their courses to include a digital learning solution. They are already using an online learning management system (LMS) in their courses, and thus have baseline level of technical literacy.</p>
@@ -111,23 +111,23 @@ const Solve = () => {
                 <ul>
                   <li>Trying to find expertise, examples, or guides for doing this type of work is time-consuming and requires piecing information together from disparate sources</li>
                   <li>If they do sit down to research this topic, they often have to sift through extremely long documents (10 pages or more). They leave unsure of the action steps they should take from the information.</li>
-                  <li>The vocabularly used in this space is not uniform and leaves them with many open questions.</li>
+                  {/* <li>The vocabularly used in this space is not uniform and leaves them with many open questions.</li> */}
                 </ul>
               </div>
            </div>
             
             <div className="columnLayout">
-              <div className="column" style={{width: '30%'}}>
-                <Img style={{borderRadius: '8px'}} fluid={data.assetteam.childImageSharp.fluid}></Img>
+              <div className="column personaImageContainer">
+                <Img className="personaImage" fluid={data.assetteam.childImageSharp.fluid}></Img>
                 <p className="caption">We conducted 1-on-1 interviews with three Every Learner Everywhere content team members to understand their goals, motivation, and anticipated pain points from the content creation and management side.</p>
               </div>
-              <div className="column" style={{width: '57%'}}>
+              <div className="column personaText">
                 <h3 style={{marginTop: '0'}}>Every Learner Everywhere Content Team</h3>
                 <h4>Context</h4>
-                <p>The Every Learner Content Team is a small group of content strategists and writers. They are in charge of collaborating with 12 network partners to prioritize content topics, research and draft content, determine the appropriate content form, manage content review workstreams, and then publish the resulting resources to knowledge management platform. They have all used content editing or management platforms (e.g. Wordpress) </p>
+                <p>The Every Learner Content Team is a small group of content strategists and writers. They are in charge of collaborating with 12 network partners to prioritize content topics, research and draft content, determine the appropriate content form, manage content review workstreams, and then publish the resulting resources to the knowledge management platform. They have all used content editing or management platforms (e.g. Wordpress) </p>
                 
                 <h4>Motivations</h4>
-                <p>This team is motivated to help institutional faculty better understand what adpative digital learning is, how it can be used in the classroom, and how it can help achieve better student outcomes. They are also motivated by the platform's potential ability to promote the Every Learner network's brand and presence as a thought leader in this space.</p>
+                <p>This team is motivated to help institutional faculty better understand what adpative digital learning is, how it can be used in the classroom, and how it can help achieve better student outcomes. They are also motivated by the platform's potential ability to promote the Every Learner network's brand and thought leadership in this space.</p>
 
                 <h4>Knowledge Management Pain Points</h4>
                 <ul>
@@ -152,8 +152,8 @@ const Solve = () => {
             <ul>
               <li>Text, image, and downloadable documents are the primary mediums currently used by content creators.</li>
               <li>Video is also used but is less common.</li>
-              <li>Current published resources in this space are often extremely long (8 pages or more).</li>
-              <li>Current published resources in this space are stored across disparate websites / journals and generally do not build cohesively. </li>
+              <li>Current published resources in this space are often extremely long (10 pages or more).</li>
+              <li>Current published resources in this space are stored across disparate websites / journals and do not build cohesively. </li>
             </ul>
           </div>
           <div className="column">
@@ -161,7 +161,7 @@ const Solve = () => {
             <ul>
               <li>The platform will eventually hold content from 12 or more different authors</li> 
               <li>Different authors may create content on overlapping topics but using different styles and mediums.</li>
-              <li>Though we may be able to encourage content creators towards creating more interactive resources, it is unlikely that drastic changes will occur .</li>
+              <li>Though we may be able to encourage content creators towards creating more interactive resources, it is unlikely that drastic changes will occur in the short-term.</li>
             </ul>
           </div>
         </div>

@@ -93,8 +93,8 @@
 
         .caption {
             font-size: .9rem;
-            line-height: 1.05rem;
-            margin-top: 1rem;
+            line-height: 1.3rem;
+            margin-top: 1.5rem;
         }
 
         .iframeWrapper {
@@ -112,12 +112,26 @@
             margin: 3rem auto;
             background-color: $backgroundColor;
             background-color: #f9f9f9;
+            background-color: $primaryColor;
+            color: white;
             border-radius: 8px;
             overflow: wrap;
 
+            
+
+            h3, ul, ol, p, h4, h5 {
+                color: white;
+            }
+
             .column {
-                margin: 0 1rem;
+                margin: 0 3.5%;
                 width: 43%;
+             
+                @media only screen and (max-width: $mobileBreak) {
+                    width: 100%;
+                    margin: 0;
+                }
+                
 
                 h3 {
                     margin-top: 0;
@@ -135,6 +149,26 @@
                 }
 
              
+            }
+
+            .personaImageContainer {
+                width: 30%;
+
+                .personaImage {
+                    border-radius: 8px;
+                }
+
+                @media only screen and (max-width: $mobileBreak) {
+                    display: none;
+                }
+            }
+
+            .personaText {
+                width: 56%;
+
+                @media only screen and (max-width: $mobileBreak) {
+                    width: 100%;
+                }
             }
         }
 

@@ -12,3 +12,43 @@ $mobileBreak: 790px;
     margin: 0 auto;
     max-width: 960px;
 }
+
+
+.aboutWrapper {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80vh;
+
+    .aboutImage {
+        width: 35%; 
+        height: 35%; 
+        border-radius: 8px;
+        margin: 3rem 5% 2rem 0;
+
+        @media only screen and (max-width: $mobileBreak) {
+            width: 50%;
+            height: 50%;
+            margin: .01rem 0;
+        }
+
+    }
+    
+    .aboutText {
+        width: 60%;
+
+        h2 {
+            margin-top: 3rem;
+        }
+
+        @media only screen and (max-width: $mobileBreak) {
+            width: 100%;
+            margin: 0 auto;
+
+            h2 {
+                margin-top: 2rem;
+            }
+        }        
+    }
+}
+

@@ -22,10 +22,10 @@ const About = () => {
   return (
     <Layout>
       <SEO title="About" />
-      <div className="contentWrapper" style={{marginTop: '2rem', minHeight: '75vh', display: 'flex', flexWrap: 'wrap'}}>
-        <Img style={{width: '35%', height: '35%', borderRadius: '8px', margin: '3rem 3rem 2rem 0'}} fluid={data.profile.childImageSharp.fluid}></Img>
-        <div style={{width: '55%'}}>
-          <h2 style={{marginTop: '3rem'}}>Thank you for visiting my portfolio!</h2>
+      <div className="contentWrapper aboutWrapper">
+        <Img className="aboutImage" fluid={data.profile.childImageSharp.fluid}></Img>
+        <div className="aboutText">
+          <h2>Thank you for visiting my portfolio!</h2>
           <p>I am a Seattle-based creative technologist who is passionate about cross-discipline collaboration in UX. Initially educated as a computer engineer, I have become fascinated by the ways that design and engineering can work together to build experiences that truly put users first.</p> 
           <p>I am currently working as a Technical Product Manager at Intentional Futures, a strategy and UX consultancy. In the evenings, I am working towards my Masters in Human-Centered Design and Engineering from the University of Washington. When I'm not working or schooling, I love playing volleyball, reading, and cooking. </p>
         </div>
