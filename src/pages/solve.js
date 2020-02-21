@@ -226,6 +226,7 @@ const Solve = () => {
               <div className="bodyTextWrapper" style={{margin: '2rem auto'}}>
                <p>This mapping lays out the relationship between high-level topics, questions that faculty might have related to those topics, and the resources that can be configured to help answer those questions.</p>
                <p>Expanding on this model, here is an example that shows how a set of related resources on impact studies might be configured into a toolkit to help answer a faculty member's question about measuring the impact of their digital learning implementation.</p>
+               <p>The assumption here is that these configured resources could each be produced by entirely different authors (maybe even at different times), but that they could be sequenced together with appropriate written context to create a cohesive experience for users.</p>
               </div>
                 <Img style={{borderRadius: '8px'}} fluid={data.kitassetexample.childImageSharp.fluid}></Img>
             <div className="columnLayout">
@@ -242,8 +243,9 @@ const Solve = () => {
           </div>
           <Img className="projectImage" fluid={data.solvetecharchitecture.childImageSharp.fluid}></Img>
           <div className="bodyTextWrapper">
-            <h3>Flamelink.io Content Management System</h3>
-            <p>The needs of our content team to work independently and manage a growing number of resources prompted me to include Flamelink.io, a headless CMS, as part of our architecture. Using a headless CMS allows content editors to add, edit, or remove resources from the platform without any intervention from developers. The fact that it's "headless" also means that our creative team has full control over how the content will appear to end users.</p><p>After detailed research on various headless CMS solutions, I chose Flamelink due to its:</p> 
+            <h2>Content Workflow Design</h2>
+            <h3>Content Management System</h3>
+            <p>The needs of our content team to work independently and manage a growing number of resources prompted me to include <a href="htttps://flamelink.io" target="_blank">Flamelink.io</a>, a headless CMS, as part of our architecture. Using a headless CMS allows content editors to add, edit, or remove resources from the platform without any intervention from developers. The fact that it's "headless" also means that our creative team has full control over how the content will appear to end users.</p> <p>After detailed research on various headless CMS solutions, I chose Flamelink due to its:</p> 
             <ul>
               <li>Flexible, customizable content schemas that can include any configuration of rich text, images, documents, tables, and links</li>
               <li>Integration with a major cloud service provider (Google Cloud / Firebase)</li>
@@ -251,7 +253,7 @@ const Solve = () => {
               <li>Support for multiple users and multiple "content environments", which would allow content editors to preview changes before they were published</li>
             </ul>
             <h3>Content Management Workflow</h3>
-            <p>I designed the architecture requirements for integrating with Flamelink around an ideal content workflow for the Every Learner content team, which is displayed below. This set-up allows content editors to add and update content in a "preview" environment, where changes can be made safely and approved by stakeholders long before they are pushed to users. Additionally, it gives a content manager exclusive access to hit "publish" on content changes, enabling change control while still elminating the need to involve developers for content changes.</p>
+            <p>I designed the architecture requirements for integrating our platform Flamelink around an ideal content workflow for the Every Learner content team, which is displayed below. This set-up allows content editors to add and update content in a "preview" environment, where changes can be made safely and approved by stakeholders long before they are pushed to users. Additionally, it gives a content manager exclusive access to hit "publish" on content changes, enabling change control while still elminating the need to involve developers for content changes.</p>
         </div>
         <Img className="projectImage" fluid={data.cmsworkflow1.childImageSharp.fluid}></Img>
         <Img className="projectImage" fluid={data.cmsworkflow2.childImageSharp.fluid}></Img>
@@ -259,7 +261,7 @@ const Solve = () => {
         <Img className="projectImage" fluid={data.cmsworkflow4.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
           <h3>Software Development</h3>
-          <p>After designing this technical architecture, I onboarded three developers from Andela to the project. Over the next 3.5 months, I did ongoing work to:</p> 
+          <p>After designing this technical architecture, I onboarded three developers from <a href="https://andela.com/" target="_blank">Andela</a> to the project. Over the next 3.5 months, I did ongoing work to:</p> 
           <ul>
             <li>Write feature specifications and tasks for developers</li>
             <li>Scope, plan, and manage development sprints</li>
