@@ -142,7 +142,7 @@ const TechLearningSession = () => {
                 <h2>Project Overview</h2>
                 <p>Clients at the Bill & Melinda Gates foundation asked our team at Intentional Futures to create a <strong>three-hour learning session</strong> on <strong>equitable technology design in the edtech space</strong>. The session was to be designed and delivered for 30-40 Senior Program Officers from the K-12, postsecondary, and “P-16 Solutions” education teams at the Foundation.</p>
             </div>
-            <Img className="projectImage" fluid={data.techlearningtimeline.childImageSharp.fluid}></Img>
+            <Img alt="Project timeline showing desk research, hcd expert interviews, attendee interviews, edtech product team interviews, content architecture development, booklet and deck creation, and client feedback and presentation practice" className="projectImage" fluid={data.techlearningtimeline.childImageSharp.fluid}></Img>
             <div className="bodyTextWrapper">
                 <h2>Research</h2>
                 <h3>Guiding Questions</h3>
@@ -207,8 +207,8 @@ const TechLearningSession = () => {
                 <h3>Identifying Risks of Human-Centered Design</h3>
                 <p>Through our desk research and interviews with HCD experts, we came across several problems and product outcomes that occurred when human-centered design was conducted without an equity focus. We believed that these could be mapped to higher-level themes, and we completed a <strong>sticky note identification and affinity mapping</strong> exercise to determine them.</p>
             </div>
-            <Img className="projectImage" fluid={data.affinity1.childImageSharp.fluid}></Img>
-            <Img className="projectImage" fluid={data.affinity2.childImageSharp.fluid}></Img>
+            <Img alt="Sticky notes showing ideation of problem themes from interviews with HCD experts" className="projectImage" fluid={data.affinity1.childImageSharp.fluid}></Img>
+            <Img alt="Sticky note problems organized into affinity groups" className="projectImage" fluid={data.affinity2.childImageSharp.fluid}></Img>
             <div className="bodyTextWrapper">
                 <p>From this affinity mapping the team crafted definitions for each of the five "risk areas" that emerged.</p>
             </div>
@@ -241,7 +241,7 @@ const TechLearningSession = () => {
                 <p>We identified four methodologies that were most relevant to the session: Microsoft's Inclusive Design, equityXdesign, Asset-Based Community Development Design, and Participatory Design. We then attempted to map the ways that each of these methodologies would augment the traditional human-centered design process through a simple journey mapping of its phases.
                 </p>
             </div>
-            <Img className="projectImage" fluid={data.hcdprocessmap.childImageSharp.fluid}></Img>
+            <Img alt="Diagram attempting to map the changes to the HCD process suggested by ABCD Design, Participatory Design, Inclusive Design, and equityXdesign" className="projectImage" fluid={data.hcdprocessmap.childImageSharp.fluid}></Img>
             <div className="bodyTextWrapper">
                 <p>Though this mapping was helpful in parsing out the recommendations of each methodology, we found several flaws in it.</p>
                 <ul>
@@ -261,31 +261,31 @@ const TechLearningSession = () => {
                 </ul>
                 <p>For these reasons, we chose to move away from trying to force-fit these methodologies directly onto an HCD process map. Instead, we developed a mapping of equitable methodologies to the HCD risk areas that they most effectively help address.</p>
             </div>
-            <Img className="projectImage" fluid={data.riskmitigation.childImageSharp.fluid}></Img>
+            <Img alt="Mapping of each of the inclusive methodologies against the risk areas that they most effectively mitigate" className="projectImage" fluid={data.riskmitigation.childImageSharp.fluid}></Img>
             <div className="bodyTextWrapper">
                 <p>This risk mitigation mapping doubled as a clear take-home message to session attendees: using a mixed-methodology approach when doing equity-centered design is essential, as different methodologies will help you mitigate the different risk areas of HCD. These methodologies are also not “plug-and-play”, but require thoughtful application in the context of the project in order to determine their tangible recommendations.</p>
                 <h3>Connecting to Edtech Product Examples</h3>
                 <p>Our final step was to connect these methodologies to <strong>tangible edtech product demos</strong>. After narrowing our edtech product research to six product "exemplars" we wanted to demo in the session, we interviewed the product teams to understand their design process and methods.</p> 
                 <p>We then connected each process to the principles and  methods of one or more equity-centered design methodologies. An early mapping for the three products that I personally demoed is below.</p>
             </div>
-            <Img className="projectImage" fluid={data.productdemos.childImageSharp.fluid}></Img>
+            <Img alt="Mapping between product demos (Code Jumper, Comadre, EF+Math) and the inclusive methodologies employed by the team" className="projectImage" fluid={data.productdemos.childImageSharp.fluid}></Img>
             <div className="bodyTextWrapper">
                 <h2>Session Booklet & Presentation</h2>
                 <p>As we moved closer to the session date, we worked with our visual designer to sequence our content and bring our frameworks to life for attendees. We collaborated to develop the following content sequence:</p>
             </div>
-            <Img className="projectImage" fluid={data.contentsequence.childImageSharp.fluid}></Img>
+            <Img alt="Session flow containing topic overview, introduction to HCD, introduction of the five risk areas of HCD, a summary of the equity-centered design methodolgoies, and product demos" className="projectImage" fluid={data.contentsequence.childImageSharp.fluid}></Img>
             <div className="bodyTextWrapper">
                 <p>and to craft the final booklet and deck. Below are excerpts from these materials which display the final version of our framework and the connections we made between our various pieces of content.</p>
             </div>
-            <Img className="projectImage" fluid={data.risksofhcdfinal.childImageSharp.fluid}></Img>
-            <Img className="projectImage" fluid={data.methodologyoverlay.childImageSharp.fluid}></Img>
-            <Img className="projectImage" fluid={data.methodology1.childImageSharp.fluid}></Img>
-            <Img className="projectImage" fluid={data.methodology2.childImageSharp.fluid}></Img>
-            <Img className="projectImage" fluid={data.codejumperdemo.childImageSharp.fluid}></Img>
-            <Img className="projectImage" fluid={data.codejumperdemo2.childImageSharp.fluid}></Img>
-            <Img className="projectImage" fluid={data.codejumperdemo3.childImageSharp.fluid}></Img>
-            <Img className="projectImage" fluid={data.codejumperdemo4.childImageSharp.fluid}></Img>
-            <Img className="projectImage" fluid={data.codejumperdemo5.childImageSharp.fluid}></Img>
+            <Img alt="Booklet page on the inherent risks of HCD" className="projectImage" fluid={data.risksofhcdfinal.childImageSharp.fluid}></Img>
+            <Img alt="Booklet page on applying inclusive methodologies to human-centered design risks" className="projectImage" fluid={data.methodologyoverlay.childImageSharp.fluid}></Img>
+            <Img alt="Booklet page on Microsoft's inclusive design" className="projectImage" fluid={data.methodology1.childImageSharp.fluid}></Img>
+            <Img alt="Booklet page on Asset-Based Community Development Design" className="projectImage" fluid={data.methodology2.childImageSharp.fluid}></Img>
+            <Img alt="Slideshow giving an overview of Code Jumper, a physical programming language for students who are blind or low-vision" className="projectImage" fluid={data.codejumperdemo.childImageSharp.fluid}></Img>
+            <Img alt="Slideshow page showing how Code Jumper solved for the existing exclusino of block programming technologies" className="projectImage" fluid={data.codejumperdemo2.childImageSharp.fluid}></Img>
+            <Img alt="Slideshow page explaining how Microsoft's financial commitment to inclusion made the product development possible" className="projectImage" fluid={data.codejumperdemo3.childImageSharp.fluid}></Img>
+            <Img alt="Slideshow page discussing the participatory design workshops conducted by the Code Jumper design team" className="projectImage" fluid={data.codejumperdemo4.childImageSharp.fluid}></Img>
+            <Img alt="Slideshow page showing how Code Jumper benefits students with all vision abilities in the classroom" className="projectImage" fluid={data.codejumperdemo5.childImageSharp.fluid}></Img>
             <div className="bodyTextWrapper">
                 <h2>Session Delivery</h2>
                 <p>The session was delivered on December 3, 2019 to about 30 program officers in Seattle, as well as 10 who joined remotely. In addition to the content laid out above, we also welcomed guest speakers from Greater Good Studio and Google, and integrated discussion and activity moments to help attendees apply the content.</p>

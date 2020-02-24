@@ -78,14 +78,14 @@ const OddJobs = () => {
         <h2>Project Overview</h2>
         <p>Odd Jobs was an open-ended class assignment to prototype key purchasing flows for a native, mobile peer-to-peer service-finding application.</p>
     </div>
-    <Img className="projectImage" fluid={data.oddjobstimeline.childImageSharp.fluid}></Img>
+    <Img alt="Project timeline, showing a sequence from persona scenarios, information architecture, draft protoype, and final prototype" className="projectImage" fluid={data.oddjobstimeline.childImageSharp.fluid}></Img>
     <div className="bodyTextWrapper">
         <h2>Persona</h2>
         <p>I was assigned a persona from which to draw inspiration throughout the design process. Due to the scope of the project, the emphasis here was decidedly <strong>not</strong> on conducting research to develop the persona myself. Instead, I was to assume that I was given this persona by UX researchers on my team.</p>
     </div>
     <div className="columnLayout">
       <div className="column personaImageContainer">
-        <Img className="personaImage" fluid={data.james.childImageSharp.fluid}></Img>
+        <Img alt="Simple cartoonish image of a man" className="personaImage" fluid={data.james.childImageSharp.fluid}></Img>
       </div>
       <div className="column personaText" >
         <h4>James</h4> 
@@ -108,7 +108,7 @@ const OddJobs = () => {
             <li>James doesn’t want to take the time to get the exact measurements of his garden in order to get a quote</li>
         </ul>
       </div>
-      <Img className="projectImage" fluid={data.scenario1.childImageSharp.fluid}></Img>
+      <Img alt="Flow for scenario 1, where a user moves through creating a new service request, finding providers that match his criteria, and requesting a quote from a specific provider" className="projectImage" fluid={data.scenario1.childImageSharp.fluid}></Img>
       <div className="bodyTextWrapper">
         <h3>Scenario 2</h3>
         <h4>Having gotten a good quote from a gardener he likes, James needs to work with her to schedule a date, time, and meeting place for the work</h4>
@@ -119,7 +119,7 @@ const OddJobs = () => {
             <li>James needs to add the planting service time to his calendar once finalized</li>
         </ul>
       </div>
-      <Img className="projectImage" fluid={data.scenario2.childImageSharp.fluid}></Img>
+      <Img alt="Flow for scenario 2, where a user moves through service requests page to see the provider quote, then chooses an available time and meeting place for the service" className="projectImage" fluid={data.scenario2.childImageSharp.fluid}></Img>
       <div className="bodyTextWrapper">
         <h3>Scenario 3</h3>
         <h4>At the chosen appointment time, James needs to meet the gardener in person, give her access to his rooftop garden, and then pay her for the work once completed</h4>
@@ -130,17 +130,17 @@ const OddJobs = () => {
             <li>James will be onsite at the apartment complex for the duration of the gardener’s work</li>
         </ul>
       </div>
-      <Img className="projectImage" fluid={data.scenario3.childImageSharp.fluid}></Img>
+      <Img alt="Flow diagram for scenario 3, where a user gets a notification when the gardener arrives, sends a message, then periodically checks in during service, then pays for the service when finished" className="projectImage" fluid={data.scenario3.childImageSharp.fluid}></Img>
       <div className="bodyTextWrapper">
           <h2>Information Architecture</h2>
           <p>Using the above scenarios as guideposts, I then developed a breadth-first information architecture for the buyer component of the application.</p>
       </div>
-      <Img className="projectImage" fluid={data.informationarchitecture.childImageSharp.fluid}></Img>
+      <Img alt="A full information architecture for the application, including main categories explore, service requests, open services, and profile pages" className="projectImage" fluid={data.informationarchitecture.childImageSharp.fluid}></Img>
       <div className="bodyTextWrapper">
           <h2>Prototype First Draft</h2>
           <p>I developed the first draft of the prototype using Figma. The focus of this prototype was to test out the core flows and design patterns at a lower fidelity in order to solicit feedback for the final prototype.</p>
       </div>
-      <Img className="projectImage" fluid={data.firstdraft.childImageSharp.fluid}></Img>
+      <Img alt="A screenshot of the first draft flow built out in Figma" className="projectImage" fluid={data.firstdraft.childImageSharp.fluid}></Img>
       <div className="iframeWrapper">
         <iframe title="oddjobsdraftprototype" style={{border: 'none', webkitTransform:'scale(0.75)', mozTransform: 'scale(0.75)'}} width="418" height="742" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FwkaebGozQmKCXPAUgCSlH6%2FDesign-Project-1-Draft-1%3Fnode-id%3D1%253A1304%26viewport%3D895%252C228%252C0.16364175081253052%26scaling%3Dmin-zoom" allowfullscreen></iframe>
       </div>

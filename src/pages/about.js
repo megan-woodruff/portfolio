@@ -23,11 +23,11 @@ const About = () => {
     <Layout>
       <SEO title="About" />
       <div className="contentWrapper aboutWrapper">
-        <Img className="aboutImage" fluid={data.profile.childImageSharp.fluid}></Img>
+        <Img alt="Megan Woodruff, smiling on a bridge in Prague, Czech Republic" className="aboutImage" fluid={data.profile.childImageSharp.fluid}></Img>
         <div className="aboutText">
           <h2>Thank you for visiting my portfolio!</h2>
           <p>I am a Seattle-based creative technologist who is passionate about cross-discipline collaboration in UX. Initially educated as a computer engineer, I have become fascinated by the ways that design and engineering can work together to build experiences that truly put users first.</p> 
-          <p>I am currently working as a Technical Product Manager at Intentional Futures, a strategy and UX consultancy. In the evenings, I am working towards my Masters in Human-Centered Design and Engineering from the University of Washington. When I'm not working or schooling, I love playing volleyball, reading, and cooking. </p>
+          <p>I am currently working as a Technical Product Manager at <a href="https://intentionalfutures.com" target="_blank" rel="noopener noreferrer" style={{color: 'black', textDecoration: 'none', fontWeight: 'bold'}} >Intentional Futures</a>, a strategy and UX consultancy. In the evenings, I am working towards my Masters in Human-Centered Design and Engineering from the University of Washington. When I'm not working or schooling, I love playing volleyball, reading, and cooking. </p>
         </div>
       </div>
     </Layout>

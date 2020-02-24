@@ -42,6 +42,7 @@ const ProjectDisplay = () => {
                     location="Every Learner Everywhere  |  Intentional Futures"
                     slug="solve" 
                     imageSource={data.solveImage.childImageSharp.fluid}
+                    altText="Several tablet screens showing the home page, search page, and profile page of Solve"
                     />
                 <ProjectCard
                     className="project"
@@ -50,6 +51,7 @@ const ProjectDisplay = () => {
                     description="Helping education leaders at the Bill & Melinda Gates Foundation learn about the equitable design of edtech products"
                     slug="tech_learning_session"
                     imageSource={data.techLearningImage.childImageSharp.fluid}
+                    altText="An open session booklet about inclusive design methodologies"
                 />
                 <ProjectCard 
                     className="project" 
@@ -58,18 +60,19 @@ const ProjectDisplay = () => {
                     description="Connecting users with independent service providers in their community" 
                     slug="odd_jobs" 
                     imageSource={data.oddJobsImage.childImageSharp.fluid}
+                    altText="Three mobile application screens shown on an iPhone over a gray background"
                 />
             </div> 
         </div>
 )
 }
 
-const ProjectCard = ({ title, description, location, slug, imageSource }) => {
+const ProjectCard = ({ title, description, location, slug, imageSource, altText }) => {
 
   return (
     <Link className="projectLink" to={`/${slug}`}>
         <div className="projectCard">
-            <Img className="projectImage" objectFit="cover" objectPosition="50% 0" fluid={imageSource} alt="Digital application in use" />
+            <Img className="projectImage" objectFit="cover" objectPosition="50% 0" fluid={imageSource} alt={altText} />
             <div className="projectInfo">
                 <div>
                     <h3 className="projectTitle">{title}</h3>

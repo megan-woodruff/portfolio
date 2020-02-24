@@ -121,7 +121,7 @@ const Solve = () => {
             <p>Intentional Futures is one of 12 partner organizations in the Every Learner Everywhere digital learning solutions network. This network is working to <strong>help postsecondary institutions use digital learning software to improve student success in entry-level courses</strong>.</p>
             <p>As the network grows a body of resources related to this work, our team was tasked with building a <strong>knowledge management solution</strong> to help organize and promote the network's thought leadership.</p>
         </div>
-        <Img style={{borderRadius: '8px'}} fluid={data.solvetimeline.childImageSharp.fluid}></Img>
+        <Img alt="Project timeline including user analysis, content analysis, information architecture, technical architecture, feature prioritization, software development for the initial release, and then iterative feature design and devleopment with ongoing releases" style={{borderRadius: '8px'}} fluid={data.solvetimeline.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
           <h2>Defining Core User Groups</h2>
           <div className="overview">
@@ -131,7 +131,7 @@ const Solve = () => {
            
            <div className="columnLayout">
               <div className="column personaImageContainer">
-                <Img className="personaImage" fluid={data.faculty.childImageSharp.fluid}></Img>
+                <Img alt="Faceless cartoon image of a woman in a suit" className="personaImage" fluid={data.faculty.childImageSharp.fluid}></Img>
                 <p className="caption">Our access to faculty and administrators at postsecondary institutions was unfortunately extremely limited. We addressed this constraint by conducting 1-on-1 interviews with "technical assistance" partners who were working directly with these faculty to better understand their needs.</p>
               </div>
               <div className="column personaText">
@@ -146,14 +146,13 @@ const Solve = () => {
                 <ul>
                   <li>Trying to find expertise, examples, or guides for doing this type of work is time-consuming and requires piecing information together from disparate sources</li>
                   <li>If they do sit down to research this topic, they often have to sift through extremely long documents (10 pages or more). They leave unsure of the action steps they should take from the information.</li>
-                  {/* <li>The vocabularly used in this space is not uniform and leaves them with many open questions.</li> */}
                 </ul>
               </div>
            </div>
             
             <div className="columnLayout">
               <div className="column personaImageContainer">
-                <Img className="personaImage" fluid={data.assetteam.childImageSharp.fluid}></Img>
+                <Img alt="Faceless cartoon image of a woman in a sweater" className="personaImage" fluid={data.assetteam.childImageSharp.fluid}></Img>
                 <p className="caption">We conducted 1-on-1 interviews with three Every Learner Everywhere content team members to understand their goals, motivation, and anticipated pain points from the content creation and management side.</p>
               </div>
               <div className="column personaText">
@@ -229,26 +228,26 @@ const Solve = () => {
             <div className="bodyTextWrapper">
               <p>Along with these definitions, we also developed the following hierarchical relationship between content topics, toolkits, and resources:</p>
             </div>
-            <Img className="projectImage"fluid={data.kitassetrelationship.childImageSharp.fluid}></Img>
+            <Img alt="A flow showing the relationship between topics, questions, toolkits, and resources. Resources are configured into toolkits to answer questions within a topic." className="projectImage"fluid={data.kitassetrelationship.childImageSharp.fluid}></Img>
             <div className="bodyTextWrapper" style={{margin: '2rem auto'}}>
               <p>This mapping lays out the relationship between high-level topics, questions that faculty might have related to those topics, and the resources that can be configured to help answer those questions.</p>
             </div>
-              <Img className="projectImage" fluid={data.kitassetexample.childImageSharp.fluid}></Img>
+              <Img alt="A flow showing the topic, kit, resource relationship, with a specific example for a question users might have about course measurement" className="projectImage" fluid={data.kitassetexample.childImageSharp.fluid}></Img>
             <div className="bodyTextWrapper">
               <p>Expanding on this model, here is an example that shows how a set of related resources on impact studies might be configured into a toolkit to help answer a faculty member's question about measuring the impact of their digital learning implementation.</p>
               <p>The assumption here is that these configured resources could each be produced by entirely different authors (maybe even at different times), but that they could be sequenced together with appropriate written context to create a cohesive experience for users. Below is a low-fidelity mock-up we then developed for this flow.</p>
             </div>
-            <Img  className="projectImage" fluid={data.kitassetflow.childImageSharp.fluid}></Img>
+            <Img alt="A screenshot of a low-fidelity home page to topic page to toolkit page flow in Figma" className="projectImage" fluid={data.kitassetflow.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
              <h3>Full Information Architecture</h3>
              <p>Once this base content hierarchy and flow was in place and approved by network stakeholders, we developed a full information architecture for the initial platform build. We prioritized implementing functionality for the four forms of content we already knew were being used by content creators: text, image, video, and document downloads. Given the small number of initial resources, we chose to de-prioritize search functionality and focus instead on browsing by topic.</p>
         </div>
-        <Img className="projectImage" fluid={data.solveiav1.childImageSharp.fluid}></Img>
+        <Img alt="Information architecture of the full site, including topic pages, toolkits, resources, and user profile page" className="projectImage" fluid={data.solveiav1.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
             <h2>Technical Architecture & Development</h2>
             <p>After creating this information architecture, our visual designer continued creating the basic page layouts and design specifications, while I conducted technical research to determine the best configuration of development resources for the build. Beyond budget, timing, and resource constraints, many of my technical decisions were guided heavily by the needs of the Every Learner Everywhere Content Team. The final architecture utilized an integration between Google Cloud's Firebase platform and Flamelink.io content management system.</p>
           </div>
-          <Img className="projectImage" fluid={data.solvetecharchitecture.childImageSharp.fluid}></Img>
+          <Img alt="Technical architecture diagram showing a Nodejs web application, which interacts with Firebase backend resources and a content management system" className="projectImage" fluid={data.solvetecharchitecture.childImageSharp.fluid}></Img>
           <div className="bodyTextWrapper">
             <h2>Content Workflow Design</h2>
             <h3>Content Management System</h3>
@@ -262,10 +261,10 @@ const Solve = () => {
             <h3>Content Management Workflow</h3>
             <p>I designed the architecture requirements for integrating our platform with Flamelink around an ideal content workflow for the Every Learner content team, which is displayed below. This set-up allows content editors to add and update content in a "preview" environment, where changes can be made safely and approved by stakeholders long before they are pushed to users. Additionally, it gives a content manager exclusive access to hit "publish" on content changes, enabling change control while still elminating the need to involve developers for content changes.</p>
         </div>
-        <Img className="projectImage" fluid={data.cmsworkflow1.childImageSharp.fluid}></Img>
-        <Img className="projectImage" fluid={data.cmsworkflow2.childImageSharp.fluid}></Img>
-        <Img className="projectImage" fluid={data.cmsworkflow3.childImageSharp.fluid}></Img>
-        <Img className="projectImage" fluid={data.cmsworkflow4.childImageSharp.fluid}></Img>
+        <Img alt="Part one of the content workflow diagram, where content editors update content in their preview environment and can see their changes on the preview site immediately" className="projectImage" fluid={data.cmsworkflow1.childImageSharp.fluid}></Img>
+        <Img alt="Part two of the content workflow diagram, where stakeholders can view and approve content on the preview site" className="projectImage" fluid={data.cmsworkflow2.childImageSharp.fluid}></Img>
+        <Img alt="Part three of the content workflow diagram, where a content manager can push the content changes to the production / live website" className="projectImage" fluid={data.cmsworkflow3.childImageSharp.fluid}></Img>
+        <Img alt="Part four of the content workflow diagram, where users can view the new content on the live site" className="projectImage" fluid={data.cmsworkflow4.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
           <h3>Software Development</h3>
           <p>After designing this technical architecture, I onboarded three developers from <a href="https://andela.com/" target="_blank" rel="noopener noreferrer">Andela</a> to the project. Over the next 3.5 months, I did ongoing work to:</p> 
@@ -290,7 +289,7 @@ const Solve = () => {
           
           <p>Below is an updated information architecture that integrates the additional search and content type features that were added as a result of this work.</p>
         </div>
-        <Img className="projectImage" fluid={data.solveiav2.childImageSharp.fluid}></Img>
+        <Img alt="Update site architecture diagram, showing the additions of Search, Tables, and User Assessments" className="projectImage" fluid={data.solveiav2.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
           <h3>Search</h3>
         </div>
