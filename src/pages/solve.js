@@ -104,6 +104,34 @@ const Solve = () => {
           }
         }
       }
+      table1: file(relativePath: { eq: "table1.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+              ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      table2: file(relativePath: { eq: "table2.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+              ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      pullquote: file(relativePath: { eq: "pullquote.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+              ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      calloutbox: file(relativePath: { eq: "calloutbox1.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+              ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -293,25 +321,43 @@ const Solve = () => {
         <Img alt="Update site architecture diagram, showing the additions of Search, Tables, and User Assessments" className="projectImage" fluid={data.solveiav2.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
           <h3>Search</h3>
+          <p><strong>User need:</strong> "I need a more flexible mechanism for finding content, especially if I'm looking for something specific, or I'm not sure what topic most applies to my question."</p>
+          <p><strong>Feature:</strong> Cross-site search, including quick inline results, as well as a full search results page with filtering.</p>
         </div>
-        <div className="columnLayout">
-          <p>Needs, mockups, finals of search feature coming soon</p>
+        <div className="videoWrapper">
+          <h4>Inline search results, available from anywhere on the site</h4>
+           <iframe title="Inline search results demo" src="https://www.youtube.com/embed/asKf4aen8iw?controls=0&vq=hd1020&autoplay=1&loop=1&playlist=asKf4aen8iw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div className="bodyTextWrapper">
-          <h3>Inline tag definitions</h3>
-        </div>
-        <div className="columnLayout">
-          <p>Needs, mockups, finals of inline tag definition feature coming soon</p>
+        <div className="videoWrapper">
+          <h4>Full search results page with filtering</h4>
+           <iframe title="Full search results page demo" src="https://www.youtube.com/embed/CFnSy72EnSQ?controls=0&vq=hd1020&autoplay=1&loop=1&playlist=CFnSy72EnSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div className="bodyTextWrapper">
           <h3>Self-assessment</h3>
+          <p><strong>Content team need:</strong> "I want to recommend content to users based on their responses to survey questions. I also want to make some of our download-and-print worksheets more interactive within the site itself."</p>
+          <p><strong>Feature:</strong> Interactive user assessment component, including a set of multiple choice and ranking scale questions. Outputs a written recommendation as well as recommended resources for users.</p>
         </div>
-        <div className="columnLayout">
-          <p>Needs, mockups, finals of self-assessment feature coming soon</p>
+        <div className="videoWrapper">
+          <h4>Live assessment for institution faculty that helps determine their readiness to use digital learning</h4>
+          <iframe title="Self-assessment demo" src="https://www.youtube.com/embed/85-3m8jygfs?controls=0&vq=hd1020&autoplay=1&loop=1&playlist=85-3m8jygfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div className="bodyTextWrapper">
+          <h3>Tables, Pull Quotes, Callout Boxes</h3>
+          <p><strong>Content team need:</strong> "Our text-heavy resources can get monotonous and repetitive. We need some additional content types to add variety and to arrange supplementary content to create a clear hierarchy for users."</p>
+          <p><strong>Features:</strong> Tables, for arranging relational information. Pull quotes, for emphasizing key points and breaking up content. Callout boxes, for highlighting supplementary pieces of content and adding contrast to sections.</p>
+        </div>
+        <h4 style={{margin: '4rem 0 0 0'}}>Table feature in use. Tables have a standard formatting that is applied, but allow a range of rich text and images in their contents.</h4>
+        <Img className="projectImage" alt="Table within a resource, containing an accessibility approach matrix" style={{borderRadius: '8px', marginTop: '1rem'}} fluid={data.table1.childImageSharp.fluid}></Img>
+        <Img className="projectImage" alt="Table within a resource, containing information about project titles and their role in conducting impact studies" style={{borderRadius: '8px'}} fluid={data.table2.childImageSharp.fluid}></Img>
+
+        <h4 style={{margin: '4rem 0 0 0'}}>Pull quote feature in use</h4>
+        <Img className="projectImage" alt="Large pull quote text within an asset, containing a quote from a director on digital learning innovations" style={{borderRadius: '8px', marginTop: '1rem'}} fluid={data.pullquote.childImageSharp.fluid}></Img>
+        <h4 style={{margin: '4rem 0 0 0'}}>Callout box feature in use</h4>
+        <Img className="projectImage" alt="A blue callout box column within an asset, containing a side bar on Adaptive Courseware in Biology" style={{borderRadius: '8px', marginTop: '1rem'}} fluid={data.calloutbox.childImageSharp.fluid}></Img>
+
+        <div className="bodyTextWrapper">
             <h2>Reflections & Next Steps</h2>
-            <p style={{display: 'inline'}}>Today, the platform is available live </p><a href="https://solve.everylearnereverywhere.org" target="_blank" rel="noopener noreferrer">here</a><p style={{display: 'inline'}}>. As the Every Learner Everywhere Network (and its body of resources) continues to grow over the next two years, I am excited to see the content mature into a set of actionable toolkits for faculty. Similarly, I believe that our iterative development process has set a standard for identifying and developing new content types that can make the content more interactive over time.</p> 
+            <p>Today, the platform is available live <a href="https://solve.everylearnereverywhere.org" target="_blank" rel="noopener noreferrer">here</a>. As the Every Learner Everywhere Network (and its body of resources) continues to grow over the next two years, I am excited to see the content mature into a set of actionable toolkits for faculty. Similarly, I believe that our iterative development process has set a standard for identifying and developing new content types that can make the content more interactive over time.</p> 
             
             <p>Were I to do this project over, I would advocate heavily for the following: </p>
               <ul>
