@@ -4,17 +4,15 @@ import React from "react"
 import "./navBar.scss"
 import resume from '../images/WoodruffResume.pdf'
 
-const NavBar = ({ siteTitle }) => (
-  <header className="navBar">
+const NavBar = ({ siteTitle, projectPage }) => (
+  <header className="navBar" style={{backgroundColor: projectPage && 'white' }}>
     <div className="navBarContentContainer">
-        <div>
           <h2>
             <Link to="/" className="link">
               {siteTitle}
             </Link>
           </h2>
-        </div>
-        <div className="navBar">
+        <div className="navBarButtons">
           <Link to="/" className="navLink">
             Work
           </Link>

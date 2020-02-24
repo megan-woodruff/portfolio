@@ -134,7 +134,7 @@ const TechLearningSession = () => {
         title="Learning Session: Equity-Centered Technology Design"
         location="Bill & Melinda Gates Foundation"
         description="Helping education leaders at the Bill & Melinda Gates Foundation learn about the equitable design of edtech products"
-        imageSource={data.techlearning.childImageSharp.fluid}
+        imageClass={"techImage"}
         stats={getStats()}
     >
         <>
@@ -290,9 +290,13 @@ const TechLearningSession = () => {
                 <h2>Session Delivery</h2>
                 <p>The session was delivered on December 3, 2019 to about 30 program officers in Seattle, as well as 10 who joined remotely. In addition to the content laid out above, we also welcomed guest speakers from Greater Good Studio and Google, and integrated discussion and activity moments to help attendees apply the content.</p>
                 <p>Attendee reception to the session was overwhelmingly positive. 9 of 10 respondents to the post-session survey "Strongly Agreed" that the session was a good use of their time (the other "Agreed"). Several also left positive comments about the value of the session:</p>
+            </div>
+            <div className="columnLayout">
                 <p>"Great work by iF researching and distilling the different design methodologies and providing taking a solid crack and sense-making across the approaches."</p>
                 <p>"The content is timely and immediately applicable to current work."</p>
                 <p>"Deeply connected to strategic decisions we're actively making. Relevant across full P-16 landscape."</p>
+            </div>
+            <div className="bodyTextWrapper">
                 <h2>Reflections</h2>
                 <p>Given more time, I would have loved to have created an even more clear visual connection between our product demos and the equitable methodologies we covered.</p>
             </div>

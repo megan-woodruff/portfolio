@@ -15,14 +15,14 @@ const ProjectDisplay = () => {
           }
         }
       }
-      solveImage: file(relativePath: { eq: "everylearner2.png" }) {
+      solveImage: file(relativePath: { eq: "solveheader.png" }) {
         childImageSharp {
           fluid(maxWidth: 700) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      oddJobsImage: file(relativePath: { eq: "oddjobsmockup.png" }) {
+      oddJobsImage: file(relativePath: { eq: "oddjobsthumbnail.png" }) {
         childImageSharp {
           fluid(maxWidth: 700) {
             ...GatsbyImageSharpFluid
@@ -35,7 +35,15 @@ const ProjectDisplay = () => {
     return (
         <div className="projectDisplay">
             <div className="projectContentContainer">
-            <ProjectCard
+                <ProjectCard 
+                    className="project" 
+                    title="Solve by Every Learner" 
+                    description="Helping postsecondary educators bring digital learning software into their classrooms" 
+                    location="Every Learner Everywhere  |  Intentional Futures"
+                    slug="solve" 
+                    imageSource={data.solveImage.childImageSharp.fluid}
+                    />
+                <ProjectCard
                     className="project"
                     title="Learning Session: Equity-Centered Technology Design"
                     location="Bill & Melinda Gates Foundation  |  Intentional Futures"
@@ -45,28 +53,12 @@ const ProjectDisplay = () => {
                 />
                 <ProjectCard 
                     className="project" 
-                    title="Solve by Every Learner" 
-                    description="Helping postsecondary educators bring digital learning software into their classrooms" 
-                    location="Every Learner Everywhere  |  Intentional Futures"
-                    slug="solve" 
-                    imageSource={data.solveImage.childImageSharp.fluid}
-                    />
-                <ProjectCard 
-                    className="project" 
                     title="OddJobs" 
                     location="University of Washington"
                     description="Connecting users with independent service providers in their community" 
                     slug="odd_jobs" 
                     imageSource={data.oddJobsImage.childImageSharp.fluid}
                 />
-                {/* <ProjectCard 
-                    className="project" 
-                    title="RxConnect" 
-                    location="University of Washington"
-                    description="Helping primary care providers understand the prescription drug costs for their patients" 
-                    slug="rx_connect" 
-                    imageSource={data.solveImage.childImageSharp.fluid}
-                /> */}
             </div> 
         </div>
 )

@@ -4,29 +4,27 @@ import './projectPage.scss'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from 'gatsby-image/withIEPolyfill'
 
 
-const ProjectPage = ({ title, description, imageSource, stats, children }) => {
+const ProjectPage = ({ title, description, imageClass, stats, children }) => {
     return (
-        <Layout>
+        <Layout projectPage={true}>
             <SEO title={title} />
-            <Img className="headerImage" objectFit="cover" objectPosition="top center" fluid={imageSource} alt="Placeholder alt text for now" />
-                <div className="projectContent">
-                    <div className="overviewCard">
-                        <div className="heading">
-                            <h3 className="title">{title}</h3>
-                            <h2 className="description">{description}</h2>
-                        </div>
-                        <div className="stats">
-                            {stats}
-                        </div>
-                    </div>
-                    <div className="contentBody">
-                        {children}
-                    </div>
-                 </div>
-        
+            <div className={`headerImage ${imageClass}`}></div>
+            <div className="projectContent">
+            <div className="overviewCard">
+                <div className="heading">
+                    <h3 className="title">{title}</h3>
+                    <h2 className="description">{description}</h2>
+                </div>
+                <div className="stats">
+                    {stats}
+                </div>
+            </div>
+            <div className="contentBody">
+                {children}
+            </div>
+            </div>
         </Layout>
     )
 }

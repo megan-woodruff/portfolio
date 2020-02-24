@@ -628,17 +628,21 @@ pre tt:after {
 }
 
 footer {  
+  background-color: $primaryColor;
+  color: white;
+
   .footerContent {
     @extend .contentWrapper;
     text-align: center;
-    margin: 1rem auto;
+    margin: 0 auto;
+    padding: 1rem 0;
     font-size: .8rem;
     font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .link {
-    color: $primaryColor;
+    color: white;
   }
 }
 

@@ -1,14 +1,34 @@
 @import 'styles';
 
 .headerImage {
-    height: 600px;
-    // -webkit-box-shadow: inset 0 0 6px black;
-	//    -moz-box-shadow: inset 0 0 6px black;
-	//         box-shadow: inset 0 0 6px black;
+    margin-top: 50px;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media only screen and (max-width: $mobileBreak) {
+        height: 400px;
+        background-attachment: scroll;
+    }
 }
 
+.solveImage {
+    background-image: url('../images/solveheader.png');
+}
+
+.oddJobsImage {
+    background-image: url('../images/oddjobsmockup.png');
+}
+
+.techImage {
+    background-image: url('../images/techlearning.png');
+}
+
+
+
 .projectContent {
-    background-color: white;
     padding-bottom: 4rem;
 
     .overviewCard {
@@ -30,6 +50,15 @@
                 font-weight: normal;
                 margin: 0;
             }
+
+            @media only screen and (max-width: $mobileBreak) {
+                .title {
+                    font-size: 1.6rem;
+                }
+                .description {
+                    font-size: 1.2rem;
+                }
+            }
         }
     
         .stats {
@@ -38,13 +67,11 @@
             padding: 1.2rem 2rem;
             background-color: $backgroundColor;
             border-radius: 0 0 8px 8px;
-            
 
 
             .stat {
                 min-width: 6rem;
                 margin: 0 1rem 1rem 0;
-                // max-width: 30%;
             }
             h5 {
                 margin-bottom: .5rem;
@@ -63,9 +90,20 @@
                 justify-content: space-between;
                 
                 .stat {
-                    width: 8rem;
+                    width: 42%;
+                    margin: 2% 4%;
                 }
             }
+
+            @media only screen and (max-width: 600px) {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                
+                .stat {
+                    width: 100%
+                }
+            }
+            
         }
     }
 

@@ -3,10 +3,6 @@ $secondaryColor: #F64747;
 $backgroundColor: #FFF4F4;
 $mobileBreak: 790px;
 
-// $secondaryColor: #173868;
-// $backgroundColor: #4c759b;
-// $backgroundColor: #f2f6f9;
-
 .contentWrapper {
     width: 90vw;
     margin: 0 auto;
@@ -15,10 +11,10 @@ $mobileBreak: 790px;
 
 
 .aboutWrapper {
-    margin-top: 2rem;
+    min-height: calc(100vh - 62px);
+    padding: 6rem 0 4rem 0;
     display: flex;
     flex-wrap: wrap;
-    min-height: 80vh;
 
     .aboutImage {
         width: 35%; 

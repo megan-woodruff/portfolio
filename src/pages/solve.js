@@ -55,6 +55,13 @@ const Solve = () => {
           }
         }
       }
+      kitassetflow: file(relativePath: { eq: "kitassetflow.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       faculty: file(relativePath: { eq: "faculty.png" }) {
         childImageSharp {
           fluid(maxWidth: 960) {
@@ -105,7 +112,7 @@ const Solve = () => {
       title="Solve by Every Learner" 
       description="Helping postsecondary educators bring digital learning software into their classrooms" 
       location="Intentional Futures"
-      imageSource={data.solvesnapshot.childImageSharp.fluid}
+      imageClass={"solveImage"}
       stats={getStats()}
     >
       <>
@@ -196,7 +203,7 @@ const Solve = () => {
         <div className="bodyTextWrapper">
             
             <h3>Developing Content Princples</h3>
-            <p>Our team recognized a clear tension between the current state of content in the space and the faculty user's need for actionable, digestible information that can help them achieve outcomes. We also recognized that, over time, a set of long, over-scoped resources would become untenable for the content team as well, as every iteration on a resource would require a major effort. </p>
+            <p>Our team recognized a clear tension between the current state of content in the space and the faculty user's need for actionable, digestible information that could help them achieve outcomes. We also recognized that, over time, a set of long, over-scoped resources would become untenable for the content team as well, as every iteration on a resource would require a major effort. </p>
             <p>We hoped to solve these problems by pushing the content to be:</p>
             <ul>
               <li><strong>Modular:</strong> Broken down into standalone, digestible chunks such that no single resource is overwhelming or "tries to do everything"</li>
@@ -222,38 +229,38 @@ const Solve = () => {
             <div className="bodyTextWrapper">
               <p>Along with these definitions, we also developed the following hierarchical relationship between content topics, toolkits, and resources:</p>
             </div>
-              <Img style={{borderRadius: '8px'}} fluid={data.kitassetrelationship.childImageSharp.fluid}></Img>
-              <div className="bodyTextWrapper" style={{margin: '2rem auto'}}>
-               <p>This mapping lays out the relationship between high-level topics, questions that faculty might have related to those topics, and the resources that can be configured to help answer those questions.</p>
-               <p>Expanding on this model, here is an example that shows how a set of related resources on impact studies might be configured into a toolkit to help answer a faculty member's question about measuring the impact of their digital learning implementation.</p>
-               <p>The assumption here is that these configured resources could each be produced by entirely different authors (maybe even at different times), but that they could be sequenced together with appropriate written context to create a cohesive experience for users.</p>
-              </div>
-                <Img style={{borderRadius: '8px'}} fluid={data.kitassetexample.childImageSharp.fluid}></Img>
-            <div className="columnLayout">
-              <p>Image of high fidelity toolkit & resource mock-ups coming soon</p>
+            <Img className="projectImage"fluid={data.kitassetrelationship.childImageSharp.fluid}></Img>
+            <div className="bodyTextWrapper" style={{margin: '2rem auto'}}>
+              <p>This mapping lays out the relationship between high-level topics, questions that faculty might have related to those topics, and the resources that can be configured to help answer those questions.</p>
             </div>
+              <Img className="projectImage" fluid={data.kitassetexample.childImageSharp.fluid}></Img>
+            <div className="bodyTextWrapper">
+              <p>Expanding on this model, here is an example that shows how a set of related resources on impact studies might be configured into a toolkit to help answer a faculty member's question about measuring the impact of their digital learning implementation.</p>
+              <p>The assumption here is that these configured resources could each be produced by entirely different authors (maybe even at different times), but that they could be sequenced together with appropriate written context to create a cohesive experience for users. Below is a low-fidelity mock-up we then developed for this flow.</p>
+            </div>
+            <Img  className="projectImage" fluid={data.kitassetflow.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
              <h3>Full Information Architecture</h3>
-             <p>Once this base content hierarchy was in place and approved by network stakeholders, we developed a full information architecture for the initial platform build. We prioritized implementing functionality for the four forms of content we already knew were being used by content creators: text, image, video, and document downloads. Given the small number of initial resources, we chose to de-prioritize search functionality and focus instead on browsing by topic.</p>
+             <p>Once this base content hierarchy and flow was in place and approved by network stakeholders, we developed a full information architecture for the initial platform build. We prioritized implementing functionality for the four forms of content we already knew were being used by content creators: text, image, video, and document downloads. Given the small number of initial resources, we chose to de-prioritize search functionality and focus instead on browsing by topic.</p>
         </div>
         <Img className="projectImage" fluid={data.solveiav1.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
             <h2>Technical Architecture & Development</h2>
-            <p>After creating this information architecture, our visual designer continued creating the basic page layouts and design specifications, while I conducted technical research to determine the best configuration of development resources for the build. Beyond budget, timing, and resource constraints, many of my technical decisions were guided heavily by the needs of the Every Learner Everywhere Content Team. The final architecture made use (among other technologies) of Google Cloud's Firebase platform and Flamelink.io content management system.</p>
+            <p>After creating this information architecture, our visual designer continued creating the basic page layouts and design specifications, while I conducted technical research to determine the best configuration of development resources for the build. Beyond budget, timing, and resource constraints, many of my technical decisions were guided heavily by the needs of the Every Learner Everywhere Content Team. The final architecture utilized an integration between Google Cloud's Firebase platform and Flamelink.io content management system.</p>
           </div>
           <Img className="projectImage" fluid={data.solvetecharchitecture.childImageSharp.fluid}></Img>
           <div className="bodyTextWrapper">
             <h2>Content Workflow Design</h2>
             <h3>Content Management System</h3>
-            <p>The needs of our content team to work independently and manage a growing number of resources prompted me to include <a href="htttps://flamelink.io" target="_blank">Flamelink.io</a>, a headless CMS, as part of our architecture. Using a headless CMS allows content editors to add, edit, or remove resources from the platform without any intervention from developers. The fact that it's "headless" also means that our creative team has full control over how the content will appear to end users.</p> <p>After detailed research on various headless CMS solutions, I chose Flamelink due to its:</p> 
+            <p>The needs of our content team to work independently and manage a growing number of resources prompted me to include <a href="htttps://flamelink.io" target="_blank" rel="noopener noreferrer">Flamelink.io</a>, a headless CMS, as part of our architecture. Using a headless CMS allows content editors to add, edit, or remove resources from the platform without any intervention from developers. The fact that it's "headless" also means that our creative team has full control over how the content will appear to end users.</p> <p>After detailed research on various headless CMS solutions, I chose Flamelink due to its:</p> 
             <ul>
               <li>Flexible, customizable content schemas that can include any configuration of rich text, images, documents, tables, and links</li>
-              <li>Integration with a major cloud service provider (Google Cloud / Firebase)</li>
+              <li>Integration with a major cloud service provider (Google Cloud Firebase)</li>
               <li>Out-of-the-box content editing web app, which relieved our team from the need to build a custom content-editing interface</li>
-              <li>Support for multiple users and multiple "content environments", which would allow content editors to preview changes before they were published</li>
+              <li>Support for multiple users and multiple "content environments", which would allow content editors to preview changes before published</li>
             </ul>
             <h3>Content Management Workflow</h3>
-            <p>I designed the architecture requirements for integrating our platform Flamelink around an ideal content workflow for the Every Learner content team, which is displayed below. This set-up allows content editors to add and update content in a "preview" environment, where changes can be made safely and approved by stakeholders long before they are pushed to users. Additionally, it gives a content manager exclusive access to hit "publish" on content changes, enabling change control while still elminating the need to involve developers for content changes.</p>
+            <p>I designed the architecture requirements for integrating our platform with Flamelink around an ideal content workflow for the Every Learner content team, which is displayed below. This set-up allows content editors to add and update content in a "preview" environment, where changes can be made safely and approved by stakeholders long before they are pushed to users. Additionally, it gives a content manager exclusive access to hit "publish" on content changes, enabling change control while still elminating the need to involve developers for content changes.</p>
         </div>
         <Img className="projectImage" fluid={data.cmsworkflow1.childImageSharp.fluid}></Img>
         <Img className="projectImage" fluid={data.cmsworkflow2.childImageSharp.fluid}></Img>
@@ -261,7 +268,7 @@ const Solve = () => {
         <Img className="projectImage" fluid={data.cmsworkflow4.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
           <h3>Software Development</h3>
-          <p>After designing this technical architecture, I onboarded three developers from <a href="https://andela.com/" target="_blank">Andela</a> to the project. Over the next 3.5 months, I did ongoing work to:</p> 
+          <p>After designing this technical architecture, I onboarded three developers from <a href="https://andela.com/" target="_blank" rel="noopener noreferrer">Andela</a> to the project. Over the next 3.5 months, I did ongoing work to:</p> 
           <ul>
             <li>Write feature specifications and tasks for developers</li>
             <li>Scope, plan, and manage development sprints</li>
@@ -304,7 +311,7 @@ const Solve = () => {
         </div>
         <div className="bodyTextWrapper">
             <h2>Reflections & Next Steps</h2>
-            <p style={{display: 'inline'}}>Today, the platform is available live </p><a href="https://solve.everylearnereverywhere.org" target="_blank">here</a><p style={{display: 'inline'}}>. As the Every Learner Everywhere Network (and its body of resources) continues to grow over the next two years, I am excited to see the content mature into a set of actionable toolkits for faculty. Similarly, I believe that our iterative development process has set a standard for identifying and developing new content types that can make the content more interactive over time.</p> 
+            <p style={{display: 'inline'}}>Today, the platform is available live </p><a href="https://solve.everylearnereverywhere.org" target="_blank" rel="noopener noreferrer">here</a><p style={{display: 'inline'}}>. As the Every Learner Everywhere Network (and its body of resources) continues to grow over the next two years, I am excited to see the content mature into a set of actionable toolkits for faculty. Similarly, I believe that our iterative development process has set a standard for identifying and developing new content types that can make the content more interactive over time.</p> 
             
             <p>Were I to do this project over, I would advocate heavily for the following: </p>
               <ul>

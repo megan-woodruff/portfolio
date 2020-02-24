@@ -70,7 +70,7 @@ const OddJobs = () => {
     title="OddJobs" 
     location="University of Washington"
     description="Connecting users with independent service providers in their community"
-    imageSource={data.oddjobsimage.childImageSharp.fluid}
+    imageClass={"oddJobsImage"}
     stats={getStats()}
   >
     <>
@@ -142,7 +142,7 @@ const OddJobs = () => {
       </div>
       <Img className="projectImage" fluid={data.firstdraft.childImageSharp.fluid}></Img>
       <div className="iframeWrapper">
-        <iframe style={{border: 'none', webkitTransform:'scale(0.75)', mozTransform: 'scale(0.75)'}} width="418" height="742" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FwkaebGozQmKCXPAUgCSlH6%2FDesign-Project-1-Draft-1%3Fnode-id%3D1%253A1304%26viewport%3D895%252C228%252C0.16364175081253052%26scaling%3Dmin-zoom" allowfullscreen></iframe>
+        <iframe title="oddjobsdraftprototype" style={{border: 'none', webkitTransform:'scale(0.75)', mozTransform: 'scale(0.75)'}} width="418" height="742" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FwkaebGozQmKCXPAUgCSlH6%2FDesign-Project-1-Draft-1%3Fnode-id%3D1%253A1304%26viewport%3D895%252C228%252C0.16364175081253052%26scaling%3Dmin-zoom" allowfullscreen></iframe>
       </div>
       <div className="bodyTextWrapper">
           <h2>Final Prototype</h2>
