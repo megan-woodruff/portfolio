@@ -44,15 +44,6 @@ const ProjectDisplay = () => {
                     imageSource={data.solveImage.childImageSharp.fluid}
                     altText="Several tablet screens showing the home page, search page, and profile page of Solve"
                     />
-                <ProjectCard
-                    className="project"
-                    title="Learning Session: Equity-Centered Technology Design"
-                    location="Bill & Melinda Gates Foundation  |  Intentional Futures"
-                    description="Helping education leaders at the Bill & Melinda Gates Foundation learn about the equitable design of edtech products"
-                    slug="tech_learning_session"
-                    imageSource={data.techLearningImage.childImageSharp.fluid}
-                    altText="An open session booklet about inclusive design methodologies"
-                />
                 <ProjectCard 
                     className="project" 
                     title="OddJobs" 
@@ -61,6 +52,15 @@ const ProjectDisplay = () => {
                     slug="odd_jobs" 
                     imageSource={data.oddJobsImage.childImageSharp.fluid}
                     altText="Three mobile application screens shown on an iPhone over a gray background"
+                />
+                <ProjectCard
+                    className="project"
+                    title="Learning Session: Equity-Centered Technology Design"
+                    location="Bill & Melinda Gates Foundation  |  Intentional Futures"
+                    description="Helping education leaders at the Bill & Melinda Gates Foundation learn about the equitable design of edtech products"
+                    slug="tech_learning_session"
+                    imageSource={data.techLearningImage.childImageSharp.fluid}
+                    altText="An open session booklet about inclusive design methodologies"
                 />
             </div> 
         </div>

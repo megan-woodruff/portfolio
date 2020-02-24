@@ -316,7 +316,7 @@ const Solve = () => {
             <li>Oversaw its development onto our production platform</li>
           </ul>
           
-          <p>Below is an updated information architecture that integrates the additional search and content type features that were added as a result of this work.</p>
+          <p>Below is an updated information architecture that integrates the features that were added as a result of this work, followed by a few examples of what these features look like in the product.</p>
         </div>
         <Img alt="Update site architecture diagram, showing the additions of Search, Tables, and User Assessments" className="projectImage" fluid={data.solveiav2.childImageSharp.fluid}></Img>
         <div className="bodyTextWrapper">
@@ -333,7 +333,7 @@ const Solve = () => {
            <iframe title="Full search results page demo" src="https://www.youtube.com/embed/CFnSy72EnSQ?controls=0&vq=hd1020&autoplay=1&loop=1&playlist=CFnSy72EnSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div className="bodyTextWrapper">
-          <h3>Self-assessment</h3>
+          <h3>User assessment</h3>
           <p><strong>Content team need:</strong> "I want to recommend content to users based on their responses to survey questions. I also want to make some of our download-and-print worksheets more interactive within the site itself."</p>
           <p><strong>Feature:</strong> Interactive user assessment component, including a set of multiple choice and ranking scale questions. Outputs a written recommendation as well as recommended resources for users.</p>
         </div>
@@ -355,8 +355,8 @@ const Solve = () => {
         <h4 style={{margin: '4rem 0 0 0'}}>Callout box feature in use</h4>
         <Img className="projectImage" alt="A blue callout box column within an asset, containing a side bar on Adaptive Courseware in Biology" style={{borderRadius: '8px', marginTop: '1rem'}} fluid={data.calloutbox.childImageSharp.fluid}></Img>
 
-        <div className="bodyTextWrapper">
-            <h2>Reflections & Next Steps</h2>
+        <div style={{marginTop: '5rem'}} className="bodyTextWrapper">
+            <h2 >Reflections & Next Steps</h2>
             <p>Today, the platform is available live <a href="https://solve.everylearnereverywhere.org" target="_blank" rel="noopener noreferrer">here</a>. As the Every Learner Everywhere Network (and its body of resources) continues to grow over the next two years, I am excited to see the content mature into a set of actionable toolkits for faculty. Similarly, I believe that our iterative development process has set a standard for identifying and developing new content types that can make the content more interactive over time.</p> 
             
             <p>Were I to do this project over, I would advocate heavily for the following: </p>

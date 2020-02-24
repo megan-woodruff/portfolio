@@ -55,6 +55,13 @@ const OddJobs = () => {
           }
         }
       }
+      finalversion: file(relativePath: { eq: "oddjobsfinal.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+              ...GatsbyImageSharpFluid
+          }
+        }
+      }
       james: file(relativePath: { eq: "james.png" }) {
         childImageSharp {
           fluid(maxWidth: 960) {
@@ -141,7 +148,8 @@ const OddJobs = () => {
           <h2>Prototype First Draft</h2>
           <p>I developed the first draft of the prototype using Figma. The focus of this prototype was to test out the core flows and design patterns at a lower fidelity in order to solicit feedback for the final prototype.</p>
       </div>
-      <Img alt="A screenshot of the first draft flow built out in Figma" className="projectImage" fluid={data.firstdraft.childImageSharp.fluid}></Img>
+      <h4 style={{ marginTop: '3rem' }}>First draft flow screens and prototype made in Figma</h4>
+      <Img style={{ margin: '1rem 0' }} alt="A screenshot of the first draft flow built out in Figma" className="projectImage" fluid={data.firstdraft.childImageSharp.fluid}></Img>
       <div className="iframeWrapper">
         <iframe title="oddjobsdraftprototype" style={{border: 'none', webkitTransform:'scale(0.75)', mozTransform: 'scale(0.75)'}} width="418" height="742" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FwkaebGozQmKCXPAUgCSlH6%2FDesign-Project-1-Draft-1%3Fnode-id%3D1%253A1304%26viewport%3D895%252C228%252C0.16364175081253052%26scaling%3Dmin-zoom" allowfullscreen></iframe>
       </div>
@@ -154,9 +162,11 @@ const OddJobs = () => {
             <li>After creating a service request, a user's next call-to-action is not obvious. Providing a user with immediate matches to their request on the same page as the request will help continue this flow.</li>
           </ul>
       </div>
-      <div className="columnLayout">
-          <p>Final prototype assets coming soon</p>
-        </div>
+      <h4 style={{ marginTop: '3rem' }}>Final version flow screens and prototype made in Figma</h4>
+      <Img style={{ margin: '1rem 0' }} alt="A screenshot of the final draft flow built out in Figma" className="projectImage" fluid={data.finalversion.childImageSharp.fluid}></Img>
+      <div className="iframeWrapper">
+        <iframe title="oddjobsfinalprototype" style={{border: 'none', webkitTransform:'scale(0.75)', mozTransform: 'scale(0.75)'}} width="418" height="742" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhLQvodkPZV62xQCu98g9SM%2FDesign-Project-1-Iteration%3Fnode-id%3D1%253A1304%26scaling%3Dmin-zoom" allowfullscreen></iframe>
+      </div>
     </>
   </ProjectPage>
 )}
