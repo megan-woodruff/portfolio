@@ -135,6 +135,7 @@ const TechLearningSession = () => {
         location="Bill & Melinda Gates Foundation"
         description="Helping education leaders at the Bill & Melinda Gates Foundation learn about the equitable design of edtech products"
         imageClass={"techImage"}
+        imageSource={data.techlearning.childImageSharp.fluid}
         stats={getStats()}
     >
         <>

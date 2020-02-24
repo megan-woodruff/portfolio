@@ -113,6 +113,7 @@ const Solve = () => {
       description="Helping postsecondary educators bring digital learning software into their classrooms" 
       location="Intentional Futures"
       imageClass={"solveImage"}
+      imageSource={data.solvesnapshot.childImageSharp.fluid}
       stats={getStats()}
     >
       <>

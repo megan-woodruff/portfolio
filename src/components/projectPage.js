@@ -4,13 +4,15 @@ import './projectPage.scss'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from 'gatsby-image'
 
 
-const ProjectPage = ({ title, description, imageClass, stats, children }) => {
+const ProjectPage = ({ title, description, imageClass, stats, children, imageSource }) => {
     return (
         <Layout projectPage={true}>
             <SEO title={title} />
-            <div className={`headerImage ${imageClass}`}></div>
+            <Img className="headerImage" objectFit="cover" objectPosition="top center" fluid={imageSource} alt="Placeholder alt text for now" />
+            {/* <div className={`headerImage ${imageClass}`} style={{background: `url(${imageSource})`}}></div> */}
             <div className="projectContent">
             <div className="overviewCard">
                 <div className="heading">

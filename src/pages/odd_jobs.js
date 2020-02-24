@@ -72,6 +72,7 @@ const OddJobs = () => {
     description="Connecting users with independent service providers in their community"
     imageClass={"oddJobsImage"}
     stats={getStats()}
+    imageSource={data.oddjobsimage.childImageSharp.fluid}
   >
     <>
     <div className="bodyTextWrapper overview">
