@@ -144,9 +144,8 @@ const TechLearningSession = () => {
                 <p>Clients at the Bill & Melinda Gates foundation asked our team at Intentional Futures to create a <strong>three-hour learning session</strong> on <strong>equitable technology design in the edtech space</strong>. The session was to be designed and delivered for 30-40 Senior Program Officers from the K-12, postsecondary, and “P-16 Solutions” education teams at the Foundation.</p>
             </div>
             <Img alt="Project timeline showing desk research, hcd expert interviews, attendee interviews, edtech product team interviews, content architecture development, booklet and deck creation, and client feedback and presentation practice" className="projectImage" fluid={data.techlearningtimeline.childImageSharp.fluid}></Img>
-            <div className="bodyTextWrapper">
-                <h2>Research</h2>
-                <h3>Guiding Questions</h3>
+            <div className="bodyTextWrapper overview">
+                <h2>Audience and Subject Matter Research</h2>
                 <p>Our research process was aimed at developing both a detailed picture of our session attendees’ existing topic understanding and needs, and quickly ramping up to the session content ourselves. The following questions guided these two research workstreams, which were completed in parallel.</p>
             </div>
             <div className="columnLayout">
@@ -183,8 +182,7 @@ const TechLearningSession = () => {
                     <li>2-on-1 semistructured interviews with edtech product teams contributing to positive outcomes for underrepresented students</li>
                 </ul>
 
-                <h2>Defining Session Goals</h2>
-                <h3>Audience Needs</h3>
+                <h2>Problem Definition</h2>
                 <p>From our interviews, we determined that our session attendees:</p>
                 <ul>
                     <li>Were familiar with diversity, equity, and inclusion efforts within the Foundation, but did not necessarily have uniform definitions for DEI or how they should apply it</li>
@@ -193,8 +191,7 @@ const TechLearningSession = () => {
                     <li>Were actively contributing to program and curriculum design work that aimed to benefit underrepresented students</li>
                     <li>Recognized equity as a core component of their work, but were at varying points in their journey towards applying it tangibly</li>
                 </ul>
-                <h3>Session Goals</h3>
-                <p>From these needs, we prioritized the following session goals:</p>
+                <p>Combining these audience needs with our subject matter research, we developed the following session goals. How might we:</p>
                 <ol>
                     <li>Help attendees develop a vocabulary that they can use to talk to their grantees about equitable human-centered design</li>
                     <li>Introduce human-centered design as a framework that can also be applied to attendees’ program and curriculum design work</li>
@@ -204,15 +201,14 @@ const TechLearningSession = () => {
                 </ol>
             
                 <h2>Content Architecture</h2>
-                <p>Our team acknowledged the breadth and complexity of the topics we were hoping to present to attendees in just three hours. With this challenge in mind, we decided to develop a framework to help attendees “connect the dots” between the <strong>risks of human-centered design</strong>, <strong>equitable design methodologies</strong>, and <strong>product outcomes that benefit underrepresented students</strong>.</p>
+                <div className="overview">
+                    <p>Our team acknowledged the breadth and complexity of the topics we were hoping to present to attendees in just three hours. With this challenge in mind, we decided to develop a framework to help attendees “connect the dots” between the <strong>risks of human-centered design</strong>, <strong>equitable design methodologies</strong>, and <strong>product outcomes that benefit underrepresented students</strong>.</p>
+                </div>
                 <h3>Identifying Risks of Human-Centered Design</h3>
-                <p>Through our desk research and interviews with HCD experts, we came across several problems and product outcomes that occurred when human-centered design was conducted without an equity focus. We believed that these could be mapped to higher-level themes, and we completed a <strong>sticky note identification and affinity mapping</strong> exercise to determine them.</p>
+                <p>Through our desk research and interviews with HCD experts, we came across several problems and product outcomes that occurred when human-centered design was conducted without an equity focus. We believed that these could be mapped to higher-level themes, and we completed a <strong>sticky note identification and affinity mapping</strong> exercise to determine them. From this affinity mapping below, we then crafted definitions for each of the five "risk areas" that emerged.</p>
             </div>
             <Img alt="Sticky notes showing ideation of problem themes from interviews with HCD experts" className="projectImage" fluid={data.affinity1.childImageSharp.fluid}></Img>
             <Img alt="Sticky note problems organized into affinity groups" className="projectImage" fluid={data.affinity2.childImageSharp.fluid}></Img>
-            <div className="bodyTextWrapper">
-                <p>From this affinity mapping the team crafted definitions for each of the five "risk areas" that emerged.</p>
-            </div>
             <div className="columnLayout">
                 <div className="column">
                     <h4>Status Quo Design</h4> 
@@ -247,16 +243,16 @@ const TechLearningSession = () => {
                 <p>Though this mapping was helpful in parsing out the recommendations of each methodology, we found several flaws in it.</p>
                 <ul>
                     <li>Each methodology makes recommendations at a different altitude
-                        <ul>
+                        {/* <ul>
                             <li>equityXdesign, for example, provides a broad set of equitable design principles, but provides fewer specific recommended methods by which to practice them</li>
                             <li>Inclusive design, on the other hand, goes deep on specific methods that push design teams to design for previously marginalized populations</li>
-                        </ul>
+                        </ul> */}
                     </li>
                     <li>There is not a 1:1 mapping between an equitable design methodology and the design methods that are employed
-                        <ul>
+                        {/* <ul>
                             <li>Multiple design methodologies might, for example, prompt a product team to conduct a co-design workshop with attendees</li>
                             <li>Situationally, a design methodology might suggest a different design method depending on the time, resources, and user access that is available</li>
-                        </ul>
+                        </ul> */}
                     </li>
                     <li>Product design teams might employ equitable design methods without necessarily being conscious of the broader equitable methodology from which they are drawing.</li>
                 </ul>
@@ -278,15 +274,35 @@ const TechLearningSession = () => {
             <div className="bodyTextWrapper">
                 <p>and to craft the final booklet and deck. Below are excerpts from these materials which display the final version of our framework and the connections we made between our various pieces of content.</p>
             </div>
-            <Img alt="Booklet page on the inherent risks of HCD" className="projectImage" fluid={data.risksofhcdfinal.childImageSharp.fluid}></Img>
-            <Img alt="Booklet page on applying inclusive methodologies to human-centered design risks" className="projectImage" fluid={data.methodologyoverlay.childImageSharp.fluid}></Img>
-            <Img alt="Booklet page on Microsoft's inclusive design" className="projectImage" fluid={data.methodology1.childImageSharp.fluid}></Img>
-            <Img alt="Booklet page on Asset-Based Community Development Design" className="projectImage" fluid={data.methodology2.childImageSharp.fluid}></Img>
-            <Img alt="Slideshow giving an overview of Code Jumper, a physical programming language for students who are blind or low-vision" className="projectImage" fluid={data.codejumperdemo.childImageSharp.fluid}></Img>
-            <Img alt="Slideshow page showing how Code Jumper solved for the existing exclusino of block programming technologies" className="projectImage" fluid={data.codejumperdemo2.childImageSharp.fluid}></Img>
-            <Img alt="Slideshow page explaining how Microsoft's financial commitment to inclusion made the product development possible" className="projectImage" fluid={data.codejumperdemo3.childImageSharp.fluid}></Img>
-            <Img alt="Slideshow page discussing the participatory design workshops conducted by the Code Jumper design team" className="projectImage" fluid={data.codejumperdemo4.childImageSharp.fluid}></Img>
-            <Img alt="Slideshow page showing how Code Jumper benefits students with all vision abilities in the classroom" className="projectImage" fluid={data.codejumperdemo5.childImageSharp.fluid}></Img>
+            <div className="photoGridElement">
+                <Img alt="Booklet page on the inherent risks of HCD" className="projectImage" fluid={data.risksofhcdfinal.childImageSharp.fluid}></Img>
+            </div>
+            <div className="photoGridElement">
+                <Img alt="Booklet page on applying inclusive methodologies to human-centered design risks" className="projectImage" fluid={data.methodologyoverlay.childImageSharp.fluid}></Img>
+            </div>
+            <div className="photoGridElement">
+                <Img alt="Booklet page on Microsoft's inclusive design" className="projectImage" fluid={data.methodology1.childImageSharp.fluid}></Img>
+            </div>
+            {/* <div className="photoGridElement">
+                <Img alt="Booklet page on Asset-Based Community Development Design" className="projectImage" fluid={data.methodology2.childImageSharp.fluid}></Img>
+            </div> */}
+            <div className="photoGrid">
+                <div className="photoGridElement">
+                    <Img alt="Slideshow giving an overview of Code Jumper, a physical programming language for students who are blind or low-vision" className="projectImage" fluid={data.codejumperdemo.childImageSharp.fluid}></Img>
+                </div>
+                <div className="photoGridElement">
+                    <Img alt="Slideshow page showing how Code Jumper solved for the existing exclusino of block programming technologies" className="projectImage" fluid={data.codejumperdemo2.childImageSharp.fluid}></Img>
+                </div>
+                <div className="photoGridElement">
+                    <Img alt="Slideshow page explaining how Microsoft's financial commitment to inclusion made the product development possible" className="projectImage" fluid={data.codejumperdemo3.childImageSharp.fluid}></Img>
+                </div>
+                <div className="photoGridElement">
+                    <Img alt="Slideshow page discussing the participatory design workshops conducted by the Code Jumper design team" className="projectImage" fluid={data.codejumperdemo4.childImageSharp.fluid}></Img>
+                </div>
+                <div className="photoGridElement">
+                    <Img alt="Slideshow page showing how Code Jumper benefits students with all vision abilities in the classroom" className="projectImage" fluid={data.codejumperdemo5.childImageSharp.fluid}></Img>
+                </div>
+            </div>
             <div className="bodyTextWrapper">
                 <h2>Session Delivery</h2>
                 <p>The session was delivered on December 3, 2019 to about 30 program officers in Seattle, as well as 10 who joined remotely. In addition to the content laid out above, we also welcomed guest speakers from Greater Good Studio and Google, and integrated discussion and activity moments to help attendees apply the content.</p>

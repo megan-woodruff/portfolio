@@ -111,6 +111,22 @@
         @extend .contentWrapper;
         margin: 4rem auto;
 
+        .photoGrid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2.5rem 0 0 0;
+
+            .photoGridElement {
+                width: 49%;
+                margin: .5rem 0;
+
+                @media only screen and (max-width: $mobileBreak) {
+                    width: 100%;
+                }
+            }
+        }
+
         .projectImage {
             margin: 2.5rem 0;
         }
@@ -121,18 +137,21 @@
         }
 
         .overview {
-            p {
+            p, li, ul {
                 font-size: 1.3rem;
                 line-height: 1.8rem;
                 letter-spacing: .02rem;
             }
-            
         }
 
         .caption {
-            font-size: .9rem;
+            font-size: .85rem;
             line-height: 1.3rem;
-            margin-top: 1.5rem;
+            margin: 1.5rem 0 2.5rem;
+        }
+
+        .imageHeading {
+            margin: 2.5rem 0 1.5rem;
         }
 
         .iframeWrapper {
@@ -189,7 +208,7 @@
                 
 
                 h3 {
-                    margin-top: 0;
+                    margin-top: 2rem;
                 }
                 
                 h4 {
@@ -211,6 +230,11 @@
 
                 .personaImage {
                     border-radius: 8px;
+                }
+
+                .flipImage {
+                    -webkit-transform: scaleX(-1);
+                    transform: scaleX(-1);
                 }
 
                 @media only screen and (max-width: $mobileBreak) {
@@ -237,7 +261,7 @@
         h2 {
             font-size: 2rem;
             color: $secondaryColor;
-            margin: 3rem 0 1rem;
+            margin: 4rem 0 1rem;
         }
 
         h3 {
