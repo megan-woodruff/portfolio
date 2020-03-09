@@ -18,15 +18,22 @@ const Layout = ({ children, projectPage }) => {
 
   return (
     <>
-      <NavBar siteTitle={data.site.siteMetadata.title} projectPage={projectPage} />
+      <NavBar
+        siteTitle={data.site.siteMetadata.title}
+        projectPage={projectPage}
+      />
       <div>
-        <main style={{backgroundColor: projectPage && 'white'}}>{children}</main>
-        <footer 
-        >
+        <main style={{ backgroundColor: projectPage && "white" }}>
+          {children}
+        </main>
+        <footer>
           <div className="footerContent">
-            © {new Date().getFullYear()}. Made with ☕ & ❤️ in Seattle. Built with
+            © {new Date().getFullYear()}. Made with ☕ & ❤️ in Seattle. Built
+            with
             {` `}
-            <a className="link" href="https://www.gatsbyjs.org">Gatsby.</a>
+            <a className="link" href="https://www.gatsbyjs.org">
+              Gatsby.
+            </a>
           </div>
         </footer>
       </div>

@@ -26,7 +26,40 @@
     background-image: url('../images/techlearning.png');
 }
 
+.scrollToTop {
+    content: "";
+    width: 64px;
+    height: 64px;
+    display: block;
+    position: sticky;
+    bottom: 40px;
+    right: 40px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    float: right;
+    background: rgba($primaryColor, 0) url("../images/arrow.png") no-repeat center;
+    background-size: 32px;
+    border-radius: 50%;
 
+    &:hover {
+        background-color: $primaryColor;
+        transform: translateY(-2px);
+    }
+
+    @media only screen and (max-width: $mobileBreak) {
+        width: 52px;
+        height: 52px;
+        background-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+.visible {
+    display: block;
+    background: rgba($primaryColor, .2) url("../images/arrow.png") no-repeat center;
+    background-size: 32px;
+}
 
 .projectContent {
     padding-bottom: 4rem;
