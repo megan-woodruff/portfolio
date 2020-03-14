@@ -2,7 +2,20 @@
 
 .splash {
     @extend .contentWrapper;
-    margin: 11rem auto;
+    margin: 12vh auto;
+    br {
+        display: none;
+    }
+
+    @media only screen and (min-width: 480px) {
+        margin: 8rem auto;
+    }
+
+    @media only screen and (min-width: $mobileBreak) {
+        br {
+            display: block;
+        }
+    }
 
     .emphasis {
         color: $secondaryColor;
@@ -10,5 +23,27 @@
 
     h1: {
         margin: 0;
+    }
+
+    .current {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin-top: 2.2rem;
+    }
+
+    a, button {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+        background-color: inherit;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        transition: all .25s ease;
+        padding: 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

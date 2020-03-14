@@ -52,7 +52,7 @@ export default class ProjectPage extends React.Component {
     const {
       title,
       description,
-      imageClass,
+      // imageClass,
       stats,
       children,
       imageSource,
@@ -79,11 +79,11 @@ export default class ProjectPage extends React.Component {
           </div>
 
           <div className="contentBody">{children}</div>
-          <div
+          <button
             className={`scrollToTop ${this.state.scrollToTopVisible &&
               "visible"}`}
             onClick={this.scrollToTop}
-          ></div>
+          ></button>
         </div>
       </Layout>
     )

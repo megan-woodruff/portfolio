@@ -21,7 +21,7 @@ const ProjectDisplay = () => {
           }
         }
       }
-      oddJobsImage: file(relativePath: { eq: "oddjobsthumbnail.png" }) {
+      oddJobsImage: file(relativePath: { eq: "oddjobsmockup.png" }) {
         childImageSharp {
           fluid(maxWidth: 700) {
             ...GatsbyImageSharpFluid
@@ -32,7 +32,7 @@ const ProjectDisplay = () => {
   `)
 
   return (
-    <div className="projectDisplay">
+    <div className="projectDisplay" id="projectDisplay">
       <div className="projectContentContainer">
         <ProjectCard
           className="project"
