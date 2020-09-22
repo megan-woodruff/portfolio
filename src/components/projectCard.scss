@@ -1,0 +1,91 @@
+@import 'styles';
+
+.projectLink {
+    text-decoration: none;
+    color: black;
+}
+
+.projectCard {
+    display: flex;
+    margin: 3rem 0;
+    height: 20rem;
+    transition: $transitionStyle;
+
+    .projectInfo {
+        padding: 2rem;
+        min-width: 280px;
+        width: 38%;
+        background-color: #ffffff;
+        text-align: left;
+        border-radius: 0 8px 8px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: $transitionStyle;
+
+        .projectTitle {
+            margin: 0 0 .5rem 0;
+            font-size: 1.3rem;
+            color: $primaryColor;
+            transition: $transitionStyle;
+        }
+
+        .projectDescription {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 200;
+            color: $primaryColor;
+        }
+    }
+        .projectImage {
+            transition: $transitionStyle;
+            height: 100%;
+            width: 65%;
+            object-fit: cover;
+            border-radius: 8px 0 0 8px;
+            margin: 0;
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            .projectImage {
+                -webkit-filter: grayscale(0%);
+                -moz-filter: grayscale(0%);
+                filter: grayscale(0%);
+            }
+            .projectTitle {
+                color: $secondaryColor;
+            }
+        }
+}
+
+// Flip to vertical stack on smaller screens
+@media only screen and (max-width: $mobileBreak) {
+    .projectCard {
+        flex-direction: column;
+        height: fit-content;                
+
+        .projectInfo {
+            width: 100%;
+            border-radius: 0 0 8px 8px;
+            padding: 1rem;
+            min-width: 0;
+
+            .projectTitle {
+                margin-bottom: .4rem;
+            }
+
+            .projectDescription {
+                margin-top: .5rem;
+            }
+        }
+            .projectImage {
+                width: 100%;
+                height: 16rem;
+                border-radius: 8px 8px 0 0;
+            }
+    }
+  }

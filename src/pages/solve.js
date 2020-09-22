@@ -188,6 +188,7 @@ const Solve = () => {
       location="Intentional Futures"
       imageClass={"solveImage"}
       imageSource={data.solvesnapshot.childImageSharp.fluid}
+      imageAlt="Screen mockups of profile, home, resource, and topic page"
       stats={getStats()}
     >
       <>

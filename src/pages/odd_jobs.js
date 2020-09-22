@@ -80,6 +80,7 @@ const OddJobs = () => {
       imageClass={"oddJobsImage"}
       stats={getStats()}
       imageSource={data.oddjobsimage.childImageSharp.fluid}
+      imageAlt="Mockup mobile screens of home, provider search, quote request, and payment screens"
     >
       <>
         <div className="bodyTextWrapper overview">

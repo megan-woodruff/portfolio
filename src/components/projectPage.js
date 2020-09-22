@@ -5,6 +5,8 @@ import "./projectPage.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
+// import { useStaticQuery, graphql } from "gatsby"
+// import ProjectCard from '../components/projectCard'
 
 export default class ProjectPage extends React.Component {
   constructor(props) {
@@ -52,21 +54,22 @@ export default class ProjectPage extends React.Component {
     const {
       title,
       description,
+      imageAlt,
       // imageClass,
       stats,
       children,
       imageSource,
     } = this.props
+
     return (
       <Layout projectPage={true}>
         <SEO title={title} />
-
         <Img
           className="headerImage"
           objectFit="cover"
           objectPosition="top center"
           fluid={imageSource}
-          alt="Placeholder alt text for now"
+          alt={imageAlt}
         />
         {/* <div className={`headerImage ${imageClass}`} style={{background: `url(${imageSource})`}}></div> */}
         <div className="projectContent">
@@ -85,9 +88,27 @@ export default class ProjectPage extends React.Component {
             onClick={this.scrollToTop}
           ></button>
         </div>
+        {/* <div className="projectPageFooter">
+          <ProjectCard
+            className="project"
+            title="OddJobs"
+            location="University of Washington"
+            description="Connecting users with independent service providers in their community"
+            slug="odd_jobs"
+            imageSource={data.oddJobsImage.childImageSharp.fluid}
+            altText="Three mobile application screens shown on an iPhone over a gray background"
+          />
+          <ProjectCard
+            className="project"
+            title="Learning Session: Equity-Centered Technology Design"
+            location="Bill & Melinda Gates Foundation  |  Intentional Futures"
+            description="Helping education leaders at the Bill & Melinda Gates Foundation learn about the equitable design of edtech products"
+            slug="tech_learning_session"
+            imageSource={data.techLearningImage.childImageSharp.fluid}
+            altText="An open session booklet about inclusive design methodologies"
+          />
+        </div> */}
       </Layout>
     )
   }
 }
-
-// export default ProjectPage
