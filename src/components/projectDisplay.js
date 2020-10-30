@@ -34,7 +34,7 @@ const ProjectDisplay = () => {
   return (
     <div className="projectDisplay" id="projectDisplay">
       <div className="projectContentContainer">
-        <ProjectCard
+        {/* <ProjectCard
           className="project"
           title="Solve by Every Learner"
           description="Helping postsecondary educators bring digital learning software into their classrooms"
@@ -42,7 +42,7 @@ const ProjectDisplay = () => {
           slug="solve"
           imageSource={data.solveImage.childImageSharp.fluid}
           altText="Several tablet screens showing the home page, search page, and profile page of Solve"
-        />
+        /> */}
         <ProjectCard
           className="project"
           title="OddJobs"

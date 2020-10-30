@@ -1,5 +1,5 @@
 import React from "react"
-import ProjectPage from "../components/projectPage"
+import ProjectPage from "../projectPage"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image/withIEPolyfill"
 
