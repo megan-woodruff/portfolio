@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal Portfolio Site by Megan Woodruff",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Megan Woodruff <13woodruffm@gmail.com>",
   "dependencies": {
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",

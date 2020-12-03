@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import ProjectCard from './projectCard'
+import ProjectCard from "./projectCard"
 
 import "./projectDisplay.scss"
 
