@@ -50,10 +50,10 @@ const About = () => {
             >
               Armoire Style
             </a>
-            , a clothing rental subscription startup. In the evenings, I am
+            , a clothing rental startup. In the evenings, I am
             working towards my Masters in Human-Centered Design and Engineering
             from the University of Washington. When I'm not working or
-            schooling, I love playing volleyball, reading, and cooking.{" "}
+            schooling, I love playing volleyball, hiking, and cooking.{" "}
           </p>
         </div>
       </div>
