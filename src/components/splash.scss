@@ -2,13 +2,15 @@
 
 .splash {
     @extend .contentWrapper;
-    margin: 12vh auto;
+    text-align: center;
+    margin: 12vh auto 0;
+
     br {
         display: none;
     }
 
     @media only screen and (min-width: 480px) {
-        margin: 8rem auto;
+        margin: 8rem auto 1rem;
     }
 
     @media only screen and (min-width: $mobileBreak) {

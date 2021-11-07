@@ -2,6 +2,7 @@
 
 .navBar {
     background: $backgroundColor;
+    color: #fff;
     z-index: 1000;
     position: fixed;
     top: 0px;
@@ -10,9 +11,10 @@
 
     .navBarContentContainer {
         @extend .contentWrapper;
-        padding: .6rem 1.0875rem .6rem 0;
+        padding: .6rem 0;
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid white;
     }
 
     h2 {
@@ -28,13 +30,17 @@
     .link, .navLink {
         text-decoration: none;
         font-family: Avenir, sans-serif;
-        color: $primaryColor;
+        color: #fff;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
     
     .navLink {
         font-size: .75rem;
         font-weight: normal;
-        margin: 0 1rem;
+        margin: 0 0 0 2rem;
     }
 }
 

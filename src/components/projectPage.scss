@@ -1,8 +1,9 @@
 @import 'styles';
 
 .headerImage {
-    margin-top: 50px;
-    height: 500px;
+    height: 400px;
+    max-width: 960px;
+    margin: 60px auto 0;
     background-attachment: fixed;
     background-position: 50% 0;
     background-repeat: no-repeat;
@@ -43,12 +44,13 @@
     float: right;
     outline: none;
     border: none;
+    opacity: 0;
     background: rgba($primaryColor, 0) url("../images/arrow.png") no-repeat center;
     background-size: 32px;
     border-radius: 50%;
 
     &:hover {
-        background-color: $primaryColor;
+        background-color: rgba(white, .1);
         transform: translateY(-2px);
     }
 
@@ -63,6 +65,8 @@
 
 .visible {
     display: block;
+    opacity: 1;
+    border: .5px solid white;
     background: rgba($primaryColor, .2) url("../images/arrow.png") no-repeat center;
     background-size: 32px;
 }
@@ -72,22 +76,30 @@
 
     .overviewCard {
         @extend .contentWrapper;
+        max-width: 800px;
         position: relative;
-        margin: -4rem auto 0;
+        margin: -6rem auto 0;
+        border: 1px solid white;
+        border-radius: 2px;
     
         .heading {
-            background-color: white;
+            background-color: $primaryColor;
             padding: 2rem;
-            border-radius: 8px 8px 0 0;
+            border-radius: 2px 2px 0 0;
+            border-bottom: 1px solid white;
 
             .title {
-                color: $secondaryColor;
+                color: white;
                 font-weight: 800;
+                color: $secondaryColor;
+
             }
              
             .description {
                 font-weight: normal;
                 margin: 0;
+                color: $secondaryColor;
+                color: white;
             }
 
             @media only screen and (max-width: $mobileBreak) {
@@ -103,9 +115,11 @@
         .stats {
             display: flex;
             justify-content: space-between;
-            padding: 1.2rem 2rem;
+            padding: 2rem 2rem 1.2rem;
             background-color: $backgroundColor;
-            border-radius: 0 0 8px 8px;
+            border-radius: 0 0 2px 2px;
+            // border: 1px solid white;
+            border-top: none;
 
 
             .stat {
@@ -149,6 +163,7 @@
     .contentBody {
         @extend .contentWrapper;
         margin: 4rem auto;
+        color: white;
 
         .photoGrid {
             display: flex;
@@ -180,6 +195,7 @@
                 font-size: 1.3rem;
                 line-height: 1.8rem;
                 letter-spacing: .02rem;
+                color: white;
             }
         }
 
@@ -223,11 +239,11 @@
             justify-content: space-between;
             padding: 2rem 2rem 1rem;
             margin: 3rem auto;
-            background-color: $backgroundColor;
+            background-color: $primaryColor;
             background-color: #f9f9f9;
             background-color: $primaryColor;
             color: white;
-            border-radius: 8px;
+            border-radius: 2px;
             overflow: wrap;
 
             
@@ -268,7 +284,7 @@
                 width: 30%;
 
                 .personaImage {
-                    border-radius: 8px;
+                    border-radius: 2px;
                 }
 
                 .flipImage {
@@ -291,7 +307,7 @@
         }
 
         p, ul, ol {
-            color: $primaryColor;
+            color: white;
             font-size: 1rem;
             font-family: Avenir, Arial, Helvetica, sans-serif;
             letter-spacing: .01rem;

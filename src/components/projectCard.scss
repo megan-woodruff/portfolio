@@ -15,7 +15,8 @@
         padding: 2rem;
         min-width: 280px;
         width: 38%;
-        background-color: #ffffff;
+        background-color: $primaryColor;
+        border: 1px solid white;
         text-align: left;
         border-radius: 0 8px 8px 0;
         display: flex;
@@ -26,15 +27,19 @@
         .projectTitle {
             margin: 0 0 .5rem 0;
             font-size: 1.3rem;
-            color: $primaryColor;
+            color: white;
             transition: $transitionStyle;
+        }
+
+        .projectLocation {
+            color: white;
         }
 
         .projectDescription {
             margin: 0;
             font-size: 1rem;
             font-weight: 200;
-            color: $primaryColor;
+            color: white;
         }
     }
         .projectImage {
@@ -58,6 +63,10 @@
             }
             .projectTitle {
                 color: $secondaryColor;
+            }
+
+            .projectInfo {
+                background-color: rgba(white, .025);
             }
         }
 }

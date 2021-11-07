@@ -28,18 +28,21 @@ const About = () => {
           fluid={data.profile.childImageSharp.fluid}
         ></Img>
         <div className="aboutText">
-          <h2>Thank you for visiting my portfolio!</h2>
+          <h2><span className="emphasis">Thank you</span> for visiting my portfolio!</h2>
           <p>
-            I pride myself on being a user-driven design technologist with a knack for systems-thinking.{'\n'}
-            
+            I pride myself on being a user-driven design technologist with a knack for systems-thinking.
+          </p>
+          <p>
             With education in both Computer Engineering and Human-Centered Design, 
             I can speak researcher, designer, and developer – and I thrive most when I can 
-            use this perspective to improve team collaboration and produce truly outstanding experiences.{'\n'}
-            
+            use this perspective to improve team collaboration and produce truly outstanding experiences.
+          </p>
+          <p>
             On the technical side, I am well-versed in the modern web and have a specific fondness
             for React (and more recently, React Native). I am known for ramping up to projects <i>fast</i> and 
-            tackling ambiguity with a steady, analytical approach.{'\n'}
-            
+            tackling ambiguity with a steady, analytical approach.
+          </p>
+          <p>
             As might already be obvious, I like variety in my work. But my sweet spot is coding interactive prototypes
             and proof-of-concepts that can be used to refine and test mid-process ideas and help them reach their 
             fullest potential.
@@ -51,7 +54,6 @@ const About = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: "black",
                 textDecoration: "none",
                 fontWeight: "bold",
               }}

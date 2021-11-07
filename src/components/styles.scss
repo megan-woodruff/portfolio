@@ -1,6 +1,6 @@
 $primaryColor: #242331;
-$secondaryColor: #F64747;
-$backgroundColor: #FFF4F4;
+$secondaryColor: #81cfe0;
+$backgroundColor: #242331;
 $mobileBreak: 790px;
 $transitionStyle: all 0.4s ease;
 
@@ -10,6 +10,13 @@ $transitionStyle: all 0.4s ease;
     max-width: 960px;
 }
 
+a {
+    color: $secondaryColor;
+}
+
+.emphasis {
+    color: $secondaryColor;
+}
 
 .aboutWrapper {
     min-height: calc(100vh - 62px);
@@ -20,7 +27,7 @@ $transitionStyle: all 0.4s ease;
     .aboutImage {
         width: 35%; 
         height: 35%; 
-        border-radius: 8px;
+        border-radius: 2px;
         margin: 3rem 5% 2rem 0;
 
         @media only screen and (max-width: $mobileBreak) {

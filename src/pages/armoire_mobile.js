@@ -20,7 +20,7 @@ const ArmoireMobile = () => {
     <ProjectPage
       title="Armoire Mobile"
       location="Armoire Style"
-      description="Bringing Armoire's personalized rental experience to mobile."
+      description="Designing + building Armoire's first mobile app"
       imageClass={"armoireImage"}
       stats={getStats()}
       imageSource={data.armoireImage.childImageSharp.fluid}
@@ -34,7 +34,7 @@ const ArmoireMobile = () => {
       </div>
       
           <div class="bodyTextWrapper">
-          <p>Between October 2020 and March 2021, I led the product development efforts for this app. My individual contributions towards this effort spanned initial investigation and design of our tech stack, development our UI component system in React Native, development of roughly 70% of the app's features, and deployment of our apps to the <a
+          <p>Between October 2020 and March 2021, I led the product development efforts for this app. My individual contributions towards this effort spanned initial investigation and design of our tech stack, development our UI component system in React Native, development of roughly 80% of the app's features, and deployment of our apps to the <a
                 href="https://apps.apple.com/us/app/armoire-style/id1560230748"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -43,13 +43,13 @@ const ArmoireMobile = () => {
               >Google Play</a> stores.
           </p>
             <p>
-            As of today (about 1.5 months after launch), more than <strong>50%</strong> of our user base has adopted the Armoire mobile app. The apps have 5 star reviews on the app stores and have maintained a <strong>99.9% crash-free rate since</strong> launch. 
+            Within 1 month of launch, more than <strong>50%</strong> of our user base had adopted the Armoire mobile apps – the apps are now Armoire's primary platform for user engagement. They have 5-star reviews on the App Stores and have maintained a <strong>99.9% crash-free rate since</strong> launch. 
             </p>
             <p>
               <strong>Coming soon:</strong> I used this move to mobile as an opportunity to make improvements on our existing user experience. I'll highlight some of the key technical + product decisions made during the process of building this app, as well as some of its unique feature adds for members.
             </p>
             <p>
-              Until then, the apps are available for public download + guest exploration at the app store links above.
+              Until then, the apps are available for public download + guest exploration at the app store links above. If you would like to more thoroughly explore, feel free to reach out at me@meganewoodruff.com
             </p>
         </div>
       </>
@@ -71,9 +71,10 @@ const getStats = () => (
     </div>
     <div className="stat">
       <h5>Responsibilities</h5>
-      <h6>Project + Front-End Engineering Lead</h6>
+      <h6>Project Lead</h6>
       <h6>Information Architecture</h6>
       <h6>Interaction Design</h6>
+      <h6>Front-End Engineering</h6>
     </div>
     <div className="stat">
       <h5>Collaborators</h5>

@@ -60,7 +60,7 @@ export default class ProjectPage extends React.Component {
     } = this.props
 
     return (
-      <Layout projectPage={true}>
+      <Layout projectPage={false}>
         <SEO title={title} />
         <Img
           className="headerImage"
