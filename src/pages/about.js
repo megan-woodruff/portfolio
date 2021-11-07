@@ -30,18 +30,18 @@ const About = () => {
         <div className="aboutText">
           <h2>Thank you for visiting my portfolio!</h2>
           <p>
-            I pride myself on being a user-driven design technologist with a knack for systems-thinking. 
+            I pride myself on being a user-driven design technologist with a knack for systems-thinking.{'\n'}
             
             With education in both Computer Engineering and Human-Centered Design, 
             I can speak researcher, designer, and developer – and I thrive most when I can 
-            use this perspective to improve team collaboration and produce truly outstanding experiences.
+            use this perspective to improve team collaboration and produce truly outstanding experiences.{'\n'}
             
             On the technical side, I am well-versed in the modern web and have a specific fondness
-            for React (and more recently, React Native). I am known for ramping up to projects <i>fast</i> 
-            and tackling ambiguity with a steady, analytical approach.
+            for React (and more recently, React Native). I am known for ramping up to projects <i>fast</i> and 
+            tackling ambiguity with a steady, analytical approach.{'\n'}
             
             As might already be obvious, I like variety in my work. But my sweet spot is coding interactive prototypes
-            or proof-of-concepts that can be used to refine and test mid-process ideas and help them reach their 
+            and proof-of-concepts that can be used to refine and test mid-process ideas and help them reach their 
             fullest potential.
           </p>
           <p>
