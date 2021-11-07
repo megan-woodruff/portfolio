@@ -30,14 +30,22 @@ const About = () => {
         <div className="aboutText">
           <h2>Thank you for visiting my portfolio!</h2>
           <p>
-            I am a Seattle-based creative technologist passionate about
-            cross-discipline collaboration in UX. Initially educated as a
-            computer engineer, I have become fascinated by the ways that design
-            and engineering can work together to build experiences that truly
-            put users first.
+            I pride myself on being a user-driven design technologist with a knack for systems-thinking. 
+            
+            With education in both Computer Engineering and Human-Centered Design, 
+            I can speak researcher, designer, and developer – and I thrive most when I can 
+            use this perspective to improve team collaboration and produce truly outstanding experiences.
+            
+            On the technical side, I am well-versed in the modern web and have a specific fondness
+            for React (and more recently, React Native). I am known for ramping up to projects <i>fast</i> 
+            and tackling ambiguity with a steady, analytical approach.
+            
+            As might already be obvious, I like variety in my work. But my sweet spot is coding interactive prototypes
+            or proof-of-concepts that can be used to refine and test mid-process ideas and help them reach their 
+            fullest potential.
           </p>
           <p>
-            I am currently working as a UX Engineer at{" "}
+            I am currently a UX Engineer at{" "}
             <a
               href="https://armoire.style"
               target="_blank"
@@ -50,10 +58,8 @@ const About = () => {
             >
               Armoire Style
             </a>
-            , a clothing rental startup. In the evenings, I am
-            working towards my Masters in Human-Centered Design and Engineering
-            from the University of Washington. When I'm not working or
-            schooling, I love playing volleyball, hiking, and cooking.{" "}
+            , a personalized clothing rental service. When I'm not working, I love playing 
+            volleyball, challenging myself with new yoga poses, and cooking.{" "}
           </p>
         </div>
       </div>

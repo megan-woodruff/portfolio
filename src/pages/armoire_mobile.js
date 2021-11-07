@@ -20,7 +20,7 @@ const ArmoireMobile = () => {
     <ProjectPage
       title="Armoire Mobile"
       location="Armoire Style"
-      description="Bringing Armoire's personalized rental experience to Android and iOS."
+      description="Bringing Armoire's personalized rental experience to mobile."
       imageClass={"armoireImage"}
       stats={getStats()}
       imageSource={data.armoireImage.childImageSharp.fluid}

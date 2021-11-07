@@ -5,8 +5,6 @@ import "./projectPage.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
-// import { useStaticQuery, graphql } from "gatsby"
-// import ProjectCard from '../components/projectCard'
 
 export default class ProjectPage extends React.Component {
   constructor(props) {

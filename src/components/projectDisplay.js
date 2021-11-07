@@ -58,7 +58,7 @@ const ProjectDisplay = () => {
           className="project"
           title="Armoire Mobile"
           location="Armoire Style"
-          description="Bringing Armoire's personalized rental experience to Android and iOS."
+          description="Bringing Armoire's personalized rental experience to mobile devices."
           imageClass={"armoireImage"}
           slug="armoire_mobile"
           imageSource={data.armoireImage.childImageSharp.fluid}
