@@ -53,7 +53,6 @@ export default class ProjectPage extends React.Component {
       title,
       description,
       imageAlt,
-      // imageClass,
       stats,
       children,
       imageSource,

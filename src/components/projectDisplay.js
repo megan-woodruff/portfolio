@@ -44,7 +44,7 @@ const ProjectDisplay = () => {
           slug="armoire_mobile"
           imageSource={data.armoireImage.childImageSharp.fluid}
           altText="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."/>
-         <ProjectCard 
+         {/* <ProjectCard 
           className="project"
           title="Adaptable Design Website + Interactive Home Tour"
           location="University of Washington + The Adaptable House Project"
@@ -61,7 +61,7 @@ const ProjectDisplay = () => {
           imageClass={"armoireImage"}
           slug="armoire_year_in_review"
           imageSource={data.yearInReview.childImageSharp.fluid}
-          altText="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."/>
+          altText="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."/> */}
       </div>
     </div>
   )

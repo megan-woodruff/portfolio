@@ -1,0 +1,42 @@
+@import 'styles';
+
+.mobileScreens {
+  padding-top: 24px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mobileScreen {
+  width: 280px;
+  margin: 0 12px;
+}
+
+.intro {
+  margin-bottom: 48px;
+}
+
+.walkthroughVideo {
+  width: 300px;
+  margin: 24px 12px 0;
+}
+
+.walkthroughs {
+  display: flex;
+  justify-content: center;
+}
+
+.sectionHeading {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.appSection {
+  margin-top: 48px;
+  margin-bottom: 8px;
+  padding-top: 32px;
+  
+  &.first {
+    padding-top: 0;
+  }
+}
