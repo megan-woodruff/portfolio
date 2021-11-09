@@ -20,7 +20,7 @@ const ArmoireMobile = () => {
     <ProjectPage
       title="Armoire Mobile"
       location="Armoire Style"
-      description="Designing + building Armoire's first mobile app"
+      description="Armoire's mobile app, designed and developed for iOS and Android"
       imageClass={"armoireImage"}
       stats={getStats()}
       imageSource={data.armoireImage.childImageSharp.fluid}
@@ -28,12 +28,12 @@ const ArmoireMobile = () => {
     >
       <>
       <div className="bodyTextWrapper overview">
-          <h2>Project Overview</h2>
+        <h2>Project Overview</h2>
+        <p><i>Armoire is a consumer clothing rental company that offers its members access to a personalized closet of high-end styles</i></p>
         <p>
           When I conducted my first set of user interviews with Armoire members in May 2020, <em>every single interviewee</em> identified a mobile app as their number one ask for our tech team.</p>
       </div>
-      
-          <div class="bodyTextWrapper">
+          <div className="bodyTextWrapper">
           <p>Between October 2020 and March 2021, I led the product development efforts for this app. My individual contributions towards this effort spanned initial investigation and design of our tech stack, development our UI component system in React Native, development of roughly 80% of the app's features, and deployment of our apps to the <a
                 href="https://apps.apple.com/us/app/armoire-style/id1560230748"
                 target="_blank"
@@ -78,9 +78,9 @@ const getStats = () => (
     </div>
     <div className="stat">
       <h5>Collaborators</h5>
-      <h6>Ryan Baerwolf, Full-Stack Engineer</h6>
-      <h6>Katrina Taylor, Head of UX</h6>
       <h6>Tristan Rees, CTO</h6>
+      <h6>Katrina Taylor, Head of UX</h6>
+      <h6>Ryan Baerwolf, Full-Stack Engineer</h6>
     </div>
   </>
 )

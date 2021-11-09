@@ -64,7 +64,7 @@ export default class ProjectPage extends React.Component {
         <SEO title={title} />
         <Img
           className="headerImage"
-          objectFit="cover"
+          objectFit="contain"
           objectPosition="top center"
           fluid={imageSource}
           alt={imageAlt}
@@ -86,26 +86,6 @@ export default class ProjectPage extends React.Component {
             onClick={this.scrollToTop}
           ></button>
         </div>
-        {/* <div className="projectPageFooter">
-          <ProjectCard
-            className="project"
-            title="OddJobs"
-            location="University of Washington"
-            description="Connecting users with independent service providers in their community"
-            slug="odd_jobs"
-            imageSource={data.oddJobsImage.childImageSharp.fluid}
-            altText="Three mobile application screens shown on an iPhone over a gray background"
-          />
-          <ProjectCard
-            className="project"
-            title="Learning Session: Equity-Centered Technology Design"
-            location="Bill & Melinda Gates Foundation  |  Intentional Futures"
-            description="Helping education leaders at the Bill & Melinda Gates Foundation learn about the equitable design of edtech products"
-            slug="tech_learning_session"
-            imageSource={data.techLearningImage.childImageSharp.fluid}
-            altText="An open session booklet about inclusive design methodologies"
-          />
-        </div> */}
       </Layout>
     )
   }

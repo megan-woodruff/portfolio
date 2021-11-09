@@ -3,7 +3,7 @@
 .headerImage {
     height: 400px;
     max-width: 960px;
-    margin: 60px auto 0;
+    margin: 92px auto 0;
     background-attachment: fixed;
     background-position: 50% 0;
     background-repeat: no-repeat;
@@ -12,6 +12,7 @@
     @media only screen and (max-width: $mobileBreak) {
         height: 400px;
         background-attachment: scroll;
+        margin: 48px auto 0;
     }
 }
 
@@ -25,6 +26,10 @@
 
 .armoireImage {
     background-image: url('../images/armoire-mock.png')
+}
+
+.yearInReviewMock {
+    object-fit: contain;
 }
 
 .techImage {
@@ -83,6 +88,7 @@
         border-radius: 2px;
     
         .heading {
+            background-color: lighten($primaryColor, 7%);
             background-color: $primaryColor;
             padding: 2rem;
             border-radius: 2px 2px 0 0;
@@ -125,6 +131,10 @@
             .stat {
                 min-width: 6rem;
                 margin: 0 1rem 1rem 0;
+
+                &.no-shrink {
+                    flex-shrink: 0;
+                }
             }
             h5 {
                 margin-bottom: .5rem;
