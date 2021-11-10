@@ -14,7 +14,7 @@ const ProjectDisplay = () => {
           }
         }
       }
-      adaptableHomeImage: file(relativePath: { eq: "adaptable_home_mock.jpg" }) {
+      adaptableHomeImage: file(relativePath: { eq: "adaptable_design_mock.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
@@ -44,7 +44,7 @@ const ProjectDisplay = () => {
           slug="armoire_mobile"
           imageSource={data.armoireImage.childImageSharp.fluid}
           altText="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."/>
-         {/* <ProjectCard 
+         <ProjectCard 
           className="project"
           title="Adaptable Design Website + Interactive Home Tour"
           location="University of Washington + The Adaptable House Project"
@@ -53,7 +53,7 @@ const ProjectDisplay = () => {
           slug="adaptable_home"
           imageSource={data.adaptableHomeImage.childImageSharp.fluid}
           altText="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."/>
-         <ProjectCard 
+         {/* <ProjectCard 
           className="project"
           title="Armoire 2020 Year In Review"
           location="Armoire Style"

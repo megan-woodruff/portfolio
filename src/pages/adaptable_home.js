@@ -1,17 +1,20 @@
 import React from "react"
 import ProjectPage from "../components/projectPage"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image/withIEPolyfill"
 
 const AdaptableHome = () => {
   const data = useStaticQuery(graphql`
     query {
-      adaptableHomeImage: file(relativePath: { eq: "adaptable_home_mock.jpg" }) {
+      adaptableHomeImage: file(relativePath: { eq: "adaptable_design_mock.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
+      }
+      walkthroughVideo: file(relativePath: { eq: "adaptable-design-walkthrough.mp4" }) {
+        name,
+        publicURL
       }
     }
   `)
@@ -30,7 +33,7 @@ const AdaptableHome = () => {
         <div className="bodyTextWrapper overview">
           <h2>Project Overview</h2>
           <p>
-            My University of Washington HCDE Masters Capstone Team worked with the Adaptable House Project to design a set of home features for individuals who experience mobility limitations. Through our research, synthesis, and design, we produced a set of adaptable design guidelines as well as 3D renderings of features we co-designed with individuals in our target user population.
+            My University of Washington HCDE Masters Capstone Team worked with the Adaptable House Project to design a set of home features that accommodate progressive changes in function to disabilities and aging. Through our research, synthesis, and design, we produced a set of adaptable design guidelines as well as 3D renderings of features we co-designed with individuals in our target user population.
           </p>
           <p>
             For our "Capstone Showcase", we wanted to create a final deliverable that:
@@ -46,7 +49,10 @@ const AdaptableHome = () => {
             Timeline + Responsibilities
           </h2>
           <p>
-            With various project deadlines rapidly approaching, I took on the role of designing and building this interactive website and walkthrough experience. My teammate Sara drafted initial ideas for the walkthrough using Figma which served as inspiration, and Azima led direction for the site's visual design. Using SketchUp, React, SCSS, Gatsby, and Netlify, I built and deployed the website in 2.5 weeks. 
+            With various project deadlines rapidly approaching, I took on the role of designing and building this interactive website and walkthrough experience. Inspiration for the walkthrough came from my teammate, Sara, who drafted initial ideas using Figma. Azima led direction for the site's visual design, and Devri helped identify connections between the features and quotes from research. 
+          </p>
+          <p>
+            Using SketchUp, React, SCSS, Gatsby, and Netlify, I built and deployed the website in 2.5 weeks. 
           </p>
         </div>
         <div className="bodyTextWrapper">
@@ -65,17 +71,19 @@ const AdaptableHome = () => {
             Final Product
           </h2>
           <p>
-            You can view a snapshot of the home walkthrough in the video below, or visit the website to explore it at your own pace. If you want to learn more about our UX process for the entire 6-month capstone project, visit the our approach page. 
+            You can view a segment of the home walkthrough in the video below, or visit <a href="https://adaptablehome.design/home-tour" target="_blank" rel="noopener noreferrer">adaptablehome.design</a> to explore it at your own pace. If you want to learn more about our UX process for the entire 6-month capstone project, visit the <a href="https://adaptablehome.design/our-approach" target="_blank" rel="noopener noreferrer">our approach</a> page. 
           </p>
         </div>
-        <div className="bodyTextWrapper">
-          <h2>
-            Reflection
-          </h2>
-          <p>
-            
-          </p>
-        </div>
+        <video
+            autoPlay={true}
+            loop
+            alt={"Video of the home walkthrough. Shows the user selecting the kitchen home area, looking at user quotes about challenges they experience in the kitchen, and then zooming in on a minimal-lift trash bin feature."}
+            style={{ width: '100%', marginTop: 32 }}
+            muted>
+            <source 
+              src={data.walkthroughVideo.publicURL} 
+              type="video/mp4" />
+          </video> 
       </>
     </ProjectPage>
   )
