@@ -138,6 +138,9 @@ const ArmoireMobile = () => {
         <p>
           Within 1 month of launch, more than <strong>50%</strong> of our user base had adopted the Armoire mobile apps – the apps are now Armoire's primary platform for user engagement. They have 5-star reviews on the App Stores and have maintained a <strong>99.9% crash-free rate since</strong> launch. 
         </p>
+        <p>
+          Below is a brief overview of the app that describes its basic scenarios and helps communicate the scope of this project. I will be adding more information about my design process, technical decisions, and challenges soon.
+        </p>
       </div>
       <div className="bodyTextWrapper">
         <h2 className="sectionHeading" >App Overview</h2>
