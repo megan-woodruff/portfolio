@@ -2,6 +2,8 @@ import React from "react"
 import ProjectPage from "../components/projectPage"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image/withIEPolyfill"
+import inspirationGif from '../images/yir-inspo3.gif'
+
 
 const ArmoireYearInReview = () => {
   const data = useStaticQuery(graphql`
@@ -52,6 +54,10 @@ const ArmoireYearInReview = () => {
           }
         }
       }
+      svgGraphs: file(relativePath: { eq: "yir_svg_graphs.mp4" }) {
+        name,
+        publicURL
+      }
       walkthrough: file(relativePath: { eq: "yir-walkthrough.mp4" }) {
         name,
         publicURL
@@ -94,20 +100,18 @@ const ArmoireYearInReview = () => {
         </p>
       </div>
       <div className="imageRow">
-        <div style={{ width: 162, height: 320 }} className="image">
+        <div style={{ width: 152, height: 300 }} className="image">
           <Img
-            alt=""
+            alt="Spotify wrapped top songs Instagram image"
             fluid={data.inspiration1.childImageSharp.fluid}/>
         </div>
-        <div style={{ width: 300, height: 320 }} className="image">
-          <Img
-            alt=""
-            fluid={data.inspiration2.childImageSharp.fluid}/>
+        <div style={{ height: 300, width: 360 }} className="image">
+          <img src={inspirationGif} alt="Facebook friendship high five gif" />
         </div>
-        <div style={{ height: 320 }} className="image">
-          {/* <Img
-            alt=""
-            fluid={data.inspiration3.childImageSharp.fluid}/> */}
+        <div style={{ width: 280, height: 300 }} className="image">
+          <Img
+            alt="Spotify top artists and top songs image"
+            fluid={data.inspiration2.childImageSharp.fluid}/>
         </div>
       </div>
       <div className="bodyTextWrapper">
@@ -185,21 +189,38 @@ const ArmoireYearInReview = () => {
       <div className="bodyTextWrapper">
         <h2>Content + Design</h2>
         <p>
-          To determine the Year in Review content, I crowd-sourced ideas from Armoire members and my co-workers using Slack and Facebook channels, asking what they would like to learn about their own rental habits.
+          To determine the Year in Review content, I crowd-sourced ideas from Armoire members and my co-workers using Slack and Facebook channels, asking what they would like to learn about their own rental behavior on Armoire. The most popular stats surfaced included:
         </p>
-        <p>
-        </p>
+        <ul>
+          <li>Top brands rented</li>
+          <li>Top patterns, colors, and item categories rented</li>
+          <li>Most expensive item rented</li>
+          <li>Rented items kept the longest</li>
+          <li>Most popular posts in the Armoire feed</li>
+        </ul>
       </div>
       <div className="bodyTextWrapper">
-        <h2>Additional Technical Learnings</h2>
+        <h2>Technical Learnings</h2>
         <h3>SVG Shapes + Patterns</h3>
-        <h3>Social Sharing Actions</h3>
-        
         <p>
-         
+          In order to show a breakdown of the top 5 colors, patterns, and items rented most often by each user, I wanted to create distribution graphs that could be used to visualize each of these attributes.
         </p>
         <p>
+          I chose to display these with horizontally stacked distribution graphs with labels underneath, because I felt that this data pattern worked on both mobile and web, and most elegantly handled different data edge cases (low data, uneven distributions, etc).
         </p>
+        <p>
+          I used SVG shapes to create these graphs, because their styling and positioning is fully supported by the html2Canvas renderer. It also allowed me to use SVG patterns for displaying the pattern distributions, scaled across any size of shape, and an SVG filter to create an effect on hover across patterns and colors.
+        </p>
+        <video
+          autoPlay={true}
+          loop
+          alt={""}
+          style={{ width: '100%', marginBottom: 48, marginTop: 24, marginLeft: 0, marginRight: 0 }}
+          muted>
+        <source 
+          src={data.svgGraphs.publicURL} 
+          type="video/mp4" />
+      </video> 
       </div>
       <div className="bodyTextWrapper">
         <h2>Final Product</h2>
@@ -215,7 +236,7 @@ const ArmoireYearInReview = () => {
         <source 
           src={data.walkthrough.publicURL} 
           type="video/mp4" />
-        </video> 
+      </video> 
       </div>
       <div className="bodyTextWrapper">
         <h3>Generated Images</h3>
