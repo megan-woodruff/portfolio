@@ -16,6 +16,25 @@
     }
 }
 
+
+
+table {
+    margin: 64px 0;
+}
+
+.imageRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+    .image {
+        width: 220px;
+        height: 360px;
+        margin: 36px 18px;
+    }
+}
+
 .scrollToTop {
     content: "";
     width: 64px;
@@ -57,6 +76,9 @@
 }
 
 .projectContent {
+    h2, h3 {
+        text-align: center;
+    }
     padding-bottom: 4rem;
 
     .overviewCard {

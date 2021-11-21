@@ -22,9 +22,9 @@ const ProjectDisplay = () => {
         }
       }
 
-      yearInReview: file(relativePath: { eq: "yearinreview.png" }) {
+      yearInReview: file(relativePath: { eq: "yearinreviewcombined.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 700) {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -46,6 +46,15 @@ const ProjectDisplay = () => {
           altText="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."/>
          <ProjectCard 
           className="project"
+          title="Armoire 2020 Year In Review"
+          location="Armoire Style"
+          description="Personalized year in review landing pages and dynamically-generated, shareable images"
+          imageClass={"armoireImage"}
+          slug="armoire_year_in_review"
+          imageSource={data.yearInReview.childImageSharp.fluid}
+          altText="Collage of screens with images of the Armoire Year in Review landing page and generated images"/>
+         <ProjectCard 
+          className="project"
           title="Adaptable Design Website + Interactive Home Tour"
           location="University of Washington + The Adaptable House Project"
           description="Capstone final deliverable showcasing user research findings, design principles, and adaptable home features"
@@ -53,15 +62,6 @@ const ProjectDisplay = () => {
           slug="adaptable_home"
           imageSource={data.adaptableHomeImage.childImageSharp.fluid}
           altText="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."/>
-         {/* <ProjectCard 
-          className="project"
-          title="Armoire 2020 Year In Review"
-          location="Armoire Style"
-          description="A personalized clothing rental year in review landing page and dynamically-generated, shareable images"
-          imageClass={"armoireImage"}
-          slug="armoire_year_in_review"
-          imageSource={data.yearInReview.childImageSharp.fluid}
-          altText="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."/> */}
       </div>
     </div>
   )

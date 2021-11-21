@@ -52,7 +52,7 @@ const AdaptableHome = () => {
             With various project deadlines rapidly approaching, I took on the role of designing and building this interactive website and walkthrough experience. Inspiration for the walkthrough came from my teammate, Sara, who drafted initial ideas using Figma. Azima led direction for the site's visual design, and Devri helped identify connections between the features and quotes from research. 
           </p>
           <p>
-            Using SketchUp, React, SCSS, Gatsby, and Netlify, I built and deployed the website in 2.5 weeks. 
+            Using SketchUp, React, SCSS, Gatsby, and Netlify, I built and deployed the website in 3 weeks. 
           </p>
         </div>
         <div className="bodyTextWrapper">
@@ -99,7 +99,7 @@ const getStats = () => (
     </div>
     <div className="stat">
       <h5>Timeline</h5>
-      <h6>2.5 Weeks</h6>
+      <h6>3 Weeks</h6>
     </div>
     <div className="stat no-shrink">
       <h5>Responsibilities</h5>

@@ -582,7 +582,7 @@ thead {
 td,
 th {
   text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  border-right: 1px solid white;
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
@@ -592,6 +592,9 @@ th {
   padding-top: 0.725rem;
   padding-bottom: calc(0.725rem - 1px);
 }
+tr, thead {
+  border-bottom: 1px solid white;
+}
 th:first-child,
 td:first-child {
   padding-left: 0;
@@ -599,6 +602,10 @@ td:first-child {
 th:last-child,
 td:last-child {
   padding-right: 0;
+  border-right: none;
+}
+tr:last-child {
+  border-bottom: none;
 }
 tt,
 code {
