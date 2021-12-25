@@ -224,6 +224,7 @@ const ArmoireYearInReview = () => {
       </div>
       <div className="bodyTextWrapper">
         <h2>Final Product</h2>
+        <p>You can check out a live version of my 2021 Year in Review <a target="_blank"  rel="noopener noreferrer" href="https://armoire.style/year-in-review/65NXpL0WNb/?share=c517bc026dd2f3c058a55e86ecf8816b6c9ef9f9618bee6cf137719a1b0f2fd1&utm_source=armoire_year_in_review_share&utm_medium=organic&utm_campaign=megan">here</a>, and view the final walkthrough below.</p>
         <h3>Walkthrough Video</h3>
       </div>
       <div className="generatedImages">
