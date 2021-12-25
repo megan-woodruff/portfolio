@@ -67,7 +67,7 @@ const ArmoireYearInReview = () => {
 
   return (
     <ProjectPage
-      title="Armoire 2020 Year In Review"
+      title="Armoire Year In Review"
       location="Armoire Style"
       description="Personalized clothing rental year in review landing pages and dynamically-generated, shareable images"
       stats={getStats()}

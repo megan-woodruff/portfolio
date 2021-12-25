@@ -46,7 +46,7 @@ const ProjectDisplay = () => {
           altText="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."/>
          <ProjectCard 
           className="project"
-          title="Armoire 2020 Year In Review"
+          title="Armoire Year In Review"
           location="Armoire Style"
           description="Personalized year in review landing pages and dynamically-generated, shareable images"
           imageClass={"armoireImage"}
