@@ -39,7 +39,7 @@ const ProjectDisplay = () => {
           className="project"
           title="Armoire Mobile"
           location="Armoire Style"
-          description="Armoire's mobile app, designed and developed for iOS and Android"
+          description="Increasing Armoire member convenience and engagement by delivering an easy-to-use, performant mobile app experience"
           imageClass={"armoireImage"}
           slug="armoire_mobile"
           imageSource={data.armoireImage.childImageSharp.fluid}
@@ -48,7 +48,7 @@ const ProjectDisplay = () => {
           className="project"
           title="Armoire Year In Review"
           location="Armoire Style"
-          description="Personalized year in review landing pages and dynamically-generated, shareable images"
+          description="Highlighting the value of an Armoire membership through year in review landing pages and dynamically-generated, shareable images"
           imageClass={"armoireImage"}
           slug="armoire_year_in_review"
           imageSource={data.yearInReview.childImageSharp.fluid}
@@ -57,7 +57,7 @@ const ProjectDisplay = () => {
           className="project"
           title="Adaptable Design Website + Interactive Home Tour"
           location="University of Washington + The Adaptable House Project"
-          description="Capstone final deliverable showcasing user research findings, design principles, and adaptable home features"
+          description="Capstone project final deliverable showcasing user research findings, design principles, and adaptable home features"
           imageClass={"armoireImage"}
           slug="adaptable_home"
           imageSource={data.adaptableHomeImage.childImageSharp.fluid}

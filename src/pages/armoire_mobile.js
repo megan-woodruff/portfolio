@@ -114,7 +114,7 @@ const ArmoireMobile = () => {
     <ProjectPage
       title="Armoire Mobile"
       location="Armoire Style"
-      description="Armoire's mobile app, designed and developed for iOS and Android"
+      description="Increasing Armoire member convenience and engagement by delivering an easy-to-use, performant mobile app experience"
       stats={getStats()}
       imageSource={data.header.childImageSharp.fluid}
       imageAlt="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."
@@ -122,28 +122,62 @@ const ArmoireMobile = () => {
       <>
       <div className="bodyTextWrapper overview">
         <h2>Project Overview</h2>
-        <p><i>Armoire is a consumer clothing rental company that offers its members access to a personalized closet of high-end styles</i></p>
+        <p><i>Armoire is a consumer clothing rental company that offers its members access to a personalized closet of high-end styles.</i></p>
+        <h3 className="subhead">Context: Why build an app?</h3>
         <p>
           When I conducted my first set of user interviews with Armoire members in May 2020, <em>every single interviewee</em> identified a mobile app as their number one ask for our tech team.</p>
       </div>
       <div className="bodyTextWrapper intro">
-        <p>Between October 2020 and March 2021, I led the product development efforts for this app. My individual contributions towards this effort spanned initial investigation and design of our tech stack, development our UI component system in React Native, development of roughly 80% of the app's features, and deployment of our apps to the <a
-              href="https://apps.apple.com/us/app/armoire-style/id1560230748"
-              target="_blank"
-              rel="noopener noreferrer"
-            > Apple </a> and <a href="https://play.google.com/store/apps/details?id=style.armoire.armoiremobile&hl=en_US&gl=US" target="_blank"
-              rel="noopener noreferrer"
-            >Google Play</a> stores.
-        </p>
         <p>
-          Within 1 month of launch, more than <strong>50%</strong> of our user base had adopted the Armoire mobile apps – the apps are now Armoire's primary platform for user engagement. They have 5-star reviews on the App Stores and have maintained a <strong>99.9% crash-free rate since</strong> launch. 
-        </p>
+        This was not a coincidence; the user mandate for a mobile app was clear and unrelenting across multiple customer surveys and interviews.</p>
+        <p>The business case was also compelling:
+          <ul className="mt-3">
+            <li>Key competitors in our target market (Rent the Runway, Nuuly, Stitchfix) all had mobile apps available on iOS</li>
+            <li>Mobile apps would unlock native-only capabilities that could increase user convenience and engagement, including push notifications and native sharing actions</li>
+            <li>Since user growth was relatively stagnant during the height of Covid-19, we could safely dedicate engineering resources to the effort</li>
+          </ul>
+        </p>  
+      </div>
+      <div className="bodyTextWrapper overview">
+        <h3 className="subhead">Problem Statement</h3>
+          <p>Increase the convenience of and engagement with Armoire's rental service for existing Armoire members by delivering an easy-to-use, performant mobile app.</p>
+      </div>
+      <div className="bodyTextWrapper into">
+        <h4>Project Scope</h4>
+        <p>To make the transition to mobile smooth for our members, we knew the MVP would require building almost all of Armoire's existing functionality into the mobile app. The app would be able to use the same server APIs and protocol as our web app, so the technical effort was almost entirely on the client side.</p> 
         <p>
-          Below is a brief overview of the app that describes its basic scenarios and helps communicate the scope of this project. I will be adding more information about my design process, technical decisions, and challenges soon.
+          Core feature areas required for the MVP included:
+        <ul className="mt-3">
+          <li>My Closet - User's hub for finding and saving clothing to rent</li>
+          <li>Search - Traditional search experience across Armoire's inventory</li>
+          <li>My Case - Similar to an e-commerce "Cart" for handling all rental logic</li>
+          <li>Feed - A members-only feed containing styling inspiration</li>
+          <li>Notifications - Updates about a user's account, rentals, and activity</li>
+          <li>My Account - User's profile and account editing features</li>
+        </ul>
         </p>
+        <h4>Out of Scope</h4>
+        <p>Prospective members were de-prioritized as a target group for this effort. As such, acquisition-specific features were not considered "required" for launch unless they were part of Apple's App Store review criteria.</p> 
+      </div>
+      <div className="bodyTextWrapper overview">
+        <h3 className="subhead">Role and Responsibilities</h3>
+          <p>For 6 months, I was the primary contributor and driver of this effort. I worked on everything from the app's initial tech investigation to the development of its core UI components and information architecture, through to its build and submission to the App Stores.</p>
+      </div>
+      <div className="bodyTextWrapper into">
+        <h4>Collaborators</h4>
+        <p>Armoire's CTO and Head of UX served as project advisors – helping to scope work and think through roadblocks as needed. Ryan, a full-stack engineer on my team, joined the project about 60% of the way through to build Search and several Feed features.</p> 
+      </div>
+      <div className="bodyTextWrapper overview">
+        <h2 className="sectionHeading">App Overview</h2>
+        <p className="">The released mobile apps are available for download on the <a
+            href="https://apps.apple.com/us/app/armoire-style/id1560230748"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Apple</a> and <a href="https://play.google.com/store/apps/details?id=style.armoire.armoiremobile&hl=en_US&gl=US" target="_blank"
+            rel="noopener noreferrer"
+          >Google Play</a> stores. I will be publishing more soon on the development process, technical challenges, UX improvements, and outcomes. In the meantime, feel free to download and explore the app or check out the overview below.</p>
       </div>
       <div className="bodyTextWrapper">
-        <h2 className="sectionHeading" >App Overview</h2>
         <h4 className="appSection first">My Closet</h4>
         <p>A user's closet contains their personalized recommendations, favorited styles, and seasonal sections curated by Armoire stylists.</p>
       </div>
@@ -289,8 +323,8 @@ const getStats = () => (
       <h5>Responsibilities</h5>
       <h6>Project Lead</h6>
       <h6>Information Architecture</h6>
-      <h6>Interaction Design</h6>
-      <h6>Front-End Engineering</h6>
+      <h6>UX Design</h6>
+      <h6>Engineering</h6>
     </div>
     <div className="stat">
       <h5>Collaborators</h5>

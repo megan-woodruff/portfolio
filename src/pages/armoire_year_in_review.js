@@ -69,7 +69,7 @@ const ArmoireYearInReview = () => {
     <ProjectPage
       title="Armoire Year In Review"
       location="Armoire Style"
-      description="Personalized clothing rental year in review landing pages and dynamically-generated, shareable images"
+      description="Highlighting the value of an Armoire membership through year in review landing pages and dynamically-generated, shareable images"
       stats={getStats()}
       imageSource={data.armoireImage.childImageSharp.fluid}
       imageAlt="Mock up of screens from Armoire Year in Review landing page"
