@@ -48,7 +48,7 @@ const About = () => {
             fullest potential.
           </p>
           <p>
-            I am currently a UX Engineer at{" "}
+            I am currently a Lead Design Technologist at{" "}
             <a
               href="https://armoire.style"
               target="_blank"

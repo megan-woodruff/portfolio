@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Megan Woodruff`,
-    description: `Creative technologist based in Seattle, WA.`,
+    description: `Design technologist based in Seattle, WA.`,
     author: `@megan-woodruff`,
   },
   plugins: [
