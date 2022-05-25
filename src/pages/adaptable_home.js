@@ -71,7 +71,7 @@ const AdaptableHome = () => {
             Final Product
           </h2>
           <p>
-            You can view a segment of the home walkthrough in the video below, or visit <a href="https://adaptablehome.design/home-tour" target="_blank" rel="noopener noreferrer">adaptablehome.design</a> to explore it at your own pace. If you want to learn more about our UX process for the entire 6-month capstone project, visit the <a href="https://adaptablehome.design/our-approach" target="_blank" rel="noopener noreferrer">our approach</a> page. 
+            You can view a segment of the home walkthrough in the video below, or visit <a href="https://adaptable-design.netlify.app/home-tour" target="_blank" rel="noopener noreferrer">adaptable-design.netlify.app</a> to explore it at your own pace. If you want to learn more about our UX process for the entire 6-month capstone project, visit the <a href="https://adaptable-design.netlify.app/our-approach" target="_blank" rel="noopener noreferrer">our approach</a> page. 
           </p>
         </div>
         <video
