@@ -114,7 +114,7 @@ const ArmoireMobile = () => {
     <ProjectPage
       title="Armoire Mobile"
       location="Armoire Style"
-      description="Increasing Armoire member convenience and engagement by delivering an easy-to-use, performant mobile app experience"
+      description="Increasing member engagement and retention by delivering an easy-to-use, performant mobile app"
       stats={getStats()}
       imageSource={data.header.childImageSharp.fluid}
       imageAlt="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."
@@ -122,53 +122,106 @@ const ArmoireMobile = () => {
       <>
       <div className="bodyTextWrapper overview">
         <h2>Project Overview</h2>
-        <p><i>Armoire is a consumer clothing rental company that offers its members access to a personalized closet of high-end styles.</i></p>
-        <h3 className="subhead">Context: Why build an app?</h3>
         <p>
-          When I conducted my first set of user interviews with Armoire members in May 2020, <em>every single interviewee</em> identified a mobile app as their number one ask for our tech team.</p>
+           In response to <a href="#customerDemand">strong user demand</a>, I led the end-to-end creation of Armoire's mobile app. In addition to developing an ambitious <a href="#mvpRequirements">MVP feature set</a>, I designed the app's <a href="#technicalArchitecture">technical architecture</a>, devised its <a href="#informationArchitecture">IA and navigation</a>, and built its <a href="#componentLibrary">UI component library</a>. Along the way, I learned to optimize JavaScript performance and React Native animations, and I pushed to improve existing product experiences whenever possible.
+          </p>
+          <p>
+            Upon successful launch, the apps were quickly adopted by more than 60% of Armoire's user base and received overwhelmingly positive reviews. Their improved UX and native capabilities increased user engagement and retention. 
+        </p>
       </div>
-      <div className="bodyTextWrapper intro">
+      <div id="customerDemand" className="bodyTextWrapper intro">
+        <h2>Context and Requirements</h2>
+        <h3 className="subhead">Why build an app?</h3>
         <p>
-        This was not a coincidence; the user mandate for a mobile app was clear and unrelenting across multiple customer surveys and interviews.</p>
+          When I conducted my first set of user interviews with Armoire members in May 2020, <em>every single interviewee</em> identified a mobile app as their number one ask for our tech team.
+        </p>
+        <p>
+          This was not a coincidence; the user mandate for a mobile app was clear and unrelenting across multiple customer surveys and interviews. Though Armoire's web experience ...</p>
         <p>The business case was also compelling:
           <ul className="mt-3">
-            <li>Key competitors in our target market (Rent the Runway, Nuuly, Stitchfix) all had mobile apps available on iOS</li>
-            <li>Mobile apps would unlock native-only capabilities that could increase user convenience and engagement, including push notifications and native sharing actions</li>
-            <li>Since user growth was relatively stagnant during the height of Covid-19, we could safely dedicate engineering resources to the effort</li>
+            <li>Key competitors in our market (Rent the Runway, Nuuly, Stitchfix) all had mobile apps available on iOS</li>
+            <li>Mobile apps would unlock native-only capabilities that could increase user convenience and engagement</li>
           </ul>
         </p>  
       </div>
-      <div className="bodyTextWrapper overview">
-        <h3 className="subhead">Problem Statement</h3>
-          <p>Increase the convenience of and engagement with Armoire's rental service for existing Armoire members by delivering an easy-to-use, performant mobile app.</p>
+      <div id="mvpRequirements" className="bodyTextWrapper">
+        <h3>MVP Requirements</h3>
+        <p>To make the transition to mobile smooth for our members, I knew the MVP would require building almost all of Armoire's existing functionality into the mobile app. The app would be able to use the same server APIs and protocol as our web app, so the technical effort was almost entirely on the client side.</p> 
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Features</th>
+              <th>Existing Experience</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th>Closet</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Search</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Case</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>PWR Feed</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Notifications</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Account</th>
+            <td></td>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
       </div>
-      <div className="bodyTextWrapper into">
-        <h4>Project Scope</h4>
-        <p>To make the transition to mobile smooth for our members, we knew the MVP would require building almost all of Armoire's existing functionality into the mobile app. The app would be able to use the same server APIs and protocol as our web app, so the technical effort was almost entirely on the client side.</p> 
+      <div id="technicalArchitecture" className="bodyTextWrapper">
+        <h2>Technical Design</h2>
+        <h3>Investigation and Proof of Concept</h3>
         <p>
-          Core feature areas required for the MVP included:
-        <ul className="mt-3">
-          <li>My Closet - User's hub for finding and saving clothing to rent</li>
-          <li>Search - Traditional search experience across Armoire's inventory</li>
-          <li>My Case - Similar to an e-commerce "Cart" for handling all rental logic</li>
-          <li>Feed - A members-only feed containing styling inspiration</li>
-          <li>Notifications - Updates about a user's account, rentals, and activity</li>
-          <li>My Account - User's profile and account editing features</li>
-        </ul>
+          As a web developer with React experience, I held a strong bias towards building Android and iOS apps using a common React Native codebase. However, with 85% of Armoire's user base on iOS, I also did not want to rule out the potential advantages of writing a native app on iOS only.
         </p>
-        <h4>Out of Scope</h4>
-        <p>Prospective members were de-prioritized as a target group for this effort. As such, acquisition-specific features were not considered "required" for launch unless they were part of Apple's App Store review criteria.</p> 
+        <p>
+          I spent the first two weeks of the project investigating the technical limitations of React Native by building a proof-of-concept prototype. I used the Expo Managed Framework to minimize startup time and to answer questions about the advantages and limitations of the Expo Managed framework vs a bare React Native app. The table below lists the technical considerations I weighed after two weeks of research and prototyping.
+          </p>
+        <h3>Technical Architecture</h3>
       </div>
+      <div id="informationArchitecture" className="bodyTextWrapper">
+        <h2>Foundational UX Design</h2>
+        <h3>Information Architecture and Navigation</h3>
+        <h3>Component Library</h3>
+      </div>
+      <div id="performanceAnimations" className="bodyTextWrapper">
+        <h2>Technical Challenges</h2>
+        <h3>JavaScript Performance</h3>
+        <h3>React Native Animations</h3>
+        <h3>React Native Webviews</h3>
+        {/* <h3></h3> */}
+      </div>
+      <div id="uxOptimizations" className="bodyTextWrapper">
+        <h2>UX Improvements</h2>
+        <h3>Auto-selecting size on product pages</h3>
+        <h3>Feed item previews</h3>
+        <h3>Sticky filter actions</h3>
+        <h3>Account hierarchy</h3>
+      </div>
+
       <div className="bodyTextWrapper overview">
-        <h3 className="subhead">Role and Responsibilities</h3>
-          <p>For 6 months, I was the primary contributor and driver of this effort. I worked on everything from the app's initial tech investigation to the development of its core UI components and information architecture, through to its build and submission to the App Stores.</p>
-      </div>
-      <div className="bodyTextWrapper into">
-        <h4>Collaborators</h4>
-        <p>Armoire's CTO and Head of UX served as project advisors – helping to scope work and think through roadblocks as needed. Ryan, a full-stack engineer on my team, joined the project about 60% of the way through to build Search and several Feed features.</p> 
-      </div>
-      <div className="bodyTextWrapper overview">
-        <h2 className="sectionHeading">App Overview</h2>
+        <h3 className="sectionHeading">Download the App</h3>
         <p className="">The released mobile apps are available for download on the <a
             href="https://apps.apple.com/us/app/armoire-style/id1560230748"
             target="_blank"
