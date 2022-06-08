@@ -64,6 +64,28 @@ const ArmoireMobile = () => {
           }
         }
       }
+      pocWalkthrough: file(relativePath: { eq: "Mobile-POC.mp4" }) {
+        name,
+        publicURL
+      } 
+      pocLogin: file(relativePath: { eq: "Mobile-POCLogin.mp4" }) {
+        name,
+        publicURL
+      } 
+      pocCloset: file(relativePath: { eq: "Mobile-POCCloset.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      pocPDP: file(relativePath: { eq: "Mobile-POCPDP.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       technicalArchitecture: file(relativePath: { eq: "Mobile-TechnicalArchitectureTransparent.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
@@ -133,8 +155,108 @@ const ArmoireMobile = () => {
            In response to <a href="#customerDemand">strong user demand</a>, I led the end-to-end creation of Armoire's mobile app. In addition to developing an ambitious <a href="#mvpRequirements">MVP feature set</a>, I designed the app's <a href="#technicalArchitecture">technical architecture</a>, devised its <a href="#informationArchitecture">IA and navigation</a>, and built its <a href="#componentLibrary">UI component library</a>. Along the way, I learned to optimize JavaScript performance and React Native animations, and I pushed to improve existing product experiences whenever possible.
           </p>
           <p>
-            Upon successful launch, the apps quickly became the primary platform for over 70% of Armoire's engaged users. Their improved UX and native capabilities also increased user retention. 
+            Upon successful launch, the apps quickly became the primary platform for over 70% of Armoire's users engagement. Their improved UX and native capabilities also increased user retention. 
         </p>
+      </div>
+      <div className="mobileScreens">
+        <div className="mobileScreen">
+          <Img
+            alt="Closet home page containing horizontally scrolling sections"
+            fluid={data.closet.childImageSharp.fluid}/>
+        </div>
+        <div className="mobileScreen">
+          <Img
+            alt="Closet section page, containing a two column layout of product thumbnails, with sort and filter buttons pinned to the bottom of the page"
+            fluid={data.closetSection.childImageSharp.fluid}/>
+        </div>
+        <div className="mobileScreen">
+          <Img
+            alt="Closet Filters modal, which shows options for filtering by Category, Occasion, Season, Color, Pattern, and other style attributes"
+            fluid={data.closetFilters.childImageSharp.fluid}/>
+        </div>
+        <div className="mobileScreen">
+          <Img
+            alt="Product Details page, which shows an image slider containing product images, product name and description, sizing information, and reviews"
+            fluid={data.closetDetails.childImageSharp.fluid}/>
+        </div>
+      </div>
+      <div className="walkthroughs">
+        <video
+          autoPlay={true}
+          loop
+          alt={"Closet section layouts. Home page containing horizontally sliding section previews, which link to full section pages with filters"}
+          className="walkthroughVideo"
+          muted>
+          <source 
+            src={data.closetSections.publicURL} 
+            type="video/mp4" />
+        </video> 
+        <video
+          autoPlay={true}
+          loop
+          alt={"Closet details page, containing product photos, reviews, sizes, and add to case button"}
+          className="walkthroughVideo"
+          muted>
+          <source 
+            src={data.closetDetailsVideo.publicURL} 
+            type="video/mp4" />
+        </video> 
+      </div>
+      <div className="mobileScreens">
+        <div className="mobileScreen">
+          <Img
+            alt=""
+            fluid={data.case.childImageSharp.fluid}/>
+        </div>
+        <div className="mobileScreen">
+          <Img
+            alt=""
+            fluid={data.notifications.childImageSharp.fluid}/>
+        </div>
+        <div className="mobileScreen">
+          <Img
+            alt=""
+            fluid={data.account.childImageSharp.fluid}/>
+        </div>
+      </div>
+      <div className="mobileScreens">
+        <div className="mobileScreen">
+          <Img
+            alt=""
+            fluid={data.feed.childImageSharp.fluid}/>
+        </div>
+        <div className="mobileScreen">
+          <Img
+            alt=""
+            fluid={data.feedProfile2.childImageSharp.fluid}/>
+        </div>
+        <div className="mobileScreen">
+          <Img
+            alt=""
+            fluid={data.feedProfile.childImageSharp.fluid}/>
+        </div>
+      </div>
+      <div className="walkthroughs">
+        <video
+          autoPlay={true}
+          loop
+          alt={""}
+          className="walkthroughVideo"
+          muted>
+          <source 
+            src={data.feedOverview.publicURL} 
+            type="video/mp4" />
+        </video> 
+        <video
+          autoPlay={true}
+          loop
+          alt={""}
+          className="walkthroughVideo"
+          muted>
+          <source 
+            src={data.feedProfileWalkthrough.publicURL} 
+            type="video/mp4" />
+        </video> 
       </div>
       <div id="customerDemand" className="bodyTextWrapper intro">
         <h2>Context and Requirements</h2>
@@ -145,18 +267,18 @@ const ArmoireMobile = () => {
         </p>
         <h4>Business imperative</h4>
         <p>
-          The business case was also compelling. Key competitors in our market (Rent the Runway, Nuuly, Stitchfix) all had mobile apps. We also knew that delivering a mobile app would unlock native-only capabilities that could increase user convenience, engagement, and ultimately, satisfaction.
+          The business case was also compelling. Key competitors in our market (Rent the Runway, Nuuly, Stitchfix) all had mobile apps. Delivering a mobile app would also unlock native-only capabilities that could increase user convenience, engagement, and ultimately, satisfaction.
         </p>  
       </div>
       <div id="mvpRequirements" className="bodyTextWrapper">
         <h3>MVP Requirements</h3>
-        <p>To make the transition to mobile smooth for our members, I knew the MVP would require building almost all of Armoire's existing functionality into the mobile app. The app would be able to use the same server APIs and protocol as our web app, so the technical effort was almost entirely on the client side.</p> 
+        <p>To make the transition to mobile smooth for our members, the MVP would require building almost all of Armoire's existing functionality into the mobile app. The app would be able to use the same server APIs and protocol as our web app, so the technical effort was almost entirely on the client side.</p> 
       </div>
       <table>
           <thead>
             <tr>
-              <th></th>
-              <th>Feature Description</th>
+              <th>Feature Area</th>
+              <th>Required Features</th>
               <th>Existing Experience</th>
             </tr>
           </thead>
@@ -165,8 +287,7 @@ const ArmoireMobile = () => {
             <th>Closet</th>
             <td>
               <ul>
-                <li>Core experience for finding and saving styles</li>
-                <li>User's recommendations and favorites sections</li>
+                <li>Finding and saving styles</li>
                 <li>Product list views (sections)</li>
                 <li>Product details page</li>
               </ul>
@@ -180,7 +301,7 @@ const ArmoireMobile = () => {
             <td>
               <ul>
                 <li>
-                  Search  across all of Armoire's inventory and user-generated content.
+                  Search inventory and user-generated content
                 </li>
               </ul>
             </td>
@@ -190,7 +311,7 @@ const ArmoireMobile = () => {
             <th>Case</th>
             <td>
               <ul>
-                <li>Selection and confirmation of styles a user is going to rent</li>
+                <li>Selection and confirmation of rentals</li>
                 <li>Package tracking</li>
                 <li>Reviewing + returning items</li>
                 <li>Purchasing items</li>
@@ -203,7 +324,7 @@ const ArmoireMobile = () => {
             <td>
               <ul>
                   <li>Viewing and sharing looks to the members-only style feed</li>
-                  <li>Commenting, liking, and favoriting items on looks</li>
+                  <li>Commenting and liking looks</li>
                   <li>Viewing other users' profiles</li>
                   <li>Updating personal profile</li>
                   <li>Following other members</li>
@@ -237,9 +358,9 @@ const ArmoireMobile = () => {
           </tr>
           </tbody>
         </table>
-      <div id="technicalArchitecture" className="bodyTextWrapper">
+      <div className="bodyTextWrapper">
         <h2>Technical Design</h2>
-        <h3>Investigation and Proof of Concept</h3>
+        <h3>Investigation</h3>
         <p>
           My first goal was to determine an overarching framework and platform for the app's development.
         </p>
@@ -317,13 +438,41 @@ const ArmoireMobile = () => {
           </tbody>
         </table>
       <div className="bodyTextWrapper">
+        <h3>Proof of Concept</h3>
         <p>
-          The initial React Native prototype I created had a basic login screen, tab navigation, a closet screen with horizontal sliding sections, and the bones of a product details page. I also tested out image upload, state management with mobx, font customizations, and using Sass as a styling preprocessor.
+          The proof of concept I created had a basic login screen, tab navigation, a closet screen with horizontal sliding sections, and the bones of a product details page. I also tested out image upload, state management with mobx, font customizations, and using Sass as a styling preprocessor.
         </p>
-        <p>
-          Overall, I found the development process for this POC to be relatively straightforward given my previous knowledge of React, though there were certainly some "gotchas" I had to adapt to.
-        </p>
-        <h3>Technical Architecture</h3>
+      </div>
+        <div className="mobileScreens">
+        <video
+            autoPlay={true}
+            loop
+            alt={""}
+            className="mobileScreen"
+            muted>
+            <source 
+              src={data.pocLogin.publicURL} 
+              type="video/mp4" />
+          </video> 
+          <div className="mobileScreen">
+            <Img
+              alt="Basic product details page"
+              fluid={data.pocPDP.childImageSharp.fluid}/>
+          </div>
+          <video
+            autoPlay={true}
+            loop
+            alt={""}
+            className="mobileScreen"
+            muted>
+            <source 
+              src={data.pocWalkthrough.publicURL} 
+              type="video/mp4" />
+          </video> 
+      </div>
+      <div style={{ marginTop: 60 }} className="bodyTextWrapper" id="technicalArchitecture">
+    
+        <h3>Final Technical Architecture</h3>
         <p>Using my analysis and proof of concept I developed a high-level technical architecture for the app.</p>
         <p>
           Since I knew Armoire's target users largely used high-end devices on strong data connections, I decided that the speed and size advantages of a native-built iOS app were not worth its high development learning curve and slow update cadence. Additionally, building in React Native would mean that Armoire would be alone amongst its competitors in offering users an Android app.
@@ -361,139 +510,23 @@ const ArmoireMobile = () => {
       </div>
 
       <div className="bodyTextWrapper overview">
-        <h3 className="sectionHeading">Download the App</h3>
+        <h2 className="sectionHeading">Final Product</h2>
         <p className="">The mobile apps were released in early April 2021 and are available for download on the <a
             href="https://apps.apple.com/us/app/armoire-style/id1560230748"
             target="_blank"
             rel="noopener noreferrer"
           >Apple</a> and <a href="https://play.google.com/store/apps/details?id=style.armoire.armoiremobile&hl=en_US&gl=US" target="_blank"
             rel="noopener noreferrer"
-          >Google Play</a> stores.</p>
+          >Google Play</a> stores. They have maintained 99.9% crash-free rates since launch and have received 4.5+ star reviews. </p>
       </div>
-      <div className="bodyTextWrapper">
-        <h4 className="appSection first">My Closet</h4>
-        <p>A user's closet contains their personalized recommendations, favorited styles, and seasonal sections curated by Armoire stylists.</p>
-      </div>
-      <div className="mobileScreens">
-        <div className="mobileScreen">
-          <Img
-            alt="Closet home page containing horizontally scrolling sections"
-            fluid={data.closet.childImageSharp.fluid}/>
-        </div>
-        <div className="mobileScreen">
-          <Img
-            alt="Closet section page, containing a two column layout of product thumbnails, with sort and filter buttons pinned to the bottom of the page"
-            fluid={data.closetSection.childImageSharp.fluid}/>
-        </div>
-        <div className="mobileScreen">
-          <Img
-            alt="Closet Filters modal, which shows options for filtering by Category, Occasion, Season, Color, Pattern, and other style attributes"
-            fluid={data.closetFilters.childImageSharp.fluid}/>
-        </div>
-        <div className="mobileScreen">
-          <Img
-            alt="Product Details page, which shows an image slider containing product images, product name and description, sizing information, and reviews"
-            fluid={data.closetDetails.childImageSharp.fluid}/>
-        </div>
-      </div>
-      <div className="walkthroughs">
-        <video
-          autoPlay={true}
-          loop
-          alt={"Closet section layouts. Home page containing horizontally sliding section previews, which link to full section pages with filters"}
-          className="walkthroughVideo"
-          muted>
-          <source 
-            src={data.closetSections.publicURL} 
-            type="video/mp4" />
-        </video> 
-        <video
-          autoPlay={true}
-          loop
-          alt={"Closet details page, containing product photos, reviews, sizes, and add to case button"}
-          className="walkthroughVideo"
-          muted>
-          <source 
-            src={data.closetDetailsVideo.publicURL} 
-            type="video/mp4" />
-        </video> 
-      </div>
-      <div className="bodyTextWrapper">
-        <h4 className="appSection">My Case, Notifications, and Account</h4>
+      <div className="bodyTextWrapper ">
+        <h2 className="sectionHeading">Reflection</h2>
         <p>
-          A user's "case" is where they choose the styles they are going to rent next, as well as where they keep track of styles they have with them or are returning.
+          I'm extremely proud of what I was able to produce in six months. This project required me to learn extensively, prioritize rigorously, and communicate my decisions effectively. I learned to trust my own judgment and ability to figure things out. It allowed me to flex both my engineering and UX design muscles in a way that truly delighted our customer base.
         </p>
         <p>
-          The Account section supports the business functionality of My Case, allowing the user to view and edit the features of their account that are less likely to change. 
+          Quite ironically, when this project was first pitched, I was hesitant to take the lead on it. I'm extremely grateful that my manager pushed me to do so and provided support and guidance throughout; I would not be the technologist I am today otherwise!
         </p>
-        <p>
-          Notifications holds in-app notifications about a user's rentals (e.g. shipping status) as well as social notifications from the Feed. These notifications are also sent as Push Notifications to members who opt in.
-        </p>
-      </div>
-      <div className="mobileScreens">
-        <div className="mobileScreen">
-          <Img
-            alt=""
-            fluid={data.case.childImageSharp.fluid}/>
-        </div>
-        <div className="mobileScreen">
-          <Img
-            alt=""
-            fluid={data.notifications.childImageSharp.fluid}/>
-        </div>
-        <div className="mobileScreen">
-          <Img
-            alt=""
-            fluid={data.account.childImageSharp.fluid}/>
-        </div>
-      </div>
-      <div className="bodyTextWrapper">
-        <h4 className="appSection">"PWR Feed"</h4>
-        <p>The PWR Feed is a in-product community where users can post images of their rented styles and discover outfit inspiration from other members. Members can post looks, like and comment on posts, favorite tagged styles, and follow other members within the feed.</p>
-        <p>
-          <i>
-          Note: All profiles shown in the images and videos below are either my own or those of members who have set their profiles to "public".
-          </i>
-        </p>
-      </div>
-      <div className="mobileScreens">
-        <div className="mobileScreen">
-          <Img
-            alt=""
-            fluid={data.feed.childImageSharp.fluid}/>
-        </div>
-        <div className="mobileScreen">
-          <Img
-            alt=""
-            fluid={data.feedProfile2.childImageSharp.fluid}/>
-        </div>
-        <div className="mobileScreen">
-          <Img
-            alt=""
-            fluid={data.feedProfile.childImageSharp.fluid}/>
-        </div>
-      </div>
-      <div className="walkthroughs">
-        <video
-          autoPlay={true}
-          loop
-          alt={""}
-          className="walkthroughVideo"
-          muted>
-          <source 
-            src={data.feedOverview.publicURL} 
-            type="video/mp4" />
-        </video> 
-        <video
-          autoPlay={true}
-          loop
-          alt={""}
-          className="walkthroughVideo"
-          muted>
-          <source 
-            src={data.feedProfileWalkthrough.publicURL} 
-            type="video/mp4" />
-        </video> 
       </div>
       </>
     </ProjectPage>

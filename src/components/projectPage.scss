@@ -8,6 +8,7 @@
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: $border-radius;
 
     @media only screen and (max-width: $mobileBreak) {
         height: 400px;
@@ -88,13 +89,13 @@ table {
         position: relative;
         margin: -6rem auto 0;
         border: 1px solid white;
-        border-radius: 2px;
+        border-radius: $border-radius;
     
         .heading {
             background-color: lighten($primaryColor, 7%);
             background-color: $primaryColor;
             padding: 2rem;
-            border-radius: 2px 2px 0 0;
+            border-radius: $border-radius $border-radius 0 0;
             border-bottom: 1px solid white;
 
             .title {
@@ -126,7 +127,7 @@ table {
             justify-content: space-between;
             padding: 2rem 2rem 1.2rem;
             background-color: $backgroundColor;
-            border-radius: 0 0 2px 2px;
+            border-radius: 0 0 $border-radius $border-radius;
             // border: 1px solid white;
             border-top: none;
 
@@ -257,7 +258,7 @@ table {
             background-color: #f9f9f9;
             background-color: $primaryColor;
             color: white;
-            border-radius: 2px;
+            border-radius: $border-radius;
             overflow: wrap;
 
             
@@ -298,7 +299,7 @@ table {
                 width: 30%;
 
                 .personaImage {
-                    border-radius: 2px;
+                    border-radius: $border-radius;
                 }
 
                 .flipImage {
