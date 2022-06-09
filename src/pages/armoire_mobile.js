@@ -155,7 +155,7 @@ const ArmoireMobile = () => {
            In response to <a href="#customerDemand">strong user demand</a>, I led the end-to-end creation of Armoire's mobile app. In addition to developing an ambitious <a href="#mvpRequirements">MVP feature set</a>, I designed the app's <a href="#technicalArchitecture">technical architecture</a>, devised its <a href="#informationArchitecture">IA and navigation</a>, and built its <a href="#componentLibrary">UI component library</a>. Along the way, I learned to optimize JavaScript performance and React Native animations, and I pushed to improve existing product experiences whenever possible.
           </p>
           <p>
-            Upon successful launch, the apps quickly became the primary platform for over 70% of Armoire's users engagement. Their improved UX and native capabilities also increased user retention. 
+            Upon successful launch, the apps quickly became the primary platform for over 70% of Armoire's user engagement. Their improved UX and native capabilities also increased user retention. 
         </p>
       </div>
       <div className="mobileScreens">
@@ -472,7 +472,7 @@ const ArmoireMobile = () => {
       </div>
       <div style={{ marginTop: 60 }} className="bodyTextWrapper" id="technicalArchitecture">
     
-        <h3>Final Technical Architecture</h3>
+        <h3>Technical Architecture</h3>
         <p>Using my analysis and proof of concept I developed a high-level technical architecture for the app.</p>
         <p>
           Since I knew Armoire's target users largely used high-end devices on strong data connections, I decided that the speed and size advantages of a native-built iOS app were not worth its high development learning curve and slow update cadence. Additionally, building in React Native would mean that Armoire would be alone amongst its competitors in offering users an Android app.
