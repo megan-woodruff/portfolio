@@ -134,6 +134,62 @@ const ArmoireMobile = () => {
           }
         }
       }
+      navigationOldDesktop: file(relativePath: { eq: "Mobile-WebNavOldDesktopCondensed.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 900) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      navigationOldFlyout: file(relativePath: { eq: "Mobile-WebNavOldFlyout.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 900) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      navigationOldMobile: file(relativePath: { eq: "Mobile-WebNavOldMobile.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 900) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      navigationArchitecture1: file(relativePath: { eq: "Mobile-NavArch1.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 900) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      navigationArchitecture2: file(relativePath: { eq: "Mobile-NavArch2.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 900) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      navigationArchitecture3: file(relativePath: { eq: "Mobile-NavArch3.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 900) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      navigationArchitectureFinal: file(relativePath: { eq: "Mobile-NavArchFinal.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 900) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      navigationDeeplinks: file(relativePath: { eq: "Mobile-NavDeeplinks.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 900) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       search: file(relativePath: { eq: "Mobile-SearchResults.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
@@ -699,7 +755,78 @@ const ArmoireMobile = () => {
         fluid={data.technicalArchitecture.childImageSharp.fluid}/>
       <div id="informationArchitecture" className="bodyTextWrapper">
         <h2>Foundational UX Development</h2>
+        <p>For the first month of the project, I focused on increasing the total surface area of the app by developing its information architecture and global UI components.</p>
         <h3>Information Architecture and Navigation</h3>
+        <p>One of the first UX challenges I had to tackle was determining how to translate the existing web app’s navigation structure into a mobile app hierarchy with only 5 main tabs.</p>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '24px auto' }}>
+        <div style={{ width: '65%',  }}>
+          <Img
+            style={{ margin: 16 }}
+            alt=""
+            fluid={data.navigationOldDesktop.childImageSharp.fluid}/>
+          <Img
+            style={{ margin: 16 }}
+            alt=""
+            fluid={data.navigationOldMobile.childImageSharp.fluid}/>
+        </div>
+        <Img
+            style={{ width: '22%', margin: 16 }}
+            alt=""
+            fluid={data.navigationOldFlyout.childImageSharp.fluid}/>
+      </div>
+      <div className="bodyTextWrapper">
+        <p> As the screen grabs above demonstrate, the existing website hierarchy was extremely flat and shallow, which didn’t lend itself well to the limited real estate of a mobile app. The diagram below represents the core sections, screens, and actions I identified in the existing web app hierarchy.</p>
+      </div>
+      <Img
+        style={{ margin: '48px auto'}}
+        alt=""
+        fluid={data.navigationArchitecture1.childImageSharp.fluid}/>
+
+      <div className="bodyTextWrapper">
+        <p>
+          I realized that certain “flows”, for example, reviewing or purchasing an item, would actually be best performed <em>without</em> the app tab bar present, to increase user focus on the task and decrease the chance of accidentally leaving before the action is complete. Those flows are highlighted above in teal. 
+        </p>
+        <p>
+          In the second diagram I grouped those flows together into one “Modals” object, with the idea that these screens would live outside or “on top” of the tab navigator and  be opened globally throughout the app. I also moved Referrals and Style Profile within the account section, as they weren't deep enough to warrant their own section. This reduced the number of contenders for the 5 spots in the tab navigator down to 6.
+        </p>
+      </div>
+
+      <Img
+        style={{ margin: '48px auto'}}
+        alt=""
+        fluid={data.navigationArchitecture2.childImageSharp.fluid}/>
+
+      <div className="bodyTextWrapper">
+        <p>
+          From here, I worked in the opposite direction, asking: when is it <em>most</em> important that a user have access to the tab bar? Other than initial login, I determined that this was right after a user adds an item to their case. At this point, a user needs visual confirmation that the item was added, and an understanding of where to view their “case” of selected items.
+        </p>
+        <p>Due to the many connections between product pages, feed items, and user profiles, 5 of the 6 remaining app areas would need to navigate to a product page. These connections are shown below, followed by an updated diagram that highlights their presence in the information architecture.</p>
+      </div>
+
+      <Img
+        style={{ margin: '48px auto'}}
+        alt=""
+        fluid={data.navigationDeeplinks.childImageSharp.fluid}/>
+      <Img
+        style={{ margin: '48px auto'}}
+        alt=""
+        fluid={data.navigationArchitecture3.childImageSharp.fluid}/>
+
+      <div className="bodyTextWrapper">
+        <p>
+          Since Account was the only area that didn't require deeplinking to product pages, and because its actions would be completed least often, I opted to also move it “above” the tab navigator. To make sure it would still be visible to users, I added links to it in the Closet home page, Closet section page, and Case home page headers.
+        </p>
+        <p>
+          The diagram below represents the final information architecture.
+        </p>
+      </div>
+      <Img
+        style={{ maxWidth:800, margin: '48px auto'}}
+        alt=""
+        fluid={data.navigationArchitectureFinal.childImageSharp.fluid}/>
+
+      <div id="componentLibrary" className="bodyTextWrapper">
         <h3>Component Library</h3>
       </div>
       <div id="performanceAnimations" className="bodyTextWrapper">
