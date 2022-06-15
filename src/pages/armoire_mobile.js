@@ -21,6 +21,48 @@ const ArmoireMobile = () => {
           }
         }
       }
+      accountMainOld: file(relativePath: { eq: "Mobile-AccountMainOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      accountMembershipOld: file(relativePath: { eq: "Mobile-MembershipOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      accountRewardsOld: file(relativePath: { eq: "Mobile-RewardsOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      caseOld: file(relativePath: { eq: "Mobile-CaseOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      casePurchaseOld: file(relativePath: { eq: "Mobile-PurchaseOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      caseReviewOld: file(relativePath: { eq: "Mobile-ReviewsOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       closet: file(relativePath: { eq: "Mobile-Closet.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
@@ -50,6 +92,20 @@ const ArmoireMobile = () => {
           }
         }
       }
+      closetHomeOld: file(relativePath: { eq: "Mobile-ClosetHomeOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      closetSectionOld: file(relativePath: { eq: "Mobile-ClosetSectionOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       closetFilters: file(relativePath: { eq: "Mobile-Filters.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
@@ -57,7 +113,42 @@ const ArmoireMobile = () => {
           }
         }
       }
+      feedOld: file(relativePath: { eq: "Mobile-PWRFeedOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      feedCommentOld: file(relativePath: { eq: "Mobile-FeedCommentOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      feedProfileOld: file(relativePath: { eq: "Mobile-FeedProfileOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       search: file(relativePath: { eq: "Mobile-SearchResults.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      searchOld: file(relativePath: { eq: "Mobile-SearchOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      searchResultsOld: file(relativePath: { eq: "Mobile-SearchResultsOld.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -80,6 +171,13 @@ const ArmoireMobile = () => {
         }
       }
       pocPDP: file(relativePath: { eq: "Mobile-POCPDP.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      closetPdpOld: file(relativePath: { eq: "Mobile-PdpOld.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -130,6 +228,20 @@ const ArmoireMobile = () => {
         }
       }
       notifications: file(relativePath: { eq: "Mobile-Notification.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      notificationsOld: file(relativePath: { eq: "Mobile-NotificationsOld.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      notificationsOld2: file(relativePath: { eq: "Mobile-NotificationsOld1.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -279,7 +391,7 @@ const ArmoireMobile = () => {
             <tr>
               <th>Feature Area</th>
               <th>Required Features</th>
-              <th>Existing Experience</th>
+              <th>Previous Experience on Mobile Web</th>
             </tr>
           </thead>
           <tbody>
@@ -293,7 +405,23 @@ const ArmoireMobile = () => {
               </ul>
             </td>
             <td>
-
+            <div className="mobileScreensTable">
+            <div className="mobileScreenTable">
+                <Img
+                  alt="Closet home page containing horizontally scrolling sections"
+                  fluid={data.closetHomeOld.childImageSharp.fluid}/>
+              </div>
+              <div className="mobileScreenTable">
+                <Img
+                  alt="Closet home page containing horizontally scrolling sections"
+                  fluid={data.closetSectionOld.childImageSharp.fluid}/>
+              </div>
+              <div className="mobileScreenTable">
+                <Img
+                  alt="Closet section page, containing a two column layout of product thumbnails, with sort and filter buttons pinned to the bottom of the page"
+                  fluid={data.closetPdpOld.childImageSharp.fluid}/>
+              </div>
+            </div>
             </td>
           </tr>
           <tr>
@@ -305,7 +433,20 @@ const ArmoireMobile = () => {
                 </li>
               </ul>
             </td>
-            <td></td>
+            <td>
+            <div className="mobileScreensTable">
+              <div className="mobileScreenTable">
+                <Img
+                  alt="Closet home page containing horizontally scrolling sections"
+                  fluid={data.searchOld.childImageSharp.fluid}/>
+              </div>
+              <div className="mobileScreenTable">
+                <Img
+                  alt="Closet home page containing horizontally scrolling sections"
+                  fluid={data.searchResultsOld.childImageSharp.fluid}/>
+              </div>
+            </div>
+            </td>
           </tr>
           <tr>
             <th>Case</th>
@@ -317,7 +458,25 @@ const ArmoireMobile = () => {
                 <li>Purchasing items</li>
               </ul>
             </td>
-            <td></td>
+            <td>
+            <div className="mobileScreensTable">
+              <div className="mobileScreenTable">
+                <Img
+                  alt=""
+                  fluid={data.caseOld.childImageSharp.fluid}/>
+              </div>
+              <div className="mobileScreenTable">
+                <Img
+                  alt=""
+                  fluid={data.casePurchaseOld.childImageSharp.fluid}/>
+              </div>
+              <div className="mobileScreenTable">
+                <Img
+                  alt=""
+                  fluid={data.caseReviewOld.childImageSharp.fluid}/>
+              </div>
+            </div>
+            </td>
           </tr>
           <tr>
             <th>PWR Feed</th>
@@ -330,7 +489,25 @@ const ArmoireMobile = () => {
                   <li>Following other members</li>
                 </ul>
             </td>
-            <td></td>
+            <td>
+              <div className="mobileScreensTable">
+                <div className="mobileScreenTable">
+                  <Img
+                    alt=""
+                    fluid={data.feedOld.childImageSharp.fluid}/>
+                </div>
+                <div className="mobileScreenTable">
+                  <Img
+                    alt=""
+                    fluid={data.feedCommentOld.childImageSharp.fluid}/>
+                </div>
+                <div className="mobileScreenTable">
+                  <Img
+                    alt=""
+                    fluid={data.feedProfileOld.childImageSharp.fluid}/>
+                </div>
+              </div>
+            </td>
           </tr>
           <tr>
             <th>Notifications</th>
@@ -341,7 +518,20 @@ const ArmoireMobile = () => {
                   <li>Push Notification integration</li>
                 </ul>
             </td>
-            <td></td>
+            <td>
+              <div className="mobileScreensTable">
+                <div className="mobileScreenTable">
+                  <Img
+                    alt=""
+                    fluid={data.notificationsOld2.childImageSharp.fluid}/>
+                </div>
+                <div className="mobileScreenTable">
+                  <Img
+                    alt=""
+                    fluid={data.notificationsOld.childImageSharp.fluid}/>
+                </div>
+              </div>
+            </td>
           </tr>
           <tr>
             <th>Account</th>
@@ -354,7 +544,25 @@ const ArmoireMobile = () => {
                 <li>Rewards</li>
               </ul>
             </td>
-            <td></td>
+            <td>
+            <div className="mobileScreensTable">
+                <div className="mobileScreenTable">
+                  <Img
+                    alt=""
+                    fluid={data.accountMainOld.childImageSharp.fluid}/>
+                </div>
+                <div className="mobileScreenTable">
+                  <Img
+                    alt=""
+                    fluid={data.accountMembershipOld.childImageSharp.fluid}/>
+                </div>
+                <div className="mobileScreenTable">
+                  <Img
+                    alt=""
+                    fluid={data.accountRewardsOld.childImageSharp.fluid}/>
+                </div>
+              </div>
+            </td>
           </tr>
           </tbody>
         </table>

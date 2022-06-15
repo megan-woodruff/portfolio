@@ -14,6 +14,19 @@
   overflow: hidden;
 }
 
+.mobileScreensTable {
+  display: flex;
+
+  .mobileScreenTable {
+    height: 346px;
+    min-width: 160px;
+    flex-shrink: 1;
+    margin: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
+
 .intro {
   margin-bottom: 48px;
 }
