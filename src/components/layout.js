@@ -1,9 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import NavBar from "./navBar"
-import "./layout.scss"
+import NavBar from './navBar'
+import './layout.scss'
 
 const Layout = ({ children, projectPage }) => {
   const data = useStaticQuery(graphql`
@@ -23,7 +23,7 @@ const Layout = ({ children, projectPage }) => {
         projectPage={projectPage}
       />
       <div>
-        <main style={{ backgroundColor: projectPage && "white" }}>
+        <main style={{ backgroundColor: projectPage && 'white' }}>
           {children}
         </main>
         <footer>

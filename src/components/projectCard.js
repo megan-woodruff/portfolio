@@ -1,8 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Img from "gatsby-image/withIEPolyfill"
-import { Link } from "gatsby"
-import "./projectCard.scss"
+import React from 'react'
+import PropTypes from 'prop-types'
+import Img from 'gatsby-image/withIEPolyfill'
+import { Link } from 'gatsby'
+import './projectCard.scss'
 
 const ProjectCard = ({
   title,

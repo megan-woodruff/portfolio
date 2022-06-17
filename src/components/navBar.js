@@ -1,13 +1,13 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import "./navBar.scss"
-import resume from "../images/WoodruffResume.pdf"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import './navBar.scss'
+import resume from '../images/WoodruffResume.pdf'
 
 const NavBar = ({ siteTitle, projectPage }) => (
   <header
     className="navBar"
-    style={{ backgroundColor: projectPage && "white" }}
+    style={{ backgroundColor: projectPage && 'white' }}
   >
     <div className="navBarContentContainer">
       <h2>
