@@ -1,5 +1,5 @@
 import React from 'react'
-import ArmoireMobileShowcaseScroller from '../components/armoireMobileShowcaseScroller'
+import ArmoireMobileShowcaseScroller from '../components/ArmoireMobileShowcaseScroller'
 import ProjectPage from '../components/projectPage'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
