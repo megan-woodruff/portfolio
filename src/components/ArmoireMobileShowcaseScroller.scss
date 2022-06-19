@@ -1,0 +1,98 @@
+@import 'styles';
+
+.armoireMobileShowcase {
+  margin: 80px auto 100px;
+}
+
+.titleScroll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 0 0;
+  margin: 0 auto;
+
+  .title {
+    margin: 0 !important;
+    padding: 0;
+  }
+}
+
+.description {
+  margin: 12px auto;
+}
+
+.finePrint {
+  font-size: .9rem !important;
+  line-height: 1.2rem !important;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+$leftOffset: calc((100vw - 960px) * -1/2);
+
+.showcaseScroller {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  width: 100vw;
+  position: relative;
+  left: $leftOffset;
+
+  @media only screen and (max-width: 960px) {
+    left: -36px;
+  }
+
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .showcaseAsset {
+    min-width: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    border-width: 0;
+    object-fit: cover;
+    margin-right: 24px;
+
+    &:first-child {
+      @media only screen and (max-width: 960px) {
+        margin-left: 36px;
+      }
+
+      margin-left: calc(-656px + 50vw);
+    }
+
+    &:last-child {
+      @media only screen and (max-width: 960px) {
+        margin-right: 36px;
+      }
+
+      margin-right: calc(-656px + 50vw);
+    }
+  }
+}
+
+.scrollButtons {
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: 960px) {
+    display: none;
+  }
+
+  .scrollButton {
+    border: none;
+    background-color: rgba(#fff, 0);
+    cursor: pointer;
+    transition: all .25s ease;
+    padding-top: 8px;
+  
+    &:disabled {
+      opacity: .3;
+    }
+  }
+}
+

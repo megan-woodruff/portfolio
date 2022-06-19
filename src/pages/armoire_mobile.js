@@ -1,4 +1,5 @@
 import React from 'react'
+import ArmoireMobileShowcaseScroller from '../components/armoireMobileShowcaseScroller'
 import ProjectPage from '../components/projectPage'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
@@ -7,16 +8,21 @@ import '../components/armoireMobile.scss'
 const ArmoireMobile = () => {
   const data = useStaticQuery(graphql`
     query {
+      animation1: file(relativePath: { eq: "Mobile-Animation1.mp4" }) {
+        name
+        publicURL
+      }
+      animation2: file(relativePath: { eq: "Mobile-Animation2.mp4" }) {
+        name
+        publicURL
+      }
+      animation3: file(relativePath: { eq: "Mobile-Animation3.mp4" }) {
+        name
+        publicURL
+      }
       header: file(relativePath: { eq: "armoire-mock.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      account: file(relativePath: { eq: "Mobile-Account.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -65,26 +71,6 @@ const ArmoireMobile = () => {
           }
         }
       }
-      closet: file(relativePath: { eq: "Mobile-Closet.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      closetDetails: file(relativePath: { eq: "Mobile-ClosetDetails.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      closetDetailsVideo: file(
-        relativePath: { eq: "Mobile-ClosetDetails.mp4" }
-      ) {
-        name
-        publicURL
-      }
       closetFilterSectionNew: file(
         relativePath: { eq: "Mobile-FilterSectionNew.mp4" }
       ) {
@@ -107,17 +93,6 @@ const ArmoireMobile = () => {
         name
         publicURL
       }
-      closetSections: file(relativePath: { eq: "Mobile-ClosetSections.mp4" }) {
-        name
-        publicURL
-      }
-      closetSection: file(relativePath: { eq: "Mobile-ClosetSection.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       closetHomeOld: file(relativePath: { eq: "Mobile-ClosetHomeOld.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
@@ -128,13 +103,6 @@ const ArmoireMobile = () => {
       closetSectionOld: file(
         relativePath: { eq: "Mobile-ClosetSectionOld.png" }
       ) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      closetFilters: file(relativePath: { eq: "Mobile-Filters.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -244,13 +212,6 @@ const ArmoireMobile = () => {
           }
         }
       }
-      search: file(relativePath: { eq: "Mobile-SearchResults.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       searchOld: file(relativePath: { eq: "Mobile-SearchOld.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
@@ -266,6 +227,10 @@ const ArmoireMobile = () => {
             ...GatsbyImageSharpFluid
           }
         }
+      }
+      performance1: file(relativePath: { eq: "Mobile-Perf1.mp4" }) {
+        name
+        publicURL
       }
       pocWalkthrough: file(relativePath: { eq: "Mobile-POC.mp4" }) {
         name
@@ -305,49 +270,6 @@ const ArmoireMobile = () => {
           }
         }
       }
-      case: file(relativePath: { eq: "Mobile-MyCase.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      feed: file(relativePath: { eq: "Mobile-Feed.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      feedOverview: file(relativePath: { eq: "Mobile-FeedOverview.mp4" }) {
-        name
-        publicURL
-      }
-      feedProfileWalkthrough: file(relativePath: { eq: "Mobile-Profile.mp4" }) {
-        name
-        publicURL
-      }
-      feedProfile: file(relativePath: { eq: "Mobile-FeedProfile.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      feedProfile2: file(relativePath: { eq: "Mobile-FeedProfile1.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      notifications: file(relativePath: { eq: "Mobile-Notification.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       notificationsOld: file(
         relativePath: { eq: "Mobile-NotificationsOld.png" }
       ) {
@@ -360,6 +282,17 @@ const ArmoireMobile = () => {
       notificationsOld2: file(
         relativePath: { eq: "Mobile-NotificationsOld1.png" }
       ) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      webview1: file(relativePath: { eq: "Mobile-Webview1.mp4" }) {
+        name
+        publicURL
+      }
+      webview2: file(relativePath: { eq: "Mobile-Webview2.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -396,106 +329,14 @@ const ArmoireMobile = () => {
           </p>
           <p>
             Upon <a href="#launch">successful launch</a>, the apps quickly
-            became the primary platform for over 70% of Armoire's user
+            became the primary platform for over 75% of Armoire's user
             engagement. Their improved UX and native capabilities also increased
             user retention.
           </p>
         </div>
-        <div className="mobileScreens">
-          <div className="mobileScreen">
-            <Img
-              alt="Closet home page containing horizontally scrolling sections"
-              fluid={data.closet.childImageSharp.fluid}
-            />
-          </div>
-          <div className="mobileScreen">
-            <Img
-              alt="Closet section page, containing a two column layout of product thumbnails, with sort and filter buttons pinned to the bottom of the page"
-              fluid={data.closetSection.childImageSharp.fluid}
-            />
-          </div>
-          <div className="mobileScreen">
-            <Img
-              alt="Closet Filters modal, which shows options for filtering by Category, Occasion, Season, Color, Pattern, and other style attributes"
-              fluid={data.closetFilters.childImageSharp.fluid}
-            />
-          </div>
-          <div className="mobileScreen">
-            <Img
-              alt="Product Details page, which shows an image slider containing product images, product name and description, sizing information, and reviews"
-              fluid={data.closetDetails.childImageSharp.fluid}
-            />
-          </div>
-        </div>
-        <div className="walkthroughs">
-          <video
-            autoPlay={true}
-            loop
-            alt={
-              'Closet section layouts. Home page containing horizontally sliding section previews, which link to full section pages with filters'
-            }
-            className="walkthroughVideo"
-            muted
-          >
-            <source src={data.closetSections.publicURL} type="video/mp4" />
-          </video>
-          <video
-            autoPlay={true}
-            loop
-            alt={
-              'Closet details page, containing product photos, reviews, sizes, and add to case button'
-            }
-            className="walkthroughVideo"
-            muted
-          >
-            <source src={data.closetDetailsVideo.publicURL} type="video/mp4" />
-          </video>
-        </div>
-        <div className="mobileScreens">
-          <div className="mobileScreen">
-            <Img alt="" fluid={data.case.childImageSharp.fluid} />
-          </div>
-          <div className="mobileScreen">
-            <Img alt="" fluid={data.notifications.childImageSharp.fluid} />
-          </div>
-          <div className="mobileScreen">
-            <Img alt="" fluid={data.account.childImageSharp.fluid} />
-          </div>
-        </div>
-        <div className="mobileScreens">
-          <div className="mobileScreen">
-            <Img alt="" fluid={data.feed.childImageSharp.fluid} />
-          </div>
-          <div className="mobileScreen">
-            <Img alt="" fluid={data.feedProfile2.childImageSharp.fluid} />
-          </div>
-          <div className="mobileScreen">
-            <Img alt="" fluid={data.feedProfile.childImageSharp.fluid} />
-          </div>
-        </div>
-        <div className="walkthroughs">
-          <video
-            autoPlay={true}
-            loop
-            alt={''}
-            className="walkthroughVideo"
-            muted
-          >
-            <source src={data.feedOverview.publicURL} type="video/mp4" />
-          </video>
-          <video
-            autoPlay={true}
-            loop
-            alt={''}
-            className="walkthroughVideo"
-            muted
-          >
-            <source
-              src={data.feedProfileWalkthrough.publicURL}
-              type="video/mp4"
-            />
-          </video>
-        </div>
+
+        <ArmoireMobileShowcaseScroller />
+
         <div id="customerDemand" className="bodyTextWrapper intro">
           <h2>Context and Requirements</h2>
           <h3 className="subhead">Why build an app?</h3>
@@ -517,7 +358,7 @@ const ArmoireMobile = () => {
             increase user convenience, engagement, and ultimately, satisfaction.
           </p>
         </div>
-        <div id="mvpRequirements" className="bodyTextWrapper">
+        <div id="mvpRequirements" className="bodyTextWrapper idNavigationInset">
           <h3>MVP Requirements</h3>
           <p>
             To make the transition to mobile smooth for our members, the MVP
@@ -876,8 +717,7 @@ const ArmoireMobile = () => {
           </video>
         </div>
         <div
-          style={{ paddingTop: 52 }}
-          className="bodyTextWrapper"
+          className="bodyTextWrapper idNavigationInset"
           id="technicalArchitecture"
         >
           <h3>Technical Architecture</h3>
@@ -1049,10 +889,6 @@ const ArmoireMobile = () => {
             fluid={data.navigationArchitectureFinal.childImageSharp.fluid}
           />
         </div>
-
-        {/* <div id="componentLibrary" className="bodyTextWrapper">
-        <h3>UI Component Library</h3>
-      </div> */}
         <div id="performanceAnimations" className="bodyTextWrapper">
           <h2>Technical Challenges</h2>
           <p>
@@ -1065,37 +901,138 @@ const ArmoireMobile = () => {
             Compared to ReactJS, one of the biggest differences I discovered in
             React Native was the impact of unnecessary re-renders and JS
             performance oversights on the usability of the app. I had to debug
-            rigorously and ____ best practices to use React Native FlatList,
-            useMemo, useCallback, and props comparison to avoid unnecessary
-            re-renders of components. Additionally, I learned to use the React
-            Native InteractionManager to delay the start of JS-intensive tasks
-            until after navigation transitions completed, in order to keep the
-            perceived performance of the app high.
+            rigorously and implement best practices, including performance
+            optimizers like React Native FlatList, useMemo, useCallback, and
+            props comparison to avoid unnecessary re-renders of components.
+            Additionally, I learned to use the React Native InteractionManager
+            to delay the start of JS-intensive tasks until after navigation
+            transitions completed, in order to keep the perceived performance of
+            the app high.
           </p>
+          <div className="mobileScreens">
+            <div className="mobileScreenWithCopy">
+              <video
+                autoPlay={true}
+                loop
+                alt={''}
+                className="walkthroughVideo"
+                muted
+              >
+                <source src={data.performance1.publicURL} type="video/mp4" />
+              </video>
+              <h5 className="screenCaption">
+                React Native Flatlist was essential for creating performant
+                product list views, as were PureComponent and useMemo.
+                runAfterInteractions facilitated a quick transition to and from
+                each list view, by delaying data load.
+              </h5>
+            </div>
+            <div className="mobileScreenWithCopy">
+              <video
+                autoPlay={true}
+                loop
+                alt={''}
+                className="walkthroughVideo"
+                muted
+              >
+                <source
+                  src={data.closetFilterSectionNew.publicURL}
+                  type="video/mp4"
+                />
+              </video>
+              <h5 className="screenCaption">
+                Modal screens, such as the list view filter modal, were
+                lazy-loaded to increase transition performance. Placeholder
+                components were rendered while loaded to decrease perceived idle
+                time.
+              </h5>
+            </div>
+          </div>
           <h3>React Native Animations</h3>
           <p>
-            CSS animations are not supported in React Native. To build many of
-            our core micro-interactions in the mobile app, I had to learn how to
-            use the Animated framework in React Native. These animations could
-            be offloaded to the native driver in order to keep the
-            single-threaded JS queue clear, but in order to do so, I had to
-            limit animations to certain native-supported properties (e.g.
-            opacity, transform).
+            CSS animations are not supported in React Native. To build core
+            micro-interactions in the mobile app, I had to learn how to use the
+            Animated framework in React Native. These animations could be
+            offloaded to the native driver in order to keep the single-threaded
+            JS queue clear, but in order to do so, I had to only animate
+            native-supported properties (e.g. opacity, transform).
           </p>
+          <div className="mobileScreens">
+            <div className="mobileScreenWithCopy">
+              <video
+                autoPlay={true}
+                loop
+                alt={''}
+                className="walkthroughVideo"
+                muted
+              >
+                <source src={data.animation1.publicURL} type="video/mp4" />
+              </video>
+            </div>
+            <div className="mobileScreenWithCopy">
+              <video
+                autoPlay={true}
+                loop
+                alt={''}
+                className="walkthroughVideo"
+                muted
+              >
+                <source src={data.animation2.publicURL} type="video/mp4" />
+              </video>
+            </div>
+            <div className="mobileScreenWithCopy">
+              <video
+                autoPlay={true}
+                loop
+                alt={''}
+                className="walkthroughVideo"
+                muted
+              >
+                <source src={data.animation3.publicURL} type="video/mp4" />
+              </video>
+            </div>
+          </div>
           <h3>Working with WebViews</h3>
-          <p></p>
+          <p>
+            Certain features required using React Native Webviews to render
+            existing web application screens or custom HTML and JS within the
+            native app. In particular, I used Webviews to create a
+            security-compliant native Stripe component (before Stripe released a
+            React Native package), and to render the web version of our
+            onboarding style quiz, which I didn't want to spend time duplicating
+            for an app that would prioritize the needs of subscribed members.
+          </p>
+          <div className="mobileScreens">
+            <div className="mobileScreenWithCopy">
+              <h5 className="screenCaption">Stripe Webview</h5>
+              <video
+                autoPlay={true}
+                loop
+                alt={''}
+                className="walkthroughVideo"
+                muted
+              >
+                <source src={data.webview1.publicURL} type="video/mp4" />
+              </video>
+            </div>
+            <div className="">
+              <h5 className="screenCaption">Style Quiz Webview</h5>
+              <div className="mobileScreen">
+                <Img
+                  alt="Closet home page containing horizontally scrolling sections"
+                  fluid={data.webview2.childImageSharp.fluid}
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          style={{ paddingTop: 60, marginTop: -60 }}
-          id="uxImprovements"
-          className="bodyTextWrapper"
-        >
+        <div id="uxImprovements" className="bodyTextWrapper idNavigationInset">
           <h2>UX Improvements</h2>
           <p>
-            I used the development of existing product experiences in a new
-            codebase as an opportunity to improve UX whenever possible. Below
-            are a few examples where I used customer feedback and prototyping to
-            make thoughtful product improvements.
+            I used the development of existing product in a new codebase as an
+            opportunity to improve UX whenever possible. Below are a few
+            examples where I used customer feedback and prototyping to make
+            thoughtful product improvements.
           </p>
           <h3>Style list view optimizations</h3>
           <p>
@@ -1108,7 +1045,7 @@ const ArmoireMobile = () => {
         </div>
         <div className="mobileScreens">
           <div>
-            <h5 style={{ textAlign: 'center' }}>Old list view (mobile web)</h5>
+            <h5 className="screenCaption">Old list view (mobile web)</h5>
             <video
               autoPlay={true}
               loop
@@ -1123,7 +1060,7 @@ const ArmoireMobile = () => {
             </video>
           </div>
           <div>
-            <h5 style={{ textAlign: 'center' }}>New list view (mobile app)</h5>
+            <h5 className="screenCaption">New list view (mobile app)</h5>
             <video
               autoPlay={true}
               loop
@@ -1143,8 +1080,7 @@ const ArmoireMobile = () => {
           <p>
             In the web version of the Style Feed, users had to navigate to a
             product page to get basic information about a product and add it to
-            their Case. Though I didn't want to overload the main feed with this
-            information, the process of navigating back and forth between the
+            their Case. This process of navigating back and forth between the
             feed and product pages was exhausting and likely decreasing user
             satisfaction with the feed.
           </p>
@@ -1156,7 +1092,7 @@ const ArmoireMobile = () => {
         </div>
         <div className="mobileScreens">
           <div>
-            <h5 style={{ textAlign: 'center' }}>
+            <h5 className="screenCaption">
               Previous feed navigation (mobile web)
             </h5>
             <video
@@ -1173,9 +1109,7 @@ const ArmoireMobile = () => {
             </video>
           </div>
           <div>
-            <h5 style={{ textAlign: 'center' }}>
-              Feed quick view (mobile app)
-            </h5>
+            <h5 className="screenCaption">Feed quick view (mobile app)</h5>
             <video
               autoPlay={true}
               loop
@@ -1199,7 +1133,7 @@ const ArmoireMobile = () => {
         </div>
         <div className="mobileScreens">
           <div>
-            <h5 style={{ textAlign: 'center' }}>Autoselect on product page</h5>
+            <h5 className="screenCaption">Autoselect on product page</h5>
             <video
               autoPlay={true}
               loop
@@ -1211,9 +1145,7 @@ const ArmoireMobile = () => {
             </video>
           </div>
           <div>
-            <h5 style={{ textAlign: 'center' }}>
-              Autoselect on product preview
-            </h5>
+            <h5 className="screenCaption">Autoselect on product preview</h5>
             <video
               autoPlay={true}
               loop
@@ -1229,11 +1161,7 @@ const ArmoireMobile = () => {
           </div>
         </div>
 
-        <div
-          id="launch"
-          style={{ marginTop: -60, paddingTop: 60 }}
-          className="bodyTextWrapper overview"
-        >
+        <div id="launch" className="bodyTextWrapper overview idNavigationInset">
           <h2 className="sectionHeading">Launch and Reception</h2>
           <p className="">
             The mobile apps were released in early April 2021 and are available
@@ -1282,10 +1210,9 @@ const ArmoireMobile = () => {
           <p>
             I'm extremely proud of what I was able to produce in six months.
             This project required me to learn extensively, prioritize
-            rigorously, and communicate my decisions effectively. I learned to
-            trust my own judgment and ability to figure things out. It allowed
-            me to flex both my engineering and UX design muscles in a way that
-            truly delighted our customer base.
+            rigorously, and communicate my decisions effectively. It allowed me
+            to flex both my engineering and UX design muscles towards an outcome
+            that truly delighted Armoire's customer base.
           </p>
           <p>
             Quite ironically, when this project was first pitched, I was
