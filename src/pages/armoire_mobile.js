@@ -4,6 +4,7 @@ import ProjectPage from '../components/projectPage'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import '../components/armoireMobile.scss'
+import Emoji from '../components/Emoji'
 
 const ArmoireMobile = () => {
   const data = useStaticQuery(graphql`
@@ -317,11 +318,11 @@ const ArmoireMobile = () => {
           <p>
             In response to <a href="#customerDemand">strong user demand</a>, I
             led the end-to-end creation of Armoire's mobile app. In addition to
-            developing an ambitious{' '}
+            developing about 80% of its{' '}
             <a href="#mvpRequirements">MVP feature set</a>, I designed the app's{' '}
             <a href="#technicalArchitecture">technical architecture</a>, devised
-            its <a href="#informationArchitecture">IA and navigation</a>, and
-            built its UI component library. Along the way, I learned to optimize
+            its <a href="#informationArchitecture">IA and navigation</a>, built
+            its UI component library. Along the way, I learned to optimize
             JavaScript performance and React Native animations, and I pushed to
             {'  '}
             <a href="#uxImprovements">improve existing product</a> experiences
@@ -390,19 +391,19 @@ const ArmoireMobile = () => {
                 <div className="mobileScreensTable">
                   <div className="mobileScreenTable">
                     <Img
-                      alt="Closet home page containing horizontally scrolling sections"
+                      alt="Snapshot of mobile web closet home page containing horizontally scrolling sections and welcome message."
                       fluid={data.closetHomeOld.childImageSharp.fluid}
                     />
                   </div>
                   <div className="mobileScreenTable">
                     <Img
-                      alt="Closet home page containing horizontally scrolling sections"
+                      alt="Snapshot of mobile web closet section page titled 'Your Favorites'. Dropdown to toggle availability and small filter button up top. Two column list view of products."
                       fluid={data.closetSectionOld.childImageSharp.fluid}
                     />
                   </div>
                   <div className="mobileScreenTable">
                     <Img
-                      alt="Closet section page, containing a two column layout of product thumbnails, with sort and filter buttons pinned to the bottom of the page"
+                      alt="Snapshot of mobile web product details page containing product's brand name, name, star rating, photo scroller, dropdown size selector, and add to case button."
                       fluid={data.closetPdpOld.childImageSharp.fluid}
                     />
                   </div>
@@ -420,13 +421,13 @@ const ArmoireMobile = () => {
                 <div className="mobileScreensTable">
                   <div className="mobileScreenTable">
                     <Img
-                      alt="Closet home page containing horizontally scrolling sections"
+                      alt="Snapshot of mobile web search bar at the top of the page. Text field is empty, with 5 suggested searches overlayed underneath."
                       fluid={data.searchOld.childImageSharp.fluid}
                     />
                   </div>
                   <div className="mobileScreenTable">
                     <Img
-                      alt="Closet home page containing horizontally scrolling sections"
+                      alt="Snapshot of mobile web search results. Search is for Spring blazer and shows an availability dropdown, filter entrypoint, and start of two column list view."
                       fluid={data.searchResultsOld.childImageSharp.fluid}
                     />
                   </div>
@@ -446,17 +447,20 @@ const ArmoireMobile = () => {
               <td>
                 <div className="mobileScreensTable">
                   <div className="mobileScreenTable">
-                    <Img alt="" fluid={data.caseOld.childImageSharp.fluid} />
+                    <Img
+                      alt="Snapshot of mobile web case 'flyout'. Flyout contains instructions to add items to case, as well as tabs for selected, with, and returning items."
+                      fluid={data.caseOld.childImageSharp.fluid}
+                    />
                   </div>
                   <div className="mobileScreenTable">
                     <Img
-                      alt=""
+                      alt="Mobile web snapshot of view within Case to purchase an item. Item purchase details, including total and payment information are shown."
                       fluid={data.casePurchaseOld.childImageSharp.fluid}
                     />
                   </div>
                   <div className="mobileScreenTable">
                     <Img
-                      alt=""
+                      alt="Mobile web snapshot of view to select the items to review."
                       fluid={data.caseReviewOld.childImageSharp.fluid}
                     />
                   </div>
@@ -479,17 +483,20 @@ const ArmoireMobile = () => {
               <td>
                 <div className="mobileScreensTable">
                   <div className="mobileScreenTable">
-                    <Img alt="" fluid={data.feedOld.childImageSharp.fluid} />
+                    <Img
+                      alt="Snapshot of mobile web PWR Feed. First post shows a blonde woman taking a mirror selfie of her rented cheetah print skirt."
+                      fluid={data.feedOld.childImageSharp.fluid}
+                    />
                   </div>
                   <div className="mobileScreenTable">
                     <Img
-                      alt=""
+                      alt="Snapshot of mobile web feed item. Post shows a woman wearing a blue dress. The ability to leave a comment is shown with a text input pinned to the bottom of the page."
                       fluid={data.feedCommentOld.childImageSharp.fluid}
                     />
                   </div>
                   <div className="mobileScreenTable">
                     <Img
-                      alt=""
+                      alt="Snapshot of mobile web feed profile. Profile shows a woman with brown hair, profile details, as well as sliding sections containing posted looks, rental history, sizes, and style stats."
                       fluid={data.feedProfileOld.childImageSharp.fluid}
                     />
                   </div>
@@ -509,13 +516,13 @@ const ArmoireMobile = () => {
                 <div className="mobileScreensTable">
                   <div className="mobileScreenTable">
                     <Img
-                      alt=""
+                      alt="Snapshot of mobile web notifications input. Notifications are listed in a vertically scrolling view."
                       fluid={data.notificationsOld2.childImageSharp.fluid}
                     />
                   </div>
                   <div className="mobileScreenTable">
                     <Img
-                      alt=""
+                      alt="Snapshot of mobile web notifications settings. Settings for receipt of membership, feed, and announcement notifications are shown."
                       fluid={data.notificationsOld.childImageSharp.fluid}
                     />
                   </div>
@@ -537,19 +544,19 @@ const ArmoireMobile = () => {
                 <div className="mobileScreensTable">
                   <div className="mobileScreenTable">
                     <Img
-                      alt=""
+                      alt="Snapshot of mobile web account overview page, with basic information about the user's membership, billing, and shipping selections."
                       fluid={data.accountMainOld.childImageSharp.fluid}
                     />
                   </div>
                   <div className="mobileScreenTable">
                     <Img
-                      alt=""
+                      alt="Snapshot of mobiel web membership page. Shows selected plan, as well as options to skip a month and cancel membership."
                       fluid={data.accountMembershipOld.childImageSharp.fluid}
                     />
                   </div>
                   <div className="mobileScreenTable">
                     <Img
-                      alt=""
+                      alt="Snapshot of mobile web account rewards page. Shows tabs for available, redeemed, and expired rewards."
                       fluid={data.accountRewardsOld.childImageSharp.fluid}
                     />
                   </div>
@@ -568,7 +575,11 @@ const ArmoireMobile = () => {
           <p>
             As a web developer with React experience, I held a strong bias
             towards building Android and iOS apps using a common{' '}
-            <a href="https://reactnative.dev/" target="_blank">
+            <a
+              href="https://reactnative.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               React Native
             </a>{' '}
             codebase. However, with 85% of Armoire's user base on iOS, I also
@@ -582,6 +593,7 @@ const ArmoireMobile = () => {
             <a
               href="https://docs.expo.dev/workflow/already-used-react-native/#expo-managed-workflow"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Expo Managed Framework
             </a>{' '}
@@ -603,91 +615,129 @@ const ArmoireMobile = () => {
           <tbody>
             <tr>
               <th>App startup speed and performance</th>
-              <td>✅  Fastest</td>
-              <td>⚠️  Slower than native ios app</td>
-              <td>⚠️  Slower than native ios app</td>
+              <td>
+                <Emoji variant="great" /> Fastest
+              </td>
+              <td>
+                <Emoji variant="okay" /> Slower than native ios app
+              </td>
+              <td>
+                <Emoji variant="okay" /> Slower than native ios app
+              </td>
             </tr>
             <tr>
               <th>App bundle size</th>
-              <td>✅  Smallest</td>
-              <td>⚠️  Larger</td>
-              <td>⛔  Largest. All Expo packages are required in JS bundle.</td>
+              <td>
+                <Emoji variant="great" /> Smallest
+              </td>
+              <td>
+                <Emoji variant="okay" /> Larger
+              </td>
+              <td>
+                <Emoji variant="bad" /> Largest. All Expo packages are required
+                in JS bundle.
+              </td>
             </tr>
             <tr>
               <th>Native Code</th>
-              <td>⛔  Required</td>
               <td>
-                ⚠️  Minimal. Primarily needed for configuring third-party
-                packages, Push Notifications, and Deeplinks. Estimated 10% of
-                work.
+                <Emoji variant="bad" /> Required
               </td>
-              <td>✅  Not required. Completely abstracted away by Expo.</td>
+              <td>
+                <Emoji variant="okay" /> Minimal. Primarily needed for
+                configuring third-party packages, Push Notifications, and
+                Deeplinks. Estimated 10% of work.
+              </td>
+              <td>
+                <Emoji variant="great" /> Not required. Completely abstracted
+                away by Expo.
+              </td>
             </tr>
             <tr>
               <th>Developer Learning Curve</th>
-              <td>⛔  Highest</td>
-              <td>⚠️  Minimal</td>
-              <td>✅  Lowest</td>
+              <td>
+                <Emoji variant="bad" /> Highest
+              </td>
+              <td>
+                <Emoji variant="okay" /> Minimal
+              </td>
+              <td>
+                <Emoji variant="great" /> Lowest
+              </td>
             </tr>
             <tr>
               <th>Push Notification Support</th>
-              <td>✅  Rich</td>
-              <td>✅  Rich</td>
               <td>
-                ⛔  Minimal. Only supported through Expo Notifications Service.
+                <Emoji variant="great" /> Rich
+              </td>
+              <td>
+                <Emoji variant="great" /> Rich
+              </td>
+              <td>
+                <Emoji variant="bad" /> Minimal. Only supported through Expo
+                Notifications Service.
               </td>
             </tr>
             <tr>
               <th>Process for builds and submissions</th>
               <td>
-                ⛔  Difficult. Would need to build manually each time, or invest
-                in third-party build and submit provider.
+                <Emoji variant="bad" /> Difficult. Would need to build manually
+                each time, or invest in third-party build and submit provider.
               </td>
               <td>
-                ✅  Easy. Can use Expo Application Services with some initial
-                configuration.
+                <Emoji variant="great" /> Easy. Can use Expo Application
+                Services with some initial configuration.
               </td>
               <td>
-                ✅  Easiest. Can use Expo Application Services with minimal
-                configuration.
+                <Emoji variant="great" /> Easiest. Can use Expo Application
+                Services with minimal configuration.
               </td>
             </tr>
             <tr>
               <th>Process for publishing small updates</th>
               <td>
-                ⛔  Time-consuming. App store submission and review required for
-                every update.
+                <Emoji variant="bad" /> Time-consuming. App store submission and
+                review required for every update.
               </td>
               <td>
-                ✅  Small updates that don’t impact JS packages can be published
-                “over the air” with Expo, without app store review.
+                <Emoji variant="great" /> Small updates that don’t impact JS
+                packages can be published “over the air” with Expo, without app
+                store review.
               </td>
               <td>
-                ✅  Small updates that don’t impact JS packages can be published
-                “over the air” with Expo, without app store review.
+                <Emoji variant="great" /> Small updates that don’t impact JS
+                packages can be published “over the air” with Expo, without app
+                store review.
               </td>
             </tr>
             <tr>
               <th>Android app</th>
-              <td>⛔  Out of scope</td>
               <td>
-                ⚠️  Supported with minimal Android-only configuration and
-                testing
+                <Emoji variant="bad" /> Out of scope
               </td>
-              <td>✅  Automatically supported with no extra work.</td>
+              <td>
+                <Emoji variant="okay" /> Supported with minimal Android-only
+                configuration and testing
+              </td>
+              <td>
+                <Emoji variant="great" /> Automatically supported with no extra
+                work.
+              </td>
             </tr>
             <tr>
               <th>
                 Support for critical third-party packages (Stripe, Intercom)
               </th>
-              <td>✅  Complete support</td>
               <td>
-                ✅  Near-complete support. Packages in development at time of
-                investigation.
+                <Emoji variant="great" /> Complete support
               </td>
               <td>
-                ⛔  Minimal. Any package that requires native configuration
-                cannot be used.
+                <Emoji variant="great" /> Near-complete support. Packages in
+                development at time of investigation.
+              </td>
+              <td>
+                <Emoji variant="bad" /> Minimal. Any package that requires
+                native configuration cannot be used.
               </td>
             </tr>
           </tbody>
@@ -703,16 +753,32 @@ const ArmoireMobile = () => {
           </p>
         </div>
         <div className="mobileScreens">
-          <video autoPlay={true} loop alt={''} className="mobileScreen" muted>
+          <video
+            autoPlay={true}
+            loop
+            alt={
+              'Walkthrough of basic login screen with Armoire logo, and text inputs for email and password. User logs in and is taken to closet home screen containing sliding sections.'
+            }
+            className="mobileScreen"
+            muted
+          >
             <source src={data.pocLogin.publicURL} type="video/mp4" />
           </video>
           <div className="mobileScreen">
             <Img
-              alt="Basic product details page"
+              alt="Snapshot of very basic product details page, containing product brand name, name, add to case button, and some basic details about the item."
               fluid={data.pocPDP.childImageSharp.fluid}
             />
           </div>
-          <video autoPlay={true} loop alt={''} className="mobileScreen" muted>
+          <video
+            autoPlay={true}
+            loop
+            alt={
+              'Walkthrough of horizontally sliding closet sections on the home screen. User clicks on an a product and is taken to the basic product details page.'
+            }
+            className="mobileScreen"
+            muted
+          >
             <source src={data.pocWalkthrough.publicURL} type="video/mp4" />
           </video>
         </div>
@@ -749,7 +815,7 @@ const ArmoireMobile = () => {
         </div>
         <Img
           style={{ maxWidth: 800, margin: '0 auto' }}
-          alt=""
+          alt="Technical architecture overview for the mobile app. Technologies depicted include React Native, Expo, Yarn, React Navigation, Sass, Prop Types, Mobx, Intercom, Stripe, Sentry, Segment, and OneSignal."
           fluid={data.technicalArchitecture.childImageSharp.fluid}
         />
         <div id="informationArchitecture" className="bodyTextWrapper">
@@ -777,18 +843,18 @@ const ArmoireMobile = () => {
           <div style={{ width: '65%' }}>
             <Img
               style={{ margin: 16 }}
-              alt=""
+              alt="Snapshot of the navigation bar on the Armoire web desktop app. Contains entries for Search, Closet, Feed, Case, Notifications, Referrals, and Account"
               fluid={data.navigationOldDesktop.childImageSharp.fluid}
             />
             <Img
               style={{ margin: 16 }}
-              alt=""
+              alt="Snapshot of navigation bar on Armoire web mobile. Shows icons for Search, Feed, Case, and Notifications, as well as hamburger menu button."
               fluid={data.navigationOldMobile.childImageSharp.fluid}
             />
           </div>
           <Img
             style={{ width: '22%', margin: 16 }}
-            alt=""
+            alt="Snapshot of flyout menu on Armoire web mobile. Vertically scrolling entries for Closet, Feed, Style Profile, Rental History, Account, Help, Referrals, Shop, Year in Review, and Sign Out"
             fluid={data.navigationOldFlyout.childImageSharp.fluid}
           />
         </div>
@@ -805,8 +871,7 @@ const ArmoireMobile = () => {
         <div style={{ margin: '48px auto', textAlign: 'center' }}>
           <h5 style={{ marginBottom: 8 }}>Step 1: Identify IA of web app</h5>
           <Img
-            style={{}}
-            alt=""
+            alt="Diagram containing the web information architecture of Armoire. Entries for Closet, Search, Case, Feed, Notifications, Referrals, Style Profile, and Account."
             fluid={data.navigationArchitecture1.childImageSharp.fluid}
           />
         </div>
@@ -834,7 +899,7 @@ const ArmoireMobile = () => {
             Step 2: Group modals and consolidate account
           </h5>
           <Img
-            alt=""
+            alt="Second iteration of information architecture, where account has been consolidated to include Style Profile and Referrals, and a modals section has been created to contain globally-accessible user flows."
             fluid={data.navigationArchitecture2.childImageSharp.fluid}
           />
         </div>
@@ -859,7 +924,7 @@ const ArmoireMobile = () => {
 
         <Img
           style={{ margin: '48px auto' }}
-          alt=""
+          alt="Screenshots and annotation outlining the various connections between product details, feed item, and user profile pages in the web app."
           fluid={data.navigationDeeplinks.childImageSharp.fluid}
         />
         <div style={{ margin: '48px auto', textAlign: 'center' }}>
@@ -867,7 +932,7 @@ const ArmoireMobile = () => {
             Step 3: Identify connections to product page
           </h5>
           <Img
-            alt=""
+            alt="Information architecture diagram identifying these same connections between product details, feed items, and user profiles."
             fluid={data.navigationArchitecture3.childImageSharp.fluid}
           />
         </div>
@@ -885,7 +950,7 @@ const ArmoireMobile = () => {
           <h5>Step 4: Finalize navigation + information architecture</h5>
           <Img
             style={{ maxWidth: 800, margin: '0 auto' }}
-            alt=""
+            alt="Final version of information architecture, with account and modals moved 'above' the tab navigator, which contains closet, search, case, feed, and notifications. All of the tab navigators contain a copy of the product details page."
             fluid={data.navigationArchitectureFinal.childImageSharp.fluid}
           />
         </div>
@@ -914,7 +979,9 @@ const ArmoireMobile = () => {
               <video
                 autoPlay={true}
                 loop
-                alt={''}
+                alt={
+                  'Walkthrough video showing a user clicking from a horizontally scrolling closet section into a list view'
+                }
                 className="walkthroughVideo"
                 muted
               >
@@ -931,7 +998,9 @@ const ArmoireMobile = () => {
               <video
                 autoPlay={true}
                 loop
-                alt={''}
+                alt={
+                  'Walkthrough showing a user clicking the Filter button from a vertically scrolling list view. The filter modal immediately pops up and shows placeholder content. Shortly after, all of the filter options load.'
+                }
                 className="walkthroughVideo"
                 muted
               >
@@ -962,7 +1031,9 @@ const ArmoireMobile = () => {
               <video
                 autoPlay={true}
                 loop
-                alt={''}
+                alt={
+                  'Walkthrough of user clicking the heart icon on product thumbnails. This expands to reveal the option to favorite or dislike an item. Once one of those options is clicked, the options collapse.'
+                }
                 className="walkthroughVideo"
                 muted
               >
@@ -973,7 +1044,9 @@ const ArmoireMobile = () => {
               <video
                 autoPlay={true}
                 loop
-                alt={''}
+                alt={
+                  'Add to Case button on product page is clicked. Text changes to "So stylish!" as the case icon expands and contracts, and a check mark animates in. The button then changes to white and says "Remove from Case"'
+                }
                 className="walkthroughVideo"
                 muted
               >
@@ -984,7 +1057,9 @@ const ArmoireMobile = () => {
               <video
                 autoPlay={true}
                 loop
-                alt={''}
+                alt={
+                  'Pull to refresh animation on the feed home screen. Users pulls down at the top of the content and a loading indicator circles for 1.5 seconds, then disappears.'
+                }
                 className="walkthroughVideo"
                 muted
               >
@@ -1008,7 +1083,9 @@ const ArmoireMobile = () => {
               <video
                 autoPlay={true}
                 loop
-                alt={''}
+                alt={
+                  'Stripe webview walkthrough. User clicks "Add Card" and an "Update Payment Method" modal opens. User types in payment card details and clicks "Update"'
+                }
                 className="walkthroughVideo"
                 muted
               >
@@ -1019,7 +1096,7 @@ const ArmoireMobile = () => {
               <h5 className="screenCaption">Style Quiz Webview</h5>
               <div className="mobileScreen">
                 <Img
-                  alt="Closet home page containing horizontally scrolling sections"
+                  alt="Snapshot of 'Complete your style profile' modal, which shows a question in the web style quiz rendered natively in the mobile app."
                   fluid={data.webview2.childImageSharp.fluid}
                 />
               </div>
@@ -1049,7 +1126,9 @@ const ArmoireMobile = () => {
             <video
               autoPlay={true}
               loop
-              alt={''}
+              alt={
+                'Walkthrough of old mobile web product list view. As user scrolls, the filter actions scroll away and are not accessible.'
+              }
               className="walkthroughVideo"
               muted
             >
@@ -1064,7 +1143,9 @@ const ArmoireMobile = () => {
             <video
               autoPlay={true}
               loop
-              alt={''}
+              alt={
+                'Walkthrough of native app list view. As a user scrolls, the sort and filter buttons stay sticky to the bottom of the screen, and can be pushed from there to open up filter options'
+              }
               className="walkthroughVideo"
               muted
             >
@@ -1098,7 +1179,9 @@ const ArmoireMobile = () => {
             <video
               autoPlay={true}
               loop
-              alt={''}
+              alt={
+                'Walkthrough of the old mobile web feed. User clicks into to multiple product pages, views them, then navigates back to the feed.'
+              }
               className="walkthroughVideo"
               muted
             >
@@ -1113,7 +1196,9 @@ const ArmoireMobile = () => {
             <video
               autoPlay={true}
               loop
-              alt={''}
+              alt={
+                'Walkthrough of new native app feed. User clicks into product, which opens a drawer quick view of the item. User adds a size medium to their case, then clicks back onto the feed.'
+              }
               className="walkthroughVideo"
               muted
             >
@@ -1137,7 +1222,9 @@ const ArmoireMobile = () => {
             <video
               autoPlay={true}
               loop
-              alt={''}
+              alt={
+                'Walkthrough of automatic size selection. User clicks into a floral dress and her recommended Size S is automatically selected.'
+              }
               className="walkthroughVideo"
               muted
             >
@@ -1149,7 +1236,9 @@ const ArmoireMobile = () => {
             <video
               autoPlay={true}
               loop
-              alt={''}
+              alt={
+                'Walkthrough of automatic size selection on the feed product preview. User clicks open the product preview for an item and a recommended Size XS is already selected for her'
+              }
               className="walkthroughVideo"
               muted
             >

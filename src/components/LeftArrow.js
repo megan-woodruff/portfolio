@@ -9,6 +9,7 @@ const LeftArrow = ({ height = 24 }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Left Arrow</title>
       <line
         x1="57.5"
         y1="16.5"

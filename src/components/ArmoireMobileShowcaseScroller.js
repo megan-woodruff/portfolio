@@ -6,7 +6,6 @@ import LeftArrow from './LeftArrow'
 import RightArrow from './RightArrow'
 
 const CARD_SIZE = 264
-const NUM_CARDS = 15
 
 const ArmoireMobileShowcaseScroller = () => {
   const data = useStaticQuery(graphql`
@@ -156,14 +155,13 @@ const ArmoireMobileShowcaseScroller = () => {
   const checkScrollButtonEnabledState = scrollTo => {
     setScrollButtonEnabled({
       left: scrollTo > 10,
-      right: scrollTo < 2500,
+      right: scrollTo < 2000,
     })
   }
 
   useEffect(() => {
     const eventListener = () => {
       const current = getCurrentScrollState()
-      console.log(current)
       checkScrollButtonEnabledState(current)
     }
     scrollerRef.current.addEventListener('scroll', eventListener)
@@ -178,7 +176,7 @@ const ArmoireMobileShowcaseScroller = () => {
       <div ref={scrollerRef} className="showcaseScroller">
         <div className="showcaseAsset">
           <Img
-            alt="Closet section page, containing a two column layout of product thumbnails, with sort and filter buttons pinned to the bottom of the page"
+            alt="Mobile app welcome screen with background image of clothing, login, signup and explore as guest buttons"
             fluid={data.welcome.childImageSharp.fluid}
           />
         </div>
@@ -186,7 +184,7 @@ const ArmoireMobileShowcaseScroller = () => {
           autoPlay={true}
           loop
           alt={
-            'Closet section layouts. Home page containing horizontally sliding section previews, which link to full section pages with filters'
+            'Mobile app closet walkthrough. Home page containing horizontally sliding section previews, which link to full section pages with filters'
           }
           className="showcaseAsset"
           muted
@@ -209,7 +207,7 @@ const ArmoireMobileShowcaseScroller = () => {
           autoPlay={true}
           loop
           alt={
-            'Product Details page, which shows an image slider containing product images, product name and description, sizing information, and reviews'
+            'Walkthrough of Product Details page, which shows an image slider containing product images, product name and description, sizing information, and reviews'
           }
           className="showcaseAsset"
           muted
@@ -217,37 +215,72 @@ const ArmoireMobileShowcaseScroller = () => {
           <source src={data.closetDetailsVideo.publicURL} type="video/mp4" />
         </video>
         <div className="showcaseAsset">
-          <Img alt="" fluid={data.search.childImageSharp.fluid} />
+          <Img
+            alt="Search results page, which shows 'jacket' typed into the Search bar, and two columns of search results with a filter button pinned to the bottom of the page"
+            fluid={data.search.childImageSharp.fluid}
+          />
         </div>
         <div className="showcaseAsset">
-          <Img alt="" fluid={data.case.childImageSharp.fluid} />
+          <Img
+            alt="Case page. Header text telling the user to select an item for their next case, and tabs containing a user's selected, with you, and returning items"
+            fluid={data.case.childImageSharp.fluid}
+          />
         </div>
         <div className="showcaseAsset">
-          <Img alt="" fluid={data.account.childImageSharp.fluid} />
+          <Img
+            alt="Account overview screen. Contains a user's profile image, buttons for FAQs and contacting support, as well as a stacked list of membership and account management actions."
+            fluid={data.account.childImageSharp.fluid}
+          />
         </div>
         <div className="showcaseAsset">
-          <Img alt="" fluid={data.feed.childImageSharp.fluid} />
+          <Img
+            alt="Top level view of the Style Feed. All, Following, and Similar Size tabs for viewing different feeds. An initial feed item containing a photo of a woman wearing a red jumpsuit"
+            fluid={data.feed.childImageSharp.fluid}
+          />
         </div>
-        <div className="showcaseAsset">
-          <Img alt="" fluid={data.feedProfile2.childImageSharp.fluid} />
-        </div>
-        <div className="showcaseAsset">
-          <Img alt="" fluid={data.feedProfile.childImageSharp.fluid} />
-        </div>
-        <video autoPlay={true} loop alt={''} className="showcaseAsset" muted>
+        <video
+          autoPlay={true}
+          loop
+          alt={
+            "Walkthrough of adding a comment on a look. User opens the keyboard, posts a comment, then clicks into another user's profile."
+          }
+          className="showcaseAsset"
+          muted
+        >
           <source src={data.feedOverview.publicURL} type="video/mp4" />
         </video>
-        <video autoPlay={true} loop alt={''} className="showcaseAsset" muted>
+        <video
+          autoPlay={true}
+          loop
+          alt={
+            "Walkthrough of a user's profile. The top of the profile contains an avatar image of a woman with brown hair smiling, and her name, Megan, followed by a bio and location. The bottom contains sliding sections with posted looks, rental history, size information, and style stats."
+          }
+          className="showcaseAsset"
+          muted
+        >
           <source
             src={data.feedProfileWalkthrough.publicURL}
             type="video/mp4"
           />
         </video>
         <div className="showcaseAsset">
-          <Img alt="" fluid={data.notifications.childImageSharp.fluid} />
+          <Img
+            alt="Edit Profile modal. Options for a user to update their location, bio, and privacy settings."
+            fluid={data.feedProfile.childImageSharp.fluid}
+          />
+        </div>
+
+        <div className="showcaseAsset">
+          <Img
+            alt="Notifications inbox in the mobile app. Contains new notifications to play style games, followed by old notifications containing package and style feed information for the user."
+            fluid={data.notifications.childImageSharp.fluid}
+          />
         </div>
         <div className="showcaseAsset">
-          <Img alt="" fluid={data.welcome.childImageSharp.fluid} />
+          <Img
+            alt="Mobile app welcome screen with background image of clothing, login, signup and explore as guest buttons"
+            fluid={data.welcome.childImageSharp.fluid}
+          />
         </div>
       </div>
       <div>
