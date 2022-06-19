@@ -1,10 +1,10 @@
-import React from "react"
-import "../components/styles.scss"
-import "./projectPage.scss"
+import React from 'react'
+import '../components/styles.scss'
+import './projectPage.scss'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Img from "gatsby-image"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Img from 'gatsby-image'
 
 export default class ProjectPage extends React.Component {
   constructor(props) {
@@ -17,11 +17,11 @@ export default class ProjectPage extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll)
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll)
+    window.removeEventListener('scroll', this.handleScroll)
   }
 
   handleScroll = () => {
@@ -44,7 +44,7 @@ export default class ProjectPage extends React.Component {
   scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     })
   }
 
@@ -81,7 +81,7 @@ export default class ProjectPage extends React.Component {
           <div className="contentBody">{children}</div>
           <button
             className={`scrollToTop ${this.state.scrollToTopVisible &&
-              "visible"}`}
+              'visible'}`}
             onClick={this.scrollToTop}
           ></button>
         </div>

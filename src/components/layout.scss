@@ -315,7 +315,7 @@ h5 {
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
   line-height: 1.1rem;
-  color: gray;
+  color: inherit;
 }
 h6 {
   margin-left: 0;
@@ -430,8 +430,17 @@ table {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  font-size: 1rem;
-  line-height: 1.45rem;
+  font-size: .9rem;
+  line-height: 1.2rem;
+
+  ul {
+    margin-top: .9rem;
+    margin-bottom: 0;
+  }
+  li {
+    font-size: .9rem;
+    line-height: 1.2rem;
+  }
   border-collapse: collapse;
   width: 100%;
 }

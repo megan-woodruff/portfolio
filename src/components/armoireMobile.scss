@@ -10,6 +10,21 @@
 .mobileScreen {
   width: 280px;
   margin: 0 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mobileScreensTable {
+  display: flex;
+
+  .mobileScreenTable {
+    height: 346px;
+    min-width: 160px;
+    flex-shrink: 1;
+    margin: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
 }
 
 .intro {
@@ -17,12 +32,32 @@
 }
 
 .walkthroughVideo {
-  width: 300px;
-  margin: 24px 12px 0;
+  width: 280px;
+  margin: 0 12px 0;
+  border-radius: 8px;
+}
+
+.idNavigationInset {
+  padding-top: 60px;
+  margin-top: -60px !important;
 }
 
 .walkthroughs {
   display: flex;
+  justify-content: center;
+}
+
+.screenCaption {
+  text-align: center;
+  max-width: 280px;
+  margin: 12px auto;
+}
+
+
+.mobileScreenWithCaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
