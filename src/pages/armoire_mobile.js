@@ -321,8 +321,8 @@ const ArmoireMobile = () => {
             developing about 80% of its{' '}
             <a href="#mvpRequirements">MVP feature set</a>, I designed the app's{' '}
             <a href="#technicalArchitecture">technical architecture</a>, devised
-            its <a href="#informationArchitecture">IA and navigation</a>, built
-            its UI component library. Along the way, I learned to optimize
+            its <a href="#informationArchitecture">IA and navigation</a>, and
+            built its UI component library. Along the way, I learned to optimize
             JavaScript performance and React Native animations, and I pushed to
             {'  '}
             <a href="#uxImprovements">improve existing product</a> experiences
