@@ -66,8 +66,7 @@ const About = () => {
               }}
             >
               eBay
-            </a>
-            in October. When I'm not working, I love playing 
+            </a> in October. When I'm not working, I love playing 
             volleyball, reading, doing yoga, cooking, and watching reality TV with my friends.{" "}
           </p>
         </div>
