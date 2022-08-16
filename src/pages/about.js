@@ -55,9 +55,9 @@ const About = () => {
             their fullest potential.
           </p>
           <p>
-            I am currently a Lead Design Technologist at{' '}
+            I'm currently taking time off, with plans to start as a Senior Design Technologist at{" "}
             <a
-              href="https://armoire.style"
+              href="https://ebay.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -65,11 +65,10 @@ const About = () => {
                 fontWeight: 'bold',
               }}
             >
-              Armoire Style
+              eBay
             </a>
-            , a personalized clothing rental service. When I'm not working, I
-            love playing volleyball, challenging myself with new yoga poses, and
-            cooking.{' '}
+            in October. When I'm not working, I love playing 
+            volleyball, reading, doing yoga, cooking, and watching reality TV with my friends.{" "}
           </p>
         </div>
       </div>
