@@ -23,6 +23,7 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
+        icon: `${__dirname}/src/images/profile.jpg`,
         theme_color: `#663399`,
         display: `minimal-ui`,
       },
