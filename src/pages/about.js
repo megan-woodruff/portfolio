@@ -33,29 +33,13 @@ const About = () => {
             portfolio!
           </h2>
           <p>
-            I pride myself on being a user-driven design technologist with a
-            knack for systems-thinking.
+            I'm a design technologist with a focus on front-end engineering, prototyping, and systems design. I love working on cross-discipline teams to solve intricate problems.
           </p>
           <p>
-            With education in both Computer Engineering and Human-Centered
-            Design, I can speak researcher, designer, and developer – and I
-            thrive most when I can use this perspective to improve team
-            collaboration and produce truly outstanding experiences.
+            My technical experience is rooted in front-end web development and cross-platform native development, with a specific fondness for React and, more recently, React Native. I'm known for ramping up to projects <em>fast</em> and tackling ambiguity with a steady, analytical approach.
           </p>
           <p>
-            On the technical side, I am well-versed in the modern web and have a
-            specific fondness for React (and more recently, React Native). I am
-            known for ramping up to projects <i>fast</i> and tackling ambiguity
-            with a steady, analytical approach.
-          </p>
-          <p>
-            As might already be obvious, I like variety in my work. But my sweet
-            spot is coding interactive prototypes and proof-of-concepts that can
-            be used to refine and test mid-process ideas and help them reach
-            their fullest potential.
-          </p>
-          <p>
-            I'm currently taking time off, with plans to start as a Senior Design Technologist at{" "}
+            I'm currently a Design Technology Lead at{" "}
             <a
               href="https://ebay.com"
               target="_blank"
@@ -66,8 +50,7 @@ const About = () => {
               }}
             >
               eBay
-            </a> in October. When I'm not working, I love playing 
-            volleyball, reading, doing yoga, cooking, and watching reality TV with my friends.{" "}
+            </a>. When I'm not working, I love playing volleyball, reading, doing yoga, cooking, and spending time with my friends.{" "}
           </p>
         </div>
       </div>
