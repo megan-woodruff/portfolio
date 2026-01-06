@@ -14,23 +14,6 @@ const ProjectDisplay = () => {
           }
         }
       }
-      adaptableHomeImage: file(
-        relativePath: { eq: "adaptable_design_mock.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-
-      yearInReview: file(relativePath: { eq: "yearinreviewcombined.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   `)
 
@@ -47,7 +30,17 @@ const ProjectDisplay = () => {
           imageSource={data.armoireImage.childImageSharp.fluid}
           altText="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."
         />
-        <ProjectCard
+        <div>
+          <p className="moreProjectsText">
+            <b>
+              It turns out keeping a portfolio up to date is basically a full
+              time job!
+            </b>
+            <br></br>I'm in the process of adding projects that reflect my most
+            recent work and expertise.<br></br>Check back soon for more!
+          </p>
+        </div>
+        {/* <ProjectCard
           className="project"
           title="Armoire Year In Review"
           location="Armoire Style"
@@ -66,7 +59,7 @@ const ProjectDisplay = () => {
           slug="adaptable_home"
           imageSource={data.adaptableHomeImage.childImageSharp.fluid}
           altText="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed."
-        />
+        /> */}
       </div>
     </div>
   )
