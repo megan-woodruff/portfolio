@@ -1,8 +1,8 @@
 import React from 'react'
 import '../components/styles.scss'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../layout'
+import SEO from '../seo'
 
 const SecondPage = () => (
   <Layout>

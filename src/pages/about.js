@@ -8,7 +8,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      profile: file(relativePath: { eq: "profile.jpg" }) {
+      profile: file(relativePath: { eq: "MeganWoodruff.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid
@@ -23,7 +23,7 @@ const About = () => {
       <SEO title="About" />
       <div className="contentWrapper aboutWrapper">
         <Img
-          alt="Megan Woodruff, smiling on a bridge in Prague, Czech Republic"
+          alt="Megan Woodruff, smiling on an Alaskan cruise"
           className="aboutImage"
           fluid={data.profile.childImageSharp.fluid}
         ></Img>
@@ -33,15 +33,14 @@ const About = () => {
             portfolio!
           </h2>
           <p>
-            I'm a design technologist with a focus on front-end engineering, prototyping, and systems design. I love working on cross-discipline teams to solve intricate problems.
+            My name is Megan, and I'm a design technologist that enjoys a
+            healthy mix of interaction design, prototyping, and front-end
+            engineering.
           </p>
           <p>
-            My technical experience is rooted in front-end web development and cross-platform native development, with a specific fondness for React and, more recently, React Native. I'm known for ramping up to projects <em>fast</em> and tackling ambiguity with a steady, analytical approach.
-          </p>
-          <p>
-            I'm currently a Design Technology Lead at{" "}
+            I'm currently working at{' '}
             <a
-              href="https://ebay.com"
+              href="https://nytimes.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -49,8 +48,15 @@ const About = () => {
                 fontWeight: 'bold',
               }}
             >
-              eBay
-            </a>. When I'm not working, I love playing volleyball, reading, doing yoga, cooking, and spending time with my friends.{" "}
+              The New York Times
+            </a>
+            , where I focus on creating native News prototypes that drive
+            internal alignment and product strategy.
+            <br />
+            <br />
+            When I'm not designing or coding, I love playing volleyball,
+            knitting, doing yoga, reading, and spending time in the PNW outdoors
+            with friends.{' '}
           </p>
         </div>
       </div>
