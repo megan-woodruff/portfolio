@@ -6,9 +6,8 @@ type ProjectCardProps = {
   description: string
   location: string
   slug: string
-  image?: StaticImageData
-  alt?: string
-  locked?: boolean
+  image: StaticImageData
+  alt: string
 }
 
 export function ProjectCard({
@@ -18,31 +17,25 @@ export function ProjectCard({
   slug,
   image,
   alt,
-  locked = false,
 }: ProjectCardProps) {
   return (
-    <Link
-      className="projectLink"
-      href={`/${slug}`}
-      aria-label={`${locked ? 'Unlock' : 'View'} ${title} case study`}>
-      <article className={`projectCard${image ? '' : ' projectCardText'}`}>
-        {image ? (
-          <div className="projectImageFrame">
-            <Image
-              className="projectImage"
-              src={image}
-              alt={alt ?? ''}
-              sizes="(max-width: 790px) 90vw, 600px"
-              priority
-            />
-          </div>
-        ) : null}
+    <Link className="projectLink" href={`/${slug}`}>
+      <article className="projectCard">
+        <div className="projectImageFrame">
+          <Image
+            className="projectImage"
+            src={image}
+            alt={alt}
+            sizes="(max-width: 790px) 90vw, 600px"
+            priority
+          />
+        </div>
         <div className="projectInfo">
           <p className="projectLocation eyebrow">{location}</p>
           <h3 className="projectTitle">{title}</h3>
           <p className="projectDescription">{description}</p>
           <span className="projectCta" aria-hidden="true">
-            {locked ? 'Unlock case study' : 'View case study'} →
+            View case study →
           </span>
         </div>
       </article>

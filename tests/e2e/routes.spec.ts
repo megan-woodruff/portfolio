@@ -24,54 +24,6 @@ for (const route of routes) {
   })
 }
 
-test('home groups the case studies', async ({ page }) => {
-  await page.goto('/')
-
-  await expect(
-    page.getByRole('heading', { name: 'Writing and shipping production code' })
-  ).toBeVisible()
-  await expect(
-    page.getByRole('heading', {
-      name: 'Building design tooling and infrastructure',
-    })
-  ).toBeVisible()
-  await expect(
-    page.getByRole('heading', {
-      name: 'Prototyping to influence product strategy',
-    })
-  ).toBeVisible()
-  await expect(
-    page.getByRole('link', { name: 'View Armoire Mobile case study' })
-  ).toBeVisible()
-  await expect(
-    page.getByRole('link', {
-      name: 'Unlock New York Times Liquid Glass case study',
-    })
-  ).toBeVisible()
-})
-
-test('locked case studies stay behind the password', async ({ page }) => {
-  await page.goto('/ebay-web-components', { waitUntil: 'domcontentloaded' })
-
-  await expect(
-    page.getByRole('heading', { name: 'eBay Web Components' })
-  ).toBeVisible()
-  await expect(page.getByLabel('Password')).toBeVisible()
-  await expect(
-    page.getByRole('heading', { name: 'Project Overview' })
-  ).toHaveCount(0)
-
-  await page.getByLabel('Password').fill('nope')
-  await page.getByRole('button', { name: 'Continue' }).click()
-  await expect(page.getByRole('alert')).toBeVisible()
-
-  await page.getByLabel('Password').fill('hiremegan')
-  await page.getByRole('button', { name: 'Continue' }).click()
-  await expect(
-    page.getByRole('heading', { name: 'Project Overview' })
-  ).toBeVisible()
-})
-
 test('navigation links are stable', async ({ page }) => {
   await page.goto('/')
 
