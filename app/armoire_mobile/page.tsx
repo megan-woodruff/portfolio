@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
-import { ArmoireMobileShowcaseScroller } from '@/components/ArmoireMobileShowcaseScroller'
+import { ArmoireMobileShowcase } from '@/components/ArmoireMobileShowcase'
+import { CaseStudySection } from '@/components/CaseStudySection'
 import { Emoji } from '@/components/Emoji'
 import { ProjectPage } from '@/components/ProjectPage'
-import { images, videoUrl } from '@/lib/media'
+import { WalkthroughVideo } from '@/components/WalkthroughVideo'
+import { images } from '@/lib/media'
 
 export const metadata: Metadata = {
   title: 'Armoire Mobile',
@@ -18,12 +20,13 @@ export default function ArmoireMobilePage() {
     <ProjectPage
       title="Armoire Mobile"
       description="Increasing member engagement and retention by delivering an easy-to-use, performant mobile app"
+      date="Oct 2021 – May 2022"
       stats={getStats()}
       imageSource={images.armoireMock}
       imageAlt="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed.">
       <>
         <div className="bodyTextWrapper overview">
-          <h2>Project Overview</h2>
+          <h2>Project Summary</h2>
           <p>
             In response to <a href="#customerDemand">strong user demand</a>, I
             led the end-to-end creation of Armoire's mobile app. In addition to
@@ -45,11 +48,11 @@ export default function ArmoireMobilePage() {
           </p>
         </div>
 
-        <ArmoireMobileShowcaseScroller />
+        <ArmoireMobileShowcase />
 
-        <div id="customerDemand" className="bodyTextWrapper intro">
-          <h2>Context and Requirements</h2>
-          <h3 className="subhead">Why build an app?</h3>
+        <CaseStudySection title="Context and Requirements">
+          <div id="customerDemand" className="bodyTextWrapper">
+          <h3>Why build an app?</h3>
           <h4>Customer demand</h4>
           <p>
             When I conducted my first set of user interviews with Armoire
@@ -68,7 +71,7 @@ export default function ArmoireMobilePage() {
             increase user convenience, engagement, and ultimately, satisfaction.
           </p>
         </div>
-        <div id="mvpRequirements" className="bodyTextWrapper idNavigationInset">
+        <div id="mvpRequirements" className="bodyTextWrapper">
           <h3>MVP Requirements</h3>
           <p>
             To make the transition to mobile smooth for our members, the MVP
@@ -274,9 +277,142 @@ export default function ArmoireMobilePage() {
             </tr>
           </tbody>
         </table>
+        </CaseStudySection>
+
+        <CaseStudySection title="Information Architecture">
+          <div id="informationArchitecture" className="bodyTextWrapper">
+          <p>
+            For the first month of the project, I focused on increasing the
+            total surface area of the app by developing its information
+            architecture and global UI components.
+          </p>
+          <p>
+            One of the first UX challenges I had to tackle was determining how
+            to translate the existing web app’s navigation structure into a
+            mobile app hierarchy with only 5 main tabs.
+          </p>
+        </div>
+        <div className="navComparison">
+          <div className="navComparisonBars">
+            <Image
+              alt="Snapshot of the navigation bar on the Armoire web desktop app. Contains entries for Search, Closet, Feed, Case, Notifications, Referrals, and Account"
+              src={images.navigationOldDesktop}
+            />
+            <Image
+              alt="Snapshot of navigation bar on Armoire web mobile. Shows icons for Search, Feed, Case, and Notifications, as well as hamburger menu button."
+              src={images.navigationOldMobile}
+            />
+          </div>
+          <Image
+            className="navComparisonFlyout"
+            alt="Snapshot of flyout menu on Armoire web mobile. Vertically scrolling entries for Closet, Feed, Style Profile, Rental History, Account, Help, Referrals, Shop, Year in Review, and Sign Out"
+            src={images.navigationOldFlyout}
+          />
+        </div>
         <div className="bodyTextWrapper">
-          <h2>Technical Design</h2>
-          <h3>Investigation</h3>
+          <p>
+            {' '}
+            As the screen grabs above demonstrate, the existing website
+            hierarchy was extremely flat and shallow, which didn’t lend itself
+            well to the limited real estate of a mobile app. The diagram below
+            represents the core sections, screens, and actions I identified in
+            the existing web app hierarchy.
+          </p>
+        </div>
+        <div className="diagram">
+          <h5 className="diagramLabel">Step 1: Identify IA of web app</h5>
+          <Image
+            alt="Diagram containing the web information architecture of Armoire. Entries for Closet, Search, Case, Feed, Notifications, Referrals, Style Profile, and Account."
+            src={images.navigationArchitecture1}
+          />
+        </div>
+
+        <div className="bodyTextWrapper">
+          <p>
+            I realized that certain “flows”, for example, reviewing or
+            purchasing an item, would actually be best performed{' '}
+            <em>without</em> the app tab bar present, to increase user focus on
+            the task and decrease the chance of accidentally leaving before the
+            action is complete. Those flows are highlighted above in teal.
+          </p>
+          <p>
+            In the second diagram I grouped those flows together into one
+            “Modals” object, with the idea that these screens would live outside
+            or “on top” of the tab navigator and be opened globally throughout
+            the app. I also moved Referrals and Style Profile within the account
+            section, as they weren't deep enough to warrant their own section.
+            This reduced the number of contenders for the 5 spots in the tab
+            navigator down to 6.
+          </p>
+        </div>
+        <div className="diagram">
+          <h5 className="diagramLabel">
+            Step 2: Group modals and consolidate account
+          </h5>
+          <Image
+            alt="Second iteration of information architecture, where account has been consolidated to include Style Profile and Referrals, and a modals section has been created to contain globally-accessible user flows."
+            src={images.navigationArchitecture2}
+          />
+        </div>
+
+        <div className="bodyTextWrapper">
+          <p>
+            From here, I worked in the opposite direction, asking: when is it{' '}
+            <em>most</em> important that a user have access to the tab bar?
+            Other than initial login, I determined that this was right after a
+            user adds an item to their case. At this point, a user needs visual
+            confirmation that the item was added, and an understanding of where
+            to view their “case” of selected items.
+          </p>
+          <p>
+            Due to the many connections between product pages, feed items, and
+            user profiles, 5 of the 6 remaining app areas would need to navigate
+            to a product page. These connections are shown below, followed by an
+            updated diagram that highlights their presence in the information
+            architecture.
+          </p>
+        </div>
+
+        <Image
+          className="diagramImage"
+          alt="Screenshots and annotation outlining the various connections between product details, feed item, and user profile pages in the web app."
+          src={images.navigationDeeplinks}
+        />
+        <div className="diagram">
+          <h5 className="diagramLabel">
+            Step 3: Identify connections to product page
+          </h5>
+          <Image
+            alt="Information architecture diagram identifying these same connections between product details, feed items, and user profiles."
+            src={images.navigationArchitecture3}
+          />
+        </div>
+
+        <div className="bodyTextWrapper">
+          <p>
+            Since Account was the only area that didn't require deeplinking to
+            product pages, and because its actions would be completed least
+            often, I opted to also move it “above” the tab navigator. To make
+            sure it would still be visible to users, I added links to it in the
+            Closet home page, Closet section page, and Case home page headers.
+          </p>
+        </div>
+        <div className="diagram">
+          <h5 className="diagramLabel">
+            Step 4: Finalize navigation + information architecture
+          </h5>
+          <Image
+            className="diagramNarrow"
+            alt="Final version of information architecture, with account and modals moved 'above' the tab navigator, which contains closet, search, case, feed, and notifications. All of the tab navigators contain a copy of the product details page."
+            src={images.navigationArchitectureFinal}
+          />
+        </div>
+        </CaseStudySection>
+
+        <CaseStudySection title="Technical Design and Learnings">
+          <div className="bodyTextWrapper">
+          <h3>Technical Design</h3>
+          <h4>Investigation</h4>
           <p>
             My first goal was to determine an overarching framework and platform
             for the app's development.
@@ -450,7 +586,7 @@ export default function ArmoireMobilePage() {
           </tbody>
         </table>
         <div className="bodyTextWrapper">
-          <h3>Proof of Concept</h3>
+          <h4>Proof of Concept</h4>
           <p>
             The proof of concept I created had a basic login screen, tab
             navigation, a closet screen with horizontal sliding sections, and
@@ -460,41 +596,27 @@ export default function ArmoireMobilePage() {
           </p>
         </div>
         <div className="mobileScreens">
-          <video
-            preload="metadata"
-            autoPlay
-            loop
-            aria-label={
-              'Walkthrough of basic login screen with Armoire logo, and text inputs for email and password. User logs in and is taken to closet home screen containing sliding sections.'
-            }
+          <WalkthroughVideo
+            filename="Mobile-POCLogin.mp4"
+            label="Walkthrough of basic login screen with Armoire logo, and text inputs for email and password. User logs in and is taken to closet home screen containing sliding sections."
             className="mobileScreen"
-            muted
-            playsInline>
-            <source src={videoUrl('Mobile-POCLogin.mp4')} type="video/mp4" />
-          </video>
+          />
           <div className="mobileScreen">
             <Image
               alt="Snapshot of very basic product details page, containing product brand name, name, add to case button, and some basic details about the item."
               src={images.pocPDP}
             />
           </div>
-          <video
-            preload="metadata"
-            autoPlay
-            loop
-            aria-label={
-              'Walkthrough of horizontally sliding closet sections on the home screen. User clicks on an a product and is taken to the basic product details page.'
-            }
+          <WalkthroughVideo
+            filename="Mobile-POC.mp4"
+            label="Walkthrough of horizontally sliding closet sections on the home screen. User clicks on an a product and is taken to the basic product details page."
             className="mobileScreen"
-            muted
-            playsInline>
-            <source src={videoUrl('Mobile-POC.mp4')} type="video/mp4" />
-          </video>
+          />
         </div>
         <div
-          className="bodyTextWrapper idNavigationInset"
+          className="bodyTextWrapper"
           id="technicalArchitecture">
-          <h3>Technical Architecture</h3>
+          <h4>Technical Architecture</h4>
           <p>
             Using my analysis and proof of concept I developed a high-level
             technical architecture for the app.
@@ -522,155 +644,19 @@ export default function ArmoireMobilePage() {
           </p>
         </div>
         <Image
-          style={{ display: 'block', width: '100%', maxWidth: 800, margin: '0 auto' }}
+          className="diagramImage diagramNarrow"
           alt="Technical architecture overview for the mobile app. Technologies depicted include React Native, Expo, Yarn, React Navigation, Sass, Prop Types, Mobx, Intercom, Stripe, Sentry, Segment, and OneSignal."
           src={images.technicalArchitecture}
           sizes="(max-width: 960px) 90vw, 800px"
         />
-        <div id="informationArchitecture" className="bodyTextWrapper">
-          <h2>Foundational UX Development</h2>
-          <p>
-            For the first month of the project, I focused on increasing the
-            total surface area of the app by developing its information
-            architecture and global UI components.
-          </p>
-          <h3>Information Architecture and Navigation</h3>
-          <p>
-            One of the first UX challenges I had to tackle was determining how
-            to translate the existing web app’s navigation structure into a
-            mobile app hierarchy with only 5 main tabs.
-          </p>
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: 32,
-            margin: '24px auto',
-          }}>
-          <div style={{ width: '65%' }}>
-            <Image
-              style={{ display: 'block', width: '100%', margin: '0 0 32px' }}
-              alt="Snapshot of the navigation bar on the Armoire web desktop app. Contains entries for Search, Closet, Feed, Case, Notifications, Referrals, and Account"
-              src={images.navigationOldDesktop}
-            />
-            <Image
-              style={{ display: 'block', width: '100%', margin: 0 }}
-              alt="Snapshot of navigation bar on Armoire web mobile. Shows icons for Search, Feed, Case, and Notifications, as well as hamburger menu button."
-              src={images.navigationOldMobile}
-            />
-          </div>
-          <Image
-            style={{ width: '22%', margin: 0 }}
-            alt="Snapshot of flyout menu on Armoire web mobile. Vertically scrolling entries for Closet, Feed, Style Profile, Rental History, Account, Help, Referrals, Shop, Year in Review, and Sign Out"
-            src={images.navigationOldFlyout}
-          />
-        </div>
-        <div className="bodyTextWrapper">
-          <p>
-            {' '}
-            As the screen grabs above demonstrate, the existing website
-            hierarchy was extremely flat and shallow, which didn’t lend itself
-            well to the limited real estate of a mobile app. The diagram below
-            represents the core sections, screens, and actions I identified in
-            the existing web app hierarchy.
-          </p>
-        </div>
-        <div style={{ margin: '48px auto', textAlign: 'center' }}>
-          <h5 style={{ marginBottom: 8 }}>Step 1: Identify IA of web app</h5>
-          <Image
-            alt="Diagram containing the web information architecture of Armoire. Entries for Closet, Search, Case, Feed, Notifications, Referrals, Style Profile, and Account."
-            src={images.navigationArchitecture1}
-          />
-        </div>
-
-        <div className="bodyTextWrapper">
-          <p>
-            I realized that certain “flows”, for example, reviewing or
-            purchasing an item, would actually be best performed{' '}
-            <em>without</em> the app tab bar present, to increase user focus on
-            the task and decrease the chance of accidentally leaving before the
-            action is complete. Those flows are highlighted above in teal.
-          </p>
-          <p>
-            In the second diagram I grouped those flows together into one
-            “Modals” object, with the idea that these screens would live outside
-            or “on top” of the tab navigator and be opened globally throughout
-            the app. I also moved Referrals and Style Profile within the account
-            section, as they weren't deep enough to warrant their own section.
-            This reduced the number of contenders for the 5 spots in the tab
-            navigator down to 6.
-          </p>
-        </div>
-        <div style={{ margin: '48px auto', textAlign: 'center' }}>
-          <h5 style={{ marginBottom: 8 }}>
-            Step 2: Group modals and consolidate account
-          </h5>
-          <Image
-            alt="Second iteration of information architecture, where account has been consolidated to include Style Profile and Referrals, and a modals section has been created to contain globally-accessible user flows."
-            src={images.navigationArchitecture2}
-          />
-        </div>
-
-        <div className="bodyTextWrapper">
-          <p>
-            From here, I worked in the opposite direction, asking: when is it{' '}
-            <em>most</em> important that a user have access to the tab bar?
-            Other than initial login, I determined that this was right after a
-            user adds an item to their case. At this point, a user needs visual
-            confirmation that the item was added, and an understanding of where
-            to view their “case” of selected items.
-          </p>
-          <p>
-            Due to the many connections between product pages, feed items, and
-            user profiles, 5 of the 6 remaining app areas would need to navigate
-            to a product page. These connections are shown below, followed by an
-            updated diagram that highlights their presence in the information
-            architecture.
-          </p>
-        </div>
-
-        <Image
-          style={{ margin: '48px auto' }}
-          alt="Screenshots and annotation outlining the various connections between product details, feed item, and user profile pages in the web app."
-          src={images.navigationDeeplinks}
-        />
-        <div style={{ margin: '48px auto', textAlign: 'center' }}>
-          <h5 style={{ marginBottom: 8 }}>
-            Step 3: Identify connections to product page
-          </h5>
-          <Image
-            alt="Information architecture diagram identifying these same connections between product details, feed items, and user profiles."
-            src={images.navigationArchitecture3}
-          />
-        </div>
-
-        <div className="bodyTextWrapper">
-          <p>
-            Since Account was the only area that didn't require deeplinking to
-            product pages, and because its actions would be completed least
-            often, I opted to also move it “above” the tab navigator. To make
-            sure it would still be visible to users, I added links to it in the
-            Closet home page, Closet section page, and Case home page headers.
-          </p>
-        </div>
-        <div style={{ margin: '48px auto', textAlign: 'center' }}>
-          <h5>Step 4: Finalize navigation + information architecture</h5>
-          <Image
-            style={{ display: 'block', width: '100%', maxWidth: 800, margin: '0 auto' }}
-            alt="Final version of information architecture, with account and modals moved 'above' the tab navigator, which contains closet, search, case, feed, and notifications. All of the tab navigators contain a copy of the product details page."
-            src={images.navigationArchitectureFinal}
-          />
-        </div>
-        <div id="performanceAnimations" className="bodyTextWrapper">
-          <h2>Technical Challenges</h2>
+          <div id="performanceAnimations" className="bodyTextWrapper">
+          <h3>Technical Learnings</h3>
           <p>
             I had never used React Native or built a mobile app prior to this
             project; it naturally came with a huge number of technical hurdles
             and learnings.
           </p>
-          <h3>JavaScript Performance</h3>
+          <h4>JavaScript Performance</h4>
           <p>
             Compared to ReactJS, one of the biggest differences I discovered in
             React Native was the impact of unnecessary re-renders and JS
@@ -685,18 +671,11 @@ export default function ArmoireMobilePage() {
           </p>
           <div className="mobileScreens">
             <div className="mobileScreenWithCopy">
-              <video
-                preload="metadata"
-                autoPlay
-                loop
-                aria-label={
-                  'Walkthrough video showing a user clicking from a horizontally scrolling closet section into a list view'
-                }
+              <WalkthroughVideo
+                filename="Mobile-Perf1.mp4"
+                label="Walkthrough video showing a user clicking from a horizontally scrolling closet section into a list view"
                 className="walkthroughVideo"
-                muted
-                playsInline>
-                <source src={videoUrl('Mobile-Perf1.mp4')} type="video/mp4" />
-              </video>
+              />
               <h5 className="screenCaption">
                 React Native Flatlist was essential for creating performant
                 product list views, as were PureComponent and useMemo.
@@ -705,21 +684,11 @@ export default function ArmoireMobilePage() {
               </h5>
             </div>
             <div className="mobileScreenWithCopy">
-              <video
-                preload="metadata"
-                autoPlay
-                loop
-                aria-label={
-                  'Walkthrough showing a user clicking the Filter button from a vertically scrolling list view. The filter modal immediately pops up and shows placeholder content. Shortly after, all of the filter options load.'
-                }
+              <WalkthroughVideo
+                filename="Mobile-FilterSectionNew.mp4"
+                label="Walkthrough showing a user clicking the Filter button from a vertically scrolling list view. The filter modal immediately pops up and shows placeholder content. Shortly after, all of the filter options load."
                 className="walkthroughVideo"
-                muted
-                playsInline>
-                <source
-                  src={videoUrl('Mobile-FilterSectionNew.mp4')}
-                  type="video/mp4"
-                />
-              </video>
+              />
               <h5 className="screenCaption">
                 Modal screens, such as the list view filter modal, were
                 lazy-loaded to increase transition performance. Placeholder
@@ -728,7 +697,7 @@ export default function ArmoireMobilePage() {
               </h5>
             </div>
           </div>
-          <h3>React Native Animations</h3>
+          <h4>React Native Animations</h4>
           <p>
             CSS animations are not supported in React Native. To build core
             micro-interactions in the mobile app, I had to learn how to use the
@@ -739,58 +708,28 @@ export default function ArmoireMobilePage() {
           </p>
           <div className="mobileScreens">
             <div className="mobileScreenWithCopy">
-              <video
-                preload="metadata"
-                autoPlay
-                loop
-                aria-label={
-                  'Walkthrough of user clicking the heart icon on product thumbnails. This expands to reveal the option to favorite or dislike an item. Once one of those options is clicked, the options collapse.'
-                }
+              <WalkthroughVideo
+                filename="Mobile-Animation1.mp4"
+                label="Walkthrough of user clicking the heart icon on product thumbnails. This expands to reveal the option to favorite or dislike an item. Once one of those options is clicked, the options collapse."
                 className="walkthroughVideo"
-                muted
-                playsInline>
-                <source
-                  src={videoUrl('Mobile-Animation1.mp4')}
-                  type="video/mp4"
-                />
-              </video>
+              />
             </div>
             <div className="mobileScreenWithCopy">
-              <video
-                preload="metadata"
-                autoPlay
-                loop
-                aria-label={
-                  'Add to Case button on product page is clicked. Text changes to "So stylish!" as the case icon expands and contracts, and a check mark animates in. The button then changes to white and says "Remove from Case"'
-                }
+              <WalkthroughVideo
+                filename="Mobile-Animation2.mp4"
+                label='Add to Case button on product page is clicked. Text changes to "So stylish!" as the case icon expands and contracts, and a check mark animates in. The button then changes to white and says "Remove from Case"'
                 className="walkthroughVideo"
-                muted
-                playsInline>
-                <source
-                  src={videoUrl('Mobile-Animation2.mp4')}
-                  type="video/mp4"
-                />
-              </video>
+              />
             </div>
             <div className="mobileScreenWithCopy">
-              <video
-                preload="metadata"
-                autoPlay
-                loop
-                aria-label={
-                  'Pull to refresh animation on the feed home screen. Users pulls down at the top of the content and a loading indicator circles for 1.5 seconds, then disappears.'
-                }
+              <WalkthroughVideo
+                filename="Mobile-Animation3.mp4"
+                label="Pull to refresh animation on the feed home screen. Users pulls down at the top of the content and a loading indicator circles for 1.5 seconds, then disappears."
                 className="walkthroughVideo"
-                muted
-                playsInline>
-                <source
-                  src={videoUrl('Mobile-Animation3.mp4')}
-                  type="video/mp4"
-                />
-              </video>
+              />
             </div>
           </div>
-          <h3>Working with WebViews</h3>
+          <h4>Working with WebViews</h4>
           <p>
             Certain features required using React Native Webviews to render
             existing web application screens or custom HTML and JS within the
@@ -803,21 +742,11 @@ export default function ArmoireMobilePage() {
           <div className="mobileScreens">
             <div className="mobileScreenWithCopy">
               <h5 className="screenCaption">Stripe Webview</h5>
-              <video
-                preload="metadata"
-                autoPlay
-                loop
-                aria-label={
-                  'Stripe webview walkthrough. User clicks "Add Card" and an "Update Payment Method" modal opens. User types in payment card details and clicks "Update"'
-                }
+              <WalkthroughVideo
+                filename="Mobile-Webview1.mp4"
+                label='Stripe webview walkthrough. User clicks "Add Card" and an "Update Payment Method" modal opens. User types in payment card details and clicks "Update"'
                 className="walkthroughVideo"
-                muted
-                playsInline>
-                <source
-                  src={videoUrl('Mobile-Webview1.mp4')}
-                  type="video/mp4"
-                />
-              </video>
+              />
             </div>
             <div className="">
               <h5 className="screenCaption">Style Quiz Webview</h5>
@@ -830,8 +759,10 @@ export default function ArmoireMobilePage() {
             </div>
           </div>
         </div>
-        <div id="uxImprovements" className="bodyTextWrapper idNavigationInset">
-          <h2>UX Improvements</h2>
+        </CaseStudySection>
+
+        <CaseStudySection title="UX Improvements">
+          <div id="uxImprovements" className="bodyTextWrapper">
           <p>
             I used the development of existing product in a new codebase as an
             opportunity to improve UX whenever possible. Below are a few
@@ -850,39 +781,19 @@ export default function ArmoireMobilePage() {
         <div className="mobileScreens">
           <div>
             <h5 className="screenCaption">Old list view (mobile web)</h5>
-            <video
-              preload="metadata"
-              autoPlay
-              loop
-              aria-label={
-                'Walkthrough of old mobile web product list view. As user scrolls, the filter actions scroll away and are not accessible.'
-              }
+            <WalkthroughVideo
+              filename="Mobile-FilterSectionOld.mp4"
+              label="Walkthrough of old mobile web product list view. As user scrolls, the filter actions scroll away and are not accessible."
               className="walkthroughVideo"
-              muted
-              playsInline>
-              <source
-                src={videoUrl('Mobile-FilterSectionOld.mp4')}
-                type="video/mp4"
-              />
-            </video>
+            />
           </div>
           <div>
             <h5 className="screenCaption">New list view (mobile app)</h5>
-            <video
-              preload="metadata"
-              autoPlay
-              loop
-              aria-label={
-                'Walkthrough of native app list view. As a user scrolls, the sort and filter buttons stay sticky to the bottom of the screen, and can be pushed from there to open up filter options'
-              }
+            <WalkthroughVideo
+              filename="Mobile-FilterSectionNew.mp4"
+              label="Walkthrough of native app list view. As a user scrolls, the sort and filter buttons stay sticky to the bottom of the screen, and can be pushed from there to open up filter options"
               className="walkthroughVideo"
-              muted
-              playsInline>
-              <source
-                src={videoUrl('Mobile-FilterSectionNew.mp4')}
-                type="video/mp4"
-              />
-            </video>
+            />
           </div>
         </div>
         <div className="bodyTextWrapper">
@@ -905,39 +816,19 @@ export default function ArmoireMobilePage() {
             <h5 className="screenCaption">
               Previous feed navigation (mobile web)
             </h5>
-            <video
-              preload="metadata"
-              autoPlay
-              loop
-              aria-label={
-                'Walkthrough of the old mobile web feed. User clicks into to multiple product pages, views them, then navigates back to the feed.'
-              }
+            <WalkthroughVideo
+              filename="Mobile-FeedQuickViewBefore.mp4"
+              label="Walkthrough of the old mobile web feed. User clicks into to multiple product pages, views them, then navigates back to the feed."
               className="walkthroughVideo"
-              muted
-              playsInline>
-              <source
-                src={videoUrl('Mobile-FeedQuickViewBefore.mp4')}
-                type="video/mp4"
-              />
-            </video>
+            />
           </div>
           <div>
             <h5 className="screenCaption">Feed quick view (mobile app)</h5>
-            <video
-              preload="metadata"
-              autoPlay
-              loop
-              aria-label={
-                'Walkthrough of new native app feed. User clicks into product, which opens a drawer quick view of the item. User adds a size medium to their case, then clicks back onto the feed.'
-              }
+            <WalkthroughVideo
+              filename="Mobile-FeedQuickView.mp4"
+              label="Walkthrough of new native app feed. User clicks into product, which opens a drawer quick view of the item. User adds a size medium to their case, then clicks back onto the feed."
               className="walkthroughVideo"
-              muted
-              playsInline>
-              <source
-                src={videoUrl('Mobile-FeedQuickView.mp4')}
-                type="video/mp4"
-              />
-            </video>
+            />
           </div>
         </div>
         <div className="bodyTextWrapper">
@@ -953,45 +844,26 @@ export default function ArmoireMobilePage() {
         <div className="mobileScreens">
           <div>
             <h5 className="screenCaption">Autoselect on product page</h5>
-            <video
-              preload="metadata"
-              autoPlay
-              loop
-              aria-label={
-                'Walkthrough of automatic size selection. User clicks into a floral dress and her recommended Size S is automatically selected.'
-              }
+            <WalkthroughVideo
+              filename="Mobile-AutoSizeSelect.mp4"
+              label="Walkthrough of automatic size selection. User clicks into a floral dress and her recommended Size S is automatically selected."
               className="walkthroughVideo"
-              muted
-              playsInline>
-              <source
-                src={videoUrl('Mobile-AutoSizeSelect.mp4')}
-                type="video/mp4"
-              />
-            </video>
+            />
           </div>
           <div>
             <h5 className="screenCaption">Autoselect on product preview</h5>
-            <video
-              preload="metadata"
-              autoPlay
-              loop
-              aria-label={
-                'Walkthrough of automatic size selection on the feed product preview. User clicks open the product preview for an item and a recommended Size XS is already selected for her'
-              }
+            <WalkthroughVideo
+              filename="Mobile-AutoSizeSelectFeed.mp4"
+              label="Walkthrough of automatic size selection on the feed product preview. User clicks open the product preview for an item and a recommended Size XS is already selected for her"
               className="walkthroughVideo"
-              muted
-              playsInline>
-              <source
-                src={videoUrl('Mobile-AutoSizeSelectFeed.mp4')}
-                type="video/mp4"
-              />
-            </video>
+            />
           </div>
         </div>
+        </CaseStudySection>
 
-        <div id="launch" className="bodyTextWrapper overview idNavigationInset">
-          <h2 className="sectionHeading">Launch and Reception</h2>
-          <p className="">
+        <CaseStudySection title="Launch and Reception" defaultOpen>
+          <div id="launch" className="bodyTextWrapper overview">
+          <p>
             The mobile apps were released in early April 2021 and are available
             for download on the{' '}
             <a
@@ -1007,8 +879,8 @@ export default function ArmoireMobilePage() {
               rel="noopener noreferrer">
               Google Play
             </a>{' '}
-            stores. They have maintained 99.9% crash-free rates since launch and
-            have received an average rating of 4.9 / 5.
+            stores. They sustained 99.9% crash-free rates and received an
+            average rating of 4.9/5 during my tenure.
           </p>
         </div>
         <div className="bodyTextWrapper">
@@ -1031,8 +903,8 @@ export default function ArmoireMobilePage() {
             </li>
           </ul>
         </div>
-        <div className="bodyTextWrapper ">
-          <h2 className="sectionHeading">Reflection</h2>
+          <div className="bodyTextWrapper">
+          <h3>Reflection</h3>
           <p>
             I'm extremely proud of what I was able to produce in six months.
             This project required me to learn extensively, prioritize
@@ -1047,6 +919,7 @@ export default function ArmoireMobilePage() {
             throughout; I would not be the technologist I am today otherwise!
           </p>
         </div>
+        </CaseStudySection>
       </>
     </ProjectPage>
   )

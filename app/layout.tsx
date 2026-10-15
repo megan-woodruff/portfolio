@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Figtree, Newsreader } from 'next/font/google'
 import Script from 'next/script'
 import type { ReactNode } from 'react'
 
@@ -12,6 +13,20 @@ const siteUrl =
   process.env.DEPLOY_PRIME_URL ??
   'http://localhost:3000'
 const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+
+const sans = Figtree({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const display = Newsreader({
+  subsets: ['latin'],
+  variable: '--font-display',
+  style: ['normal', 'italic'],
+  axes: ['opsz'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -35,7 +50,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${sans.variable} ${display.variable}`}>
       <body>
         <SiteShell>{children}</SiteShell>
         {gaId ? (

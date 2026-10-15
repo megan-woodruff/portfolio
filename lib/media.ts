@@ -80,13 +80,13 @@ export const images = {
   welcome,
 } satisfies Record<string, StaticImageData>
 
-const defaultMediaBase =
-  'https://raw.githubusercontent.com/megan-woodruff/portfolio/77947115fb8b72a14a9ced8dd4066fc193219df8/src/images'
-
 export function videoUrl(filename: string) {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_MEDIA_BASE_URL?.replace(/\/$/, '') ??
-    defaultMediaBase
+  const baseUrl = process.env.NEXT_PUBLIC_MEDIA_BASE_URL?.replace(/\/$/, '')
+  if (!baseUrl) return `/videos/${encodeURIComponent(filename)}`
 
   return `${baseUrl}/${encodeURIComponent(filename)}`
+}
+
+export function posterUrl(filename: string) {
+  return `/videos/posters/${encodeURIComponent(filename.replace(/\.mp4$/, '.jpg'))}`
 }

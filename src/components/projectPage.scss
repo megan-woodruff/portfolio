@@ -2,320 +2,291 @@
 
 .headerImage {
     display: block;
-    width: 100%;
-    height: 400px;
+    width: 90vw;
+    height: 440px;
     max-width: 960px;
-    margin: 92px auto 0;
+    margin: $space5 auto 0;
     object-fit: cover;
     object-position: center top;
-    background-attachment: fixed;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: $border-radius;
 
     @media only screen and (max-width: $mobileBreak) {
-        height: 400px;
-        background-attachment: scroll;
-        margin: 48px auto 0;
-    }
-}
-
-
-
-table {
-    margin: 80px 0;
-}
-
-.imageRow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-
-    .image {
-        width: 220px;
-        height: 360px;
-        margin: 36px 18px;
+        height: 280px;
+        margin-top: $space4;
     }
 }
 
 .projectContent {
-    h2, h3 {
-        text-align: left;
-        color: white;
-    }
-    padding-bottom: 4rem;
+    padding-bottom: $space8;
 
     .overviewCard {
-        @extend .contentWrapper;
-        max-width: 800px;
-        position: relative;
-        margin: -6rem auto 0;
-        border: 1px solid white;
-        border-radius: $border-radius;
-    
+        width: 90vw;
+        max-width: 960px;
+        margin: $space6 auto 0;
+
         .heading {
-            background-color: $primaryColor;
-            padding: 2rem;
-            border-radius: $border-radius $border-radius 0 0;
-            border-bottom: 1px solid white;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: $space5;
+            padding: 0 0 $space6;
+
+            .date {
+                flex: 0 0 auto;
+                margin: 0;
+                white-space: nowrap;
+            }
 
             .title {
-                color: white;
-                font-weight: 800;
-                color: $secondaryColor;
-
+                margin-bottom: $space3;
             }
-             
+
             .description {
-                font-weight: normal;
                 margin: 0;
-                color: $secondaryColor;
-                color: white;
-            }
-
-            @media only screen and (max-width: $mobileBreak) {
-                .title {
-                    font-size: 1.6rem;
-                }
-                .description {
-                    font-size: 1.2rem;
-                }
+                max-width: 34rem;
+                font-family: $fontSans;
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 1.5;
+                letter-spacing: 0;
+                color: $textBody;
             }
         }
-    
+
         .stats {
-            display: flex;
-            justify-content: space-between;
-            padding: 2rem 2rem 1.2rem;
-            background-color: $backgroundColor;
-            border-radius: 0 0 $border-radius $border-radius;
-            // border: 1px solid white;
-            border-top: none;
+            display: grid;
+            grid-template-columns: 0.8fr 0.7fr 1.2fr 1.4fr;
+            gap: $space4 $space5;
+            padding: $space5 0;
+            border-top: 1px solid $line;
+            border-bottom: 1px solid $line;
 
-
-            .stat {
-                min-width: 6rem;
-                margin: 0 1rem 1rem 0;
-
-                &.no-shrink {
-                    flex-shrink: 0;
-                }
-            }
             h5 {
-                margin-bottom: .5rem;
-                color: $secondaryColor;
+                margin-bottom: $space2;
+                font-size: 0.75rem;
                 font-weight: 600;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: $textMuted;
             }
 
             h6 {
-                font-weight: 400;
-                margin-bottom: .1rem;
-                line-height: 1.2rem;
+                margin: 0 0 2px;
+            }
+        }
+
+        @media only screen and (max-width: $mobileBreak) {
+            margin-top: $space5;
+
+            .heading {
+                flex-direction: column-reverse;
+                gap: $space2;
+                padding-bottom: $space5;
             }
 
-            @media only screen and (max-width: $mobileBreak) {
-                flex-wrap: wrap;
-                justify-content: space-between;
-                
-                .stat {
-                    width: 42%;
-                    margin: 2% 4%;
-                }
+            .stats {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                padding-top: $space4;
             }
-
-            @media only screen and (max-width: 600px) {
-                flex-wrap: wrap;
-                justify-content: space-between;
-                
-                .stat {
-                    width: 100%
-                }
-            }
-            
         }
     }
 
     .contentBody {
         @extend .contentWrapper;
-        margin: 4rem auto;
-        color: white;
+        margin: $space7 auto 0;
 
-        .photoGrid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin: 2.5rem 0 0 0;
-
-            .photoGridElement {
-                width: 49%;
-                margin: .5rem 0;
-
-                @media only screen and (max-width: $mobileBreak) {
-                    width: 100%;
-                }
-            }
-        }
-
-        .projectImage {
-            margin: 2.5rem 0;
+        [id] {
+            scroll-margin-top: $navHeight + $space4;
         }
 
         .bodyTextWrapper {
-            max-width: 37rem;
-            margin: 0 auto;
+            max-width: 40rem;
+            margin: 0;
         }
 
-        .overview {
-            p, li, ul {
-                font-weight: 500;
-                font-size: 1.25rem;
-                line-height: 1.8rem;
-                letter-spacing: .02rem;
-                color: white;
-            }
+        p,
+        ul,
+        ol {
+            color: $textBody;
+            font-size: 1.0625rem;
+            line-height: 1.5;
         }
 
-        .caption {
-            font-size: .85rem;
-            line-height: 1.3rem;
-            margin: 1.5rem 0 2.5rem;
+        ul,
+        ol {
+            margin: 0 0 $space3 $space4;
         }
 
-        .imageHeading {
-            margin: 2.5rem 0 1.5rem;
+        li {
+            margin-bottom: $space1;
         }
 
-        .iframeWrapper {
-            max-width: 420px;
-            height: 700px;
-            margin: 0 auto;
-        }
-
-        .videoWrapper {
-            margin: 3rem 0;
-            max-width: 100%;
-
-            iframe {
-                width: 100%;
-                height: 540px;
-            }
-
-            @media only screen and (max-width: 960px) {
-                iframe {
-                    width: 100%;
-                    height: 50vw;
-                }
-            }
-        }
-
-        .columnLayout {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 2rem 2rem 1rem;
-            margin: 3rem auto;
-            background-color: $primaryColor;
-            background-color: #f9f9f9;
-            background-color: $primaryColor;
-            color: white;
-            border-radius: $border-radius;
-            overflow: wrap;
-
-            
-
-            h3, ul, ol, p, h4, h5 {
-                color: white;
-            }
-
-            .column {
-                margin: 0 3.5%;
-                width: 43%;
-             
-                @media only screen and (max-width: $mobileBreak) {
-                    width: 100%;
-                    margin: 0;
-                }
-                
-
-                h3 {
-                    margin-top: 2rem;
-                }
-                
-                h4 {
-                    font-size: 1rem;
-                    margin-bottom: .75rem;
-                }
-
-                h5 {
-                    font-size: .9rem;
-                    margin-bottom: 1rem;
-                    line-height: 1.1rem;
-                }
-
-             
-            }
-
-            .personaImageContainer {
-                width: 30%;
-
-                .personaImage {
-                    border-radius: $border-radius;
-                }
-
-                .flipImage {
-                    -webkit-transform: scaleX(-1);
-                    transform: scaleX(-1);
-                }
-
-                @media only screen and (max-width: $mobileBreak) {
-                    display: none;
-                }
-            }
-
-            .personaText {
-                width: 56%;
-
-                @media only screen and (max-width: $mobileBreak) {
-                    width: 100%;
-                }
-            }
-        }
-
-        p, ul, ol {
-            color: white;
-            font-size: 1rem;
-            font-family: Avenir, Arial, Helvetica, sans-serif;
-            letter-spacing: .01rem;
+        .overview p {
+            font-size: 1.25rem;
+            line-height: 1.45;
+            color: $text;
         }
 
         h2 {
-            font-size: 1.8rem;
-            color: $secondaryColor;
-            margin: 3rem 0 1rem;
+            margin: $space8 0 $space3;
         }
 
         h3 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin: 3rem 0 1rem;
+            margin: $space6 0 $space2;
         }
 
         h4 {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-top: .75rem;
-            margin-bottom: .5rem;
+            margin: $space5 0 $space2;
+        }
+
+        h2 + h3 {
+            margin-top: $space4;
+        }
+
+        h3 + h4 {
+            margin-top: $space3;
+        }
+
+        .bodyTextWrapper:first-child h2 {
+            margin-top: 0;
+        }
+
+        .caseStudySection {
+            border-top: 1px solid $line;
+
+            &:first-of-type {
+                margin-top: $space8;
+            }
+
+            &:last-child {
+                border-bottom: 1px solid $line;
+            }
+
+            &[open] {
+                padding-bottom: $space7;
+            }
+
+            &[open] > summary::after {
+                transform: rotate(45deg);
+            }
+
+            > summary {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: $space4;
+                padding: $space5 0;
+                list-style: none;
+                cursor: pointer;
+
+                &::-webkit-details-marker {
+                    display: none;
+                }
+
+                &::after {
+                    content: '+';
+                    flex: 0 0 auto;
+                    color: $textMuted;
+                    font-family: $fontSans;
+                    font-size: 1.75rem;
+                    font-weight: 300;
+                    line-height: 1;
+                    transition: transform 0.2s ease;
+                }
+
+                &:hover h2 {
+                    color: $text;
+                }
+
+                h2 {
+                    margin: 0;
+                    font-size: clamp(1.625rem, 3vw, 2rem);
+                    color: $textBody;
+                    transition: color 0.2s ease;
+                }
+            }
+
+            .caseStudySectionContent {
+                padding-top: $space3;
+
+                > .bodyTextWrapper:first-child > h3:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        table,
+        .diagram,
+        .diagramImage,
+        .navComparison,
+        .mobileScreens {
+            margin-top: $space6;
+            margin-bottom: $space6;
+        }
+
+        @media only screen and (max-width: $mobileBreak) {
+            table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        .diagram {
+            text-align: left;
+
+            img {
+                margin: 0;
+            }
+        }
+
+        .diagramLabel {
+            margin-bottom: $space3;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: $textMuted;
+        }
+
+        .diagramImage,
+        .diagramNarrow {
+            display: block;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .diagramNarrow {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .navComparison {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: $space5;
+
+            img {
+                margin: 0;
+                border-radius: $radiusSmall;
+            }
+
+            .navComparisonBars {
+                display: flex;
+                flex-direction: column;
+                gap: $space5;
+                width: 65%;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .navComparisonFlyout {
+                width: 22%;
+            }
         }
     }
 }
-
-.projectPageFooter {
-    background: $primaryColor;
-    color: $backgroundColor;
-}
-
-
-

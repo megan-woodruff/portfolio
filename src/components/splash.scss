@@ -2,50 +2,22 @@
 
 .splash {
     @extend .contentWrapper;
-    text-align: center;
-    margin: 100px auto 0;
-
-    br {
-        display: none;
-    }
-
-    @media only screen and (min-width: 480px) {
-        margin: 8rem auto 1rem;
-    }
-
-    @media only screen and (min-width: $mobileBreak) {
-        br {
-            display: block;
-        }
-    }
-
-    .emphasis {
-        color: $secondaryColor;
-    }
+    padding: $space8 0 $space7;
 
     h1 {
+        margin: 0 0 $space4;
+    }
+
+    h3 {
+        max-width: 40rem;
         margin: 0;
+        font-size: clamp(1.25rem, 2.4vw, 1.5rem);
+        font-weight: 400;
+        line-height: 1.45;
+        color: $textBody;
     }
 
-    .current {
-        font-size: 1.2rem;
-        line-height: 1.8rem;
-        margin-top: 2.2rem;
-    }
-
-    a, button {
-        text-decoration: none;
-        color: inherit;
-        font-weight: bold;
-        background-color: inherit;
-        outline: none;
-        cursor: pointer;
-        border: none;
-        transition: all .25s ease;
-        padding: 0;
-
-        &:hover {
-            text-decoration: underline;
-        }
+    @media only screen and (max-width: $mobileBreak) {
+        padding: $space7 0 $space6;
     }
 }

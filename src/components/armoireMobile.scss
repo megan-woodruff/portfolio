@@ -1,10 +1,16 @@
 @use 'styles' as *;
 
 .mobileScreens {
-  padding-top: 24px;
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $space4;
   width: 100%;
+
+  > * {
+    flex: 0 1 280px;
+    min-width: 0;
+  }
 
   > div:has(> .screenCaption) {
     display: flex;
@@ -12,12 +18,27 @@
     align-items: center;
     justify-content: flex-start;
   }
+
+  @media only screen and (max-width: $mobileBreak) {
+    gap: $space3;
+  }
+}
+
+.bodyTextWrapper .mobileScreens {
+  width: min(960px, 90vw);
+  margin-left: 0;
 }
 
 .mobileScreen {
-  width: 280px;
-  margin: 0 12px;
   overflow: hidden;
+}
+
+.mobileScreen,
+.walkthroughVideo {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin: 0;
 }
 
 .mobileScreen,
@@ -41,12 +62,14 @@
 .mobileScreensTable {
   display: flex;
 
+  gap: $space3;
+
   .mobileScreenTable {
     height: 346px;
     width: 160px;
     min-width: 160px;
     flex: 0 1 160px;
-    margin: 12px;
+    margin: 0;
     border-radius: #{$phoneScreenRadiusX} / #{$phoneScreenRadiusY};
     clip-path: inset(0 round #{$phoneScreenRadiusX} / #{$phoneScreenRadiusY});
     overflow: hidden;
@@ -62,56 +85,10 @@
   }
 }
 
-.intro {
-  margin-bottom: 48px;
-}
-
-.walkthroughVideo {
-  width: 280px;
-  margin: 0 12px 0;
-}
-
-.idNavigationInset {
-  padding-top: 60px;
-  margin-top: -60px !important;
-}
-
-.walkthroughs {
-  display: flex;
-  justify-content: center;
-}
-
 .screenCaption {
   order: 1;
-  text-align: center;
   max-width: 280px;
-  margin: 20px auto 12px;
-}
-
-
-.mobileScreenWithCaption {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.sectionHeading {
+  margin: $space4 auto 0;
   text-align: center;
-  margin-bottom: 24px;
-}
-
-.appSection {
-  margin-top: 48px;
-  margin-bottom: 8px;
-  padding-top: 32px;
-  
-  &.first {
-    padding-top: 0;
-  }
-}
-
-.subhead {
-  color: $secondaryColor;
-  margin-top: 2.5rem !important;
+  text-wrap: balance;
 }

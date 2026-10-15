@@ -24,15 +24,30 @@ for (const route of routes) {
   })
 }
 
-test('navigation and resume links are stable', async ({ page }) => {
+test('navigation links are stable', async ({ page }) => {
   await page.goto('/')
 
+  await expect(page.getByRole('link', { name: 'Resume' })).toHaveCount(0)
   await page.getByRole('link', { name: 'About' }).click()
   await expect(page).toHaveURL(/\/about$/)
-  await expect(page.getByRole('link', { name: 'Resume' })).toHaveAttribute(
-    'href',
-    '/Megan-Woodruff-Resume.pdf'
-  )
+})
+
+test('case study sections progressively disclose detail', async ({ page }) => {
+  await page.goto('/armoire_mobile', { waitUntil: 'domcontentloaded' })
+
+  const context = page
+    .locator('details')
+    .filter({ hasText: 'Context and Requirements' })
+  const launch = page
+    .locator('details')
+    .filter({ hasText: 'Launch and Reception' })
+
+  await expect(context).not.toHaveAttribute('open', '')
+  await expect(launch).toHaveAttribute('open', '')
+
+  await page.getByRole('link', { name: 'strong user demand' }).click()
+  await expect(context).toHaveAttribute('open', '')
+  await expect(page).toHaveURL(/#customerDemand$/)
 })
 
 test('unknown routes render the custom 404', async ({ page }) => {

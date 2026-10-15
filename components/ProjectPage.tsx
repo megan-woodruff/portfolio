@@ -4,6 +4,7 @@ import { type ReactNode } from 'react'
 type ProjectPageProps = {
   title: string
   description: string
+  date: string
   imageAlt: string
   stats: ReactNode
   children: ReactNode
@@ -13,6 +14,7 @@ type ProjectPageProps = {
 export function ProjectPage({
   title,
   description,
+  date,
   imageAlt,
   stats,
   children,
@@ -30,8 +32,11 @@ export function ProjectPage({
       <div className="projectContent">
         <div className="overviewCard">
           <div className="heading">
-            <h1 className="title">{title}</h1>
-            <h2 className="description">{description}</h2>
+            <div className="headingText">
+              <h1 className="title">{title}</h1>
+              <h2 className="description">{description}</h2>
+            </div>
+            <p className="date eyebrow">{date}</p>
           </div>
           <div className="stats">{stats}</div>
         </div>

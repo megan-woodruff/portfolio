@@ -16,9 +16,6 @@ export function NavBar() {
           <Link href="/about" className="navLink">
             About
           </Link>
-          <a className="navLink" href="/Megan-Woodruff-Resume.pdf">
-            Resume
-          </a>
         </nav>
       </div>
     </header>

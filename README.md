@@ -29,10 +29,11 @@ Playwright route tests in GitHub Actions.
 
 ## Media
 
-Portfolio videos are loaded from an immutable copy of the final Gatsby commit
-on GitHub's CDN instead of being included in every deploy. Set
-`NEXT_PUBLIC_MEDIA_BASE_URL` to move them to another object store or CDN; copy
-`.env.example` to `.env.local` for local overrides.
+Optimized videos and their poster frames live in `public/videos`. They are
+H.264, silent, and start playing as soon as the file header arrives. Set
+`NEXT_PUBLIC_MEDIA_BASE_URL` to move the video files to another object store
+or CDN; poster images stay on this site. Copy `.env.example` to `.env.local`
+for local overrides.
 When changing hosts, also allow the new origin in the `img-src` and `media-src`
 directives in `netlify.toml`.
 

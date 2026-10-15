@@ -21,19 +21,22 @@ export function ProjectCard({
   return (
     <Link className="projectLink" href={`/${slug}`}>
       <article className="projectCard">
-        <Image
-          className="projectImage"
-          src={image}
-          alt={alt}
-          sizes="(max-width: 790px) 90vw, 600px"
-          priority
-        />
+        <div className="projectImageFrame">
+          <Image
+            className="projectImage"
+            src={image}
+            alt={alt}
+            sizes="(max-width: 790px) 90vw, 600px"
+            priority
+          />
+        </div>
         <div className="projectInfo">
-          <div>
-            <h3 className="projectTitle">{title}</h3>
-            <h5 className="projectLocation">{location}</h5>
-          </div>
-          <h4 className="projectDescription">{description}</h4>
+          <p className="projectLocation eyebrow">{location}</p>
+          <h3 className="projectTitle">{title}</h3>
+          <p className="projectDescription">{description}</p>
+          <span className="projectCta" aria-hidden="true">
+            View case study →
+          </span>
         </div>
       </article>
     </Link>

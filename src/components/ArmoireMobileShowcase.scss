@@ -1,0 +1,32 @@
+@use 'styles' as *;
+
+.armoireMobileShowcase {
+  margin: $space7 auto 0;
+}
+
+.showcaseGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: $space4;
+
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media only screen and (max-width: $mobileBreak) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $space3;
+  }
+
+  .showcaseAsset {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    aspect-ratio: 1125 / 2436;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: #{$phoneScreenRadiusX} / #{$phoneScreenRadiusY};
+    clip-path: inset(0 round #{$phoneScreenRadiusX} / #{$phoneScreenRadiusY});
+  }
+}

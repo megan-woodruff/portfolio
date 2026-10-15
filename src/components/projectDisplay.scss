@@ -1,20 +1,9 @@
 @use 'styles' as *;
 
 .projectDisplay {
-  background-color: $primaryColor;
-  padding: 0 0 1rem;
+  padding: 0 0 $space8;
 
   .projectContentContainer {
     @extend .contentWrapper;
-    transition: $transitionStyle;
-  }
-
-  .moreProjectsText {
-    @extend .contentWrapper;
-    font-size: 1.25rem;
-    line-height: 140%;
-    text-align: center;
-    text-wrap: balance;
-    margin: 2rem auto;
   }
 }
