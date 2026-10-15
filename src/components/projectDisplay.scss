@@ -1,9 +1,26 @@
 @use 'styles' as *;
 
 .projectDisplay {
-  padding: 0 0 $space8;
+    padding: 0 0 $space8;
 
-  .projectContentContainer {
-    @extend .contentWrapper;
-  }
+    .projectContentContainer {
+        @extend .contentWrapper;
+    }
+
+    .projectGroup + .projectGroup {
+        margin-top: $space8;
+    }
+
+    .projectGroupTitle {
+        max-width: 18em;
+        margin: 0 0 $space5;
+        font-size: clamp(1.5rem, 2.6vw, 1.875rem);
+        line-height: 1.2;
+    }
+
+    .projectGroupCards {
+        display: flex;
+        flex-direction: column;
+        gap: $space5;
+    }
 }

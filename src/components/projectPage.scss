@@ -24,6 +24,12 @@
         max-width: 960px;
         margin: $space6 auto 0;
 
+        .caseStudyMeta {
+            margin: 0;
+            padding-top: $space5;
+            border-top: 1px solid $line;
+        }
+
         .heading {
             display: flex;
             align-items: flex-start;

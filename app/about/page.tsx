@@ -30,7 +30,7 @@ export default function AboutPage() {
             rel="noopener noreferrer">
             The New York Times
           </a>
-          , where I focus on creating native News prototypes that drive product strategy and technical direction.
+          , where I focus on creating iOS News app prototypes that drive product strategy and technical direction.
           <br />
           <br />
           When I&apos;m not designing or coding, I love knitting, playing volleyball,
