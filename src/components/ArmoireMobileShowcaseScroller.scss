@@ -1,4 +1,4 @@
-@import 'styles';
+@use 'styles' as *;
 
 .armoireMobileShowcase {
   margin: 80px auto 100px;
@@ -28,19 +28,15 @@
   margin-bottom: 0;
 }
 
-$leftOffset: calc((100vw - 960px) * -1/2);
+$contentInset: max(5vw, calc((100vw - 960px) / 2));
 
 .showcaseScroller {
   display: flex;
   flex-wrap: nowrap;
+  align-items: flex-start;
   overflow-x: scroll;
   width: 100vw;
-  position: relative;
-  left: $leftOffset;
-
-  @media only screen and (max-width: 960px) {
-    left: -36px;
-  }
+  margin-left: calc(50% - 50vw);
 
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -51,26 +47,24 @@ $leftOffset: calc((100vw - 960px) * -1/2);
 
   .showcaseAsset {
     min-width: 240px;
-    border-radius: 8px;
+    width: 240px;
+    height: auto;
+    aspect-ratio: 1125 / 2436;
+    flex: 0 0 240px;
+    object-position: top center;
+    border-radius: #{$phoneScreenRadiusX} / #{$phoneScreenRadiusY};
+    clip-path: inset(0 round #{$phoneScreenRadiusX} / #{$phoneScreenRadiusY});
     overflow: hidden;
     border-width: 0;
     object-fit: cover;
     margin-right: 24px;
 
     &:first-child {
-      @media only screen and (max-width: 960px) {
-        margin-left: 36px;
-      }
-
-      margin-left: calc(-656px + 50vw);
+      margin-left: $contentInset;
     }
 
     &:last-child {
-      @media only screen and (max-width: 960px) {
-        margin-right: 36px;
-      }
-
-      margin-right: calc(-656px + 50vw);
+      margin-right: $contentInset;
     }
   }
 }

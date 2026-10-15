@@ -1,0 +1,59 @@
+@use '../src/components/layout';
+@use '../src/components/navBar';
+@use '../src/components/splash';
+@use '../src/components/projectDisplay';
+@use '../src/components/projectCard';
+@use '../src/components/projectPage';
+@use '../src/components/armoireMobile';
+@use '../src/components/ArmoireMobileShowcaseScroller';
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+}
+
+main {
+  min-height: calc(100vh - 62px);
+}
+
+img {
+  height: auto;
+}
+
+.notFound {
+  min-height: calc(100vh - 62px);
+  padding-top: 10rem;
+}
+
+.notFound a,
+.aboutText a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.notFound a:hover,
+.aboutText a:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

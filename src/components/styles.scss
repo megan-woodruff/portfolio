@@ -4,6 +4,8 @@ $backgroundColor: #242331;
 $mobileBreak: 790px;
 $transitionStyle: all 0.4s ease;
 $border-radius: 4px;
+$phoneScreenRadiusX: 11%;
+$phoneScreenRadiusY: 5%;
 
 .contentWrapper {
   width: 90vw;
@@ -42,7 +44,9 @@ a {
   .aboutText {
     width: 60%;
 
-    h2 {
+    h1 {
+      font-size: 1.62671rem;
+      line-height: 1.1;
       margin-top: 3rem;
     }
 
@@ -50,7 +54,7 @@ a {
       width: 100%;
       margin: 0 auto;
 
-      h2 {
+      h1 {
         margin-top: 2rem;
       }
     }

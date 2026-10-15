@@ -1,17 +1,41 @@
-@import 'styles';
+@use 'styles' as *;
 
 .mobileScreens {
   padding-top: 24px;
   display: flex;
   justify-content: center;
   width: 100%;
+
+  > div:has(> .screenCaption) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 .mobileScreen {
   width: 280px;
   margin: 0 12px;
-  border-radius: 8px;
   overflow: hidden;
+}
+
+.mobileScreen,
+.walkthroughVideo {
+  aspect-ratio: 1125 / 2436;
+  border-radius: #{$phoneScreenRadiusX} / #{$phoneScreenRadiusY};
+  clip-path: inset(0 round #{$phoneScreenRadiusX} / #{$phoneScreenRadiusY});
+  object-fit: cover;
+  object-position: top center;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    object-position: top center;
+  }
 }
 
 .mobileScreensTable {
@@ -19,11 +43,22 @@
 
   .mobileScreenTable {
     height: 346px;
+    width: 160px;
     min-width: 160px;
-    flex-shrink: 1;
+    flex: 0 1 160px;
     margin: 12px;
-    border-radius: 8px;
+    border-radius: #{$phoneScreenRadiusX} / #{$phoneScreenRadiusY};
+    clip-path: inset(0 round #{$phoneScreenRadiusX} / #{$phoneScreenRadiusY});
     overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      object-fit: cover;
+      object-position: top center;
+    }
   }
 }
 
@@ -34,7 +69,6 @@
 .walkthroughVideo {
   width: 280px;
   margin: 0 12px 0;
-  border-radius: 8px;
 }
 
 .idNavigationInset {
@@ -48,9 +82,10 @@
 }
 
 .screenCaption {
+  order: 1;
   text-align: center;
   max-width: 280px;
-  margin: 12px auto;
+  margin: 20px auto 12px;
 }
 
 
