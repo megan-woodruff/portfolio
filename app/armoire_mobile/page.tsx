@@ -20,7 +20,7 @@ export default function ArmoireMobilePage() {
     <ProjectPage
       title="Armoire Mobile"
       description="Increasing member engagement and retention by delivering an easy-to-use, performant mobile app"
-      date="Oct 2021 – May 2022"
+      date="Oct 2020 – May 2021"
       stats={getStats()}
       imageSource={images.armoireMock}
       imageAlt="Mock up of phones with screens showing Armoire's mobile app. Including a welcome screen, product details page, search results, and member feed.">
